@@ -16,9 +16,9 @@ Posting days are Monday, Wednesday and Friday. A run may happen on the posting d
 
 ## Steps
 
-1. **Read the front page.** Fetch https://news.ycombinator.com/ and list the top 10 stories with points and comment counts. Read every `posts/*/sources.md` and skip any story already covered.
+1. **Read the front page.** Run `python3 hn_brief.py top`. It lists the top 10 stories with rank, id, points and comment counts, and leaves out any story already linked in a `posts/*/sources.md`.
 2. **Pick one story.** Choose the most-discussed story in the top 10 that a working developer can act on or form an opinion about in their own job: engineering practice, tools, careers, security incidents, AI in development, architecture, performance. Skip politics, non-tech stories, and plain product launches unless there's a clear practical angle. Break ties by comment count.
-3. **Research it.** Read the full article and the HN comment thread. Note the strongest counterpoints from commenters.
+3. **Research it.** Run `python3 hn_brief.py story <id>` for the article text and the top comments with their first reply. Note the strongest counterpoints from commenters. Fetch the article URL directly only if the script prints `ARTICLE: could not fetch`.
 4. **Write the carousel** as `posts/YYYY-MM-DD-short-slug/spec.json` (YYYY-MM-DD is the posting date), using `posts/2026-09-23-dont-read-what-you-didnt-write/spec.json` as the format and quality reference. Keep the `profile` block exactly as in that file.
    - 6 to 10 slides. Slide 1 is the hook: why a developer should care, plus the HN signal (rank, comments). The last slide asks one specific question that invites people to share experiences, and asks them to save the post.
    - One idea per slide, at most about 55 words. At most one bold phrase per slide (`**like this**`). At most 3 slides with a `panel`; keep panel text very short (a title, a number with a caption, or a short line).
@@ -29,7 +29,7 @@ Posting days are Monday, Wednesday and Friday. A run may happen on the posting d
 6. **Render.** Run `python3 carousel.py posts/<folder>/spec.json posts/<folder>/`. Open the PNGs and check that no text overflows and each slide reads well. Fix and re-render if needed.
 7. **Write the other files** in the same folder:
    - `caption.txt`: one hook line, two short paragraphs with the practical take, the question, a source credit line ("Source: <title> by <author> (<domain>), via Hacker News."), then 3 to 5 hashtags. No em dashes.
-   - `sources.md`: HN thread link with points, comments and rank; article link.
+   - `sources.md`: HN thread link (`https://news.ycombinator.com/item?id=<id>`, which `hn_brief.py top` uses to skip covered stories) with points, comments and rank; article link.
    - `REVIEW.md`: checkboxes for every claim about the owner, every number to double-check, and any slide you're unsure about.
 8. **Commit and push.** Follow "Publish to GitHub" below with the commit message `post: <folder>`.
 9. **Send to Metricool for review.** Follow "Send to Metricool" below, scheduled for 11:00 AM on the posting date. If that time has already passed, use the next Monday, Wednesday or Friday at 11:00 AM.
@@ -62,6 +62,7 @@ Run this only when the owner asks, for example "rewrite posts/<folder>: <what to
 5. **Notify** the owner as in the scheduled run, saying the rewrite is waiting for approval.
 
 ## Never
+- Never open news.ycombinator.com pages directly. Use `hn_brief.py`.
 - Never publish directly. Every Metricool post is either in review or a draft until the owner approves it in the Metricool UI.
 - Never delete a Metricool post, and never change the publish date unless the owner asks.
 - Never commit or push anything outside the post folder being published.

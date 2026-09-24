@@ -2,7 +2,7 @@
 
 ## One-time setup
 1. Put this folder somewhere permanent on your computer.
-2. Install Pillow: `pip3 install pillow`
+2. Install Pillow: `pip3 install pillow`. Optionally, `pip3 install trafilatura` for cleaner article text in `hn_brief.py`.
 3. Open Claude Desktop, go to the Code tab, and choose this folder as the project.
 4. Create a local scheduled task (Routines page) for this folder, with this prompt:
 
@@ -11,6 +11,13 @@
    Schedule it for Monday, Wednesday and Friday at 7:00 AM (America/Edmonton).
 
 Local tasks run only while Claude Desktop is open and your computer is awake. If a run is missed, it catches up the next time the app opens.
+
+## Research
+
+The routine researches through `hn_brief.py`, which uses the official HN API instead of the web pages:
+
+- `python3 hn_brief.py top` lists the top 10 stories and skips any already linked in `posts/*/sources.md`.
+- `python3 hn_brief.py story <id>` prints the article text (up to 1,800 words) and the top 12 comments, each with its first reply.
 
 ## Publishing
 
