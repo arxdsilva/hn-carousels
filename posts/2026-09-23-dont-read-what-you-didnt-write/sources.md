@@ -1,0 +1,2 @@
+- HN thread: https://news.ycombinator.com/item?id=49794330 (998 points, 427 comments, #3 on the 2026-09-22 front page)
+- Article: https://blog.colinbreck.com/i-dont-want-to-read-what-you-didnt-write/

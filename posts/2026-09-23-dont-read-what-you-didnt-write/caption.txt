@@ -1,0 +1,9 @@
+A post arguing that AI-written docs are becoming unreadable reached the top 3 on Hacker News this week and drew 400+ comments. It matched what I see in code review: PR descriptions that list every changed file and never say why.
+
+I still use AI when I write. It checks my claims against the code and catches typos. The reasoning behind a change has to come from me, because the model doesn't have it.
+
+What's the worst AI-generated PR you've had to review?
+
+Source: "I Don't Want to Read What You Didn't Write" by Colin Breck (blog.colinbreck.com), via Hacker News.
+
+#softwareengineering #codereview #programming #developers #ai

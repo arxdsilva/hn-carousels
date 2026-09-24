@@ -1,0 +1,44 @@
+{
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "This post reached the top 3 on Hacker News this week, with 400+ comments.\n\nIf you ship AI-written PR descriptions or design docs, **your reviewers are probably thinking the same thing.**",
+      "panel": {
+        "big": "I don't want to read what you didn't write"
+      }
+    },
+    {
+      "text": "The author, engineer Colin Breck, keeps seeing the same pattern: someone builds a feature with AI, then **has the AI write the design doc after the fact.**\n\nHe calls the result unreadable: pages of detail, no explanation of why."
+    },
+    {
+      "text": "He cites a survey of developers: if they suspect AI wrote a blog post, **78% stop reading** and 71% avoid that author afterward.\n\nA reviewer can't stop reading your PR. My guess is they keep going and trust you a little less.",
+      "panel": {
+        "big": "78%",
+        "small": "stop reading when it sounds like AI"
+      }
+    },
+    {
+      "text": "His explanation for why these docs are so hard to read: **the person who prompted the AI already has the context.** They wrote the prompts and saw the code.\n\nThe reviewer gets \"changed X, split Y, added tests for Z\" and has to guess what matters."
+    },
+    {
+      "text": "What I want from a PR description is short: **why the change exists, how risky it is, and where you want me to look.**\n\nI'd take a rough paragraph in your own words over a page of generated summary."
+    },
+    {
+      "text": "He isn't against AI. On a recent paper he used it to check his sentences against the source code and fill in citations.\n\n**He still wrote every line himself.** The only part the AI wrote was the abstract."
+    },
+    {
+      "text": "My rule for anything a teammate has to read: **I write it, and AI checks it against the code.**\n\nThe model can catch a typo or a wrong column name. It has no idea why I made the change, and that's the part my reviewer needs.",
+      "panel": {
+        "big": "Write the why yourself."
+      }
+    },
+    {
+      "text": "What's the worst AI-generated PR or design doc you've had to review?\n\n**Tell me in the comments,** and save this for the next time you write one."
+    }
+  ]
+}
