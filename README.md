@@ -8,12 +8,17 @@
 
    Run the HN carousel workflow described in CLAUDE.md.
 
-   Schedule it for Monday, Wednesday and Friday at 7:00 AM. If the scheduler only offers daily, pick daily: the workflow skips other days by itself.
+   Schedule it for Monday, Wednesday and Friday at 7:00 AM (America/Edmonton).
 
 Local tasks run only while Claude Desktop is open and your computer is awake. If a run is missed, it catches up the next time the app opens.
 
-## After each run
-1. Open the newest folder in `posts/`.
-2. Go through `REVIEW.md` and edit `spec.json` or `caption.txt` so the take is really yours.
-3. If you changed `spec.json`, re-render: `python3 carousel.py posts/<folder>/spec.json posts/<folder>/`
-4. Upload the slide PNGs in order and paste `caption.txt` in Metricool (Create post) or the Instagram app.
+## Publishing
+
+1. **Routine drafts and pushes.** The routine writes a new folder in `posts/`, commits it (`post: <folder>`) and pushes to `main`. Metricool can't read local files or Google Drive, so it pulls the slides from raw GitHub URLs pinned to that commit, such as `https://raw.githubusercontent.com/arxdsilva/hn-carousels/<sha>/posts/<folder>/slide_01.png`. Drafts are public on GitHub from this point, before you've reviewed them.
+2. **Sent to Metricool for review.** The routine creates the Instagram carousel for 11:00 AM on the posting date and sends it to review, with you as the reviewer. If your plan doesn't have the review flow, it saves the post as a draft instead. You get a notification with the planner link.
+3. **You approve in Metricool.** Check the post against `REVIEW.md`, then approve it (or schedule the draft) in the Metricool UI. Nothing publishes until you do.
+4. **Rewrite if needed.** In Claude Code, say "rewrite posts/<folder>: <what to change>". Claude edits and re-renders the post, pushes a new commit, updates the Metricool post and sends it back to review.
+
+The Metricool post ids are saved in `posts/<folder>/metricool.json`, which is gitignored.
+
+The Metricool free plan allows 20 posts a month. Three posts a week comes to about 13, which leaves some room for extra posts.
