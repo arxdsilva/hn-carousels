@@ -1,0 +1,11 @@
+Replacing Windows across a government is the easy part. Replacing Excel is where it gets hard.
+
+A government IT project is swapping Microsoft for a fully declarative NixOS setup: describe a machine as code and it builds the same system every time, with no drift and no per-machine patching. France and Germany are running similar projects on their own, so three governments landed on the same architecture independently.
+
+Developers weighing in pushed back on where the real difficulty sits. Cloning Microsoft 365's collaboration features tops out around 80 percent parity at best, and the hard problem is the workflow people already know, not the operating system underneath it. If you're trying to cut vendor lock-in at your own company, budget most of your effort for the tools people live in every day, not the infrastructure layer.
+
+Have you ever tried to replace a core vendor tool at your company, the one people use every day, rather than the infrastructure behind it? What broke first?
+
+Source: DAWO by the DAWO project (dawo.community).
+
+#softwareengineering #vendorlockin #opensource #nixos #devtools

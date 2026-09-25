@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "A government agency just replaced Windows with a fully declarative Linux setup built from swappable pieces: OS, cloud, even the office suite. The goal: stop depending on one vendor's roadmap for basic computing. **Swapping the OS turned out to be the easy part.**",
+      "panel": {
+        "big": "DAWO",
+        "small": "the Dutch government's Microsoft alternative"
+      }
+    },
+    {
+      "text": "The operating system layer is NixOS: describe a machine in one config file, and it builds **the exact same system every time.** No drift between machines, no surprises from a vendor's patch. That's why platform teams reach for it when they don't trust someone else's roadmap."
+    },
+    {
+      "text": "France already ships a hardened NixOS build for its own agencies, and Germany runs a similar open desktop project. Three countries arrived at the same architecture on their own: **declarative infrastructure as the way out of vendor lock-in.**"
+    },
+    {
+      "text": "Developers in the discussion weren't convinced the OS was the hard part. One argued the real blocker is the office suite: **LibreOffice and Collabora still can't match Microsoft 365's collaboration** without real friction for everyday teams."
+    },
+    {
+      "text": "Another pushed further: cloning Office feature-for-feature tops out well short of the original. One engineer put it at roughly **80% parity, at best,** and argued the real fix is rethinking the workflow, not building a lookalike of tools people already route around.",
+      "panel": {
+        "big": "80%",
+        "small": "one engineer's estimate for office clones"
+      }
+    },
+    {
+      "text": "A sharper pattern showed up in the same discussion for running this at scale: make every machine **read-only,** push configuration from one central source, and serve the package store over the network. That leaves nothing to patch by hand and nothing left to drift.",
+      "panel": {
+        "big": "Read-only.",
+        "small": "config pushed from one place"
+      }
+    },
+    {
+      "text": "If you're chasing vendor lock-in at your own company, the infrastructure layer is usually the tractable part. **The tools people live in all day** are the hard part, and that's where most independence projects fail."
+    },
+    {
+      "text": "Has your team ever tried to replace a core vendor tool, the one people use every day, rather than the infrastructure behind it? What broke first?\n\n**Save this** for the next time someone proposes \"let's just self-host it.\""
+    }
+  ]
+}
