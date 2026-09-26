@@ -21,8 +21,17 @@ Source: DAWO by the DAWO project (dawo.community).
 #softwareengineering #vendorlockin #opensource #devtools
 
 1. Run `pip3 install pillow trafilatura`.
-2. Follow CLAUDE.md in the repo root, starting with the day check in America/Edmonton. It covers research with hn_brief.py, writing and humanizing the carousel, rendering with carousel.py, committing and pushing only the new post folder to main, sending the post to Metricool for review (brand id 7070774, reviewer arxdsilva@gmail.com), and notifying the owner. sources.md still records the HN thread link, so covered stories get skipped.
-3. Blog post. Only after the carousel was sent to Metricool successfully:
+2. Follow CLAUDE.md in the repo root, starting with the day check in America/Edmonton, through research with hn_brief.py, writing and humanizing the carousel, and rendering with carousel.py. Before CLAUDE.md's "Publish to GitHub" step commits and pushes the post folder, do step 3 below so the LinkedIn files are ready and land in that same commit. Then continue CLAUDE.md's flow: commit and push the post folder to main, send the carousel to Metricool for review (brand id 7070774, reviewer arxdsilva@gmail.com). sources.md still records the HN thread link, so covered stories get skipped.
+3. LinkedIn image, every run. This is a manual-post asset for the owner, not something the routine publishes itself; LinkedIn has no API integration here.
+   a. In the same post folder, produce exactly one image, `posts/<folder>/linkedin.png`, and one text file, `posts/<folder>/linkedin.txt`.
+   b. The image is a single 1080x1080 quote card, not a slide: reuse carousel.py's panel style (big serif line, optional short caption, dark background), with no profile header and no paragraph body text. Keep it to one short line, roughly 10 words or fewer, plus an optional one-line caption. If carousel.py can't produce a bare panel-only frame yet, extend it minimally rather than hand-rolling a second renderer. Open the PNG and confirm nothing overflows before committing.
+   c. Hook rotation: the hook on the image (and the opening line of linkedin.txt) must differ from that day's Instagram slide 1, and must not reuse the hook style from the immediately preceding run. Rotate by weekday:
+      - Monday: a blunt claim or contrarian take, stated flat as fact.
+      - Wednesday: a direct question aimed at the reader's own job.
+      - Friday: a concrete number or detail from the article or discussion, stated cold, with the implication left for the body text.
+   d. linkedin.txt: the hook line, 2-3 short paragraphs with the practical take (rewritten in LinkedIn's more prose-y register, never pasted verbatim from the caption or blog post), a closing question, the same source line format as the Instagram caption ("Source: <title> by <author> (<domain>)."), and 3-5 hashtags. Run the humanizer over it before saving.
+   e. These two files are part of the post folder, so they get committed and pushed together with the carousel files in CLAUDE.md's "Publish to GitHub" step, and get a raw GitHub URL built from that same commit SHA.
+4. Blog post. Only after the carousel was sent to Metricool successfully:
    a. Clone https://github.com/insurgencylabs/ytwebsite (private) next to this repo. If the clone fails, skip the blog, mention the error in the owner email, and finish.
    b. Learn the site's conventions: framework, blog posts folder, filename pattern, frontmatter fields, build command, and the style of the 3 most recent posts.
    c. Write a new post in that format, 800–1200 words, on the same topic as today's carousel. Go deeper than the carousel: my practical take, the strongest counterpoints from the discussion, and what a developer should do differently. Never copy passages from the source.
@@ -36,11 +45,11 @@ Source: DAWO by the DAWO project (dawo.community).
    g. Before building, check that the post file contains the article URL at least twice (intro and Sources) and a "Sources" heading. If not, fix it; never push a post without its sources.
    h. Install dependencies and run the site's build. If the build fails, don't push; include the error in the owner email.
    i. Commit only the new post as "blog: <slug>" and push to main of ytwebsite.
-4. The owner email covers both: the carousel (topic, why it was picked, Metricool status) and the blog (title, file path, commit link, or why it was skipped).
+5. The owner email covers all three: the carousel (topic, why it was picked, Metricool status), the LinkedIn image (the raw GitHub URL to linkedin.png, built from the commit SHA the same way as the carousel slide URLs, plus the full text of linkedin.txt inline in the email body so both can be copied and pasted straight into a manual LinkedIn post), and the blog (title, file path, commit link, or why it was skipped).
 
 Cloud-specific notes:
 - Push notifications aren't available here. Notify the owner by sending an email to arxdsilva@gmail.com with the Gmail connector.
 - posts/<folder>/metricool.json is gitignored, so it won't persist after this run. That's expected; still write it.
-- If `git push` to hn-carousels fails (for example, missing credentials), don't send anything to Metricool and don't write the blog. Email the owner the error and stop.
+- If `git push` to hn-carousels fails (for example, missing credentials), don't send anything to Metricool, don't write the blog, and don't send a LinkedIn image/text link that points at nothing. Email the owner the error and stop.
 - Never publish a post directly. Every Metricool post must be in review or a draft.
 - Never edit or delete existing posts in either repo.
