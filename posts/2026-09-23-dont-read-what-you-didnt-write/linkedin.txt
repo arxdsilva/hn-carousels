@@ -1,11 +1,16 @@
 Do you know why your last PR should merge?
 
-Engineer Colin Breck argues AI-generated PR descriptions and design docs are becoming unreadable because whoever prompted the model already had the full context in their head and skipped writing it down. A generated list of changed files rarely tells a reviewer what matters.
 
-My rule: write the reasoning yourself, in a few plain sentences, then let AI check that description against the diff for typos or missed details. The model can catch a mistake, but it can't tell your reviewer why you made the change, because it never knew.
+#3 on HackerNews last week: Colin Breck was arguing that a generated list of changed files rarely tells a reviewer what matters.
+
+
+My rule: write the why yourself, in a few sentences, then let AI check that description against the diff for missed details. The model can catch a mistake, but it can't tell your reviewer why you made the change, because it never knew.
+
 
 What's the worst AI-generated PR description you've had to review?
 
+
 Source: "I Don't Want to Read What You Didn't Write" by Colin Breck (blog.colinbreck.com).
+
 
 #softwareengineering #codereview #ai #programming

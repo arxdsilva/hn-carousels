@@ -1,11 +1,16 @@
 Three governments. Same operating system. No coordination.
 
-The Dutch government's DAWO project, France's Securix, and Germany's openDesk are three separate efforts to replace the Microsoft desktop stack with declarative, open infrastructure. None of them appears to share a codebase. They landed on the same architecture on their own.
 
-Developers picking apart DAWO agreed the operating system was never the hard part: tools like NixOS make a fleet of machines reproducible from a single config file. The real wall is the office suite. One engineer estimated that cloning Microsoft 365's collaboration features tops out around 80% parity, and argued the useful goal is rethinking the workflow, not building a lookalike of Excel.
+#8 on HackerNews this week: developers were arguing that swapping the OS is the easy part, the office suite is where these migrations stall.
+
+
+The Dutch government's DAWO project, France's Securix, and Germany's openDesk all landed on the same architecture independently: describe every machine as code, and it builds the same system every time. One engineer in the thread put cloning Microsoft 365 at roughly 80% parity, at best.
+
 
 If your company dropped a core vendor tomorrow, which would break first: the infrastructure underneath it, or the daily habits built around the tool itself?
 
+
 Source: DAWO by the DAWO project (dawo.community).
+
 
 #softwareengineering #vendorlockin #opensource #nixos #devops
