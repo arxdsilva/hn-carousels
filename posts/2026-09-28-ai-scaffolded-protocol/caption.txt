@@ -1,0 +1,7 @@
+A federated chat network shipped fast, and reinvented half of XMPP along the way.
+
+Have you caught AI-assisted code reinventing something that already existed?
+
+Source: Parley by prologic (git.mills.io).
+
+#softwareengineering #vibecoding #opensource #protocoldesign #devtools

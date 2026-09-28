@@ -1,0 +1,45 @@
+{
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "A new chat system ships with working federation, IRC compatibility, full docs, even tests. Read closely and it's re-implementing **roughly half of XMPP**, a protocol that already solved the same problem years ago.",
+      "panel": {
+        "big": "Parley",
+        "small": "a federated IRC-speaking chat network"
+      }
+    },
+    {
+      "text": "The project's commit history shows it was built fast with an AI coding assistant, working code and tests, end to end. **Nobody stopped to check what already existed.**"
+    },
+    {
+      "text": "One developer in the discussion put it directly: this is **a poorly specified implementation of half of XMPP.** He'd seen the pattern before: people building deep into a domain without ever touching the existing work in that field."
+    },
+    {
+      "text": "Not everyone in the thread agreed reuse was the answer. Another developer replied that **XMPP itself is a genuinely painful protocol to implement.** Prior art isn't automatically worth reusing, even when it exists."
+    },
+    {
+      "text": "A sharper gap: one engineer asked how the project plans to stop bad actors spinning up unlimited servers and spamming at scale. **No answer showed up in the docs.** Federated systems spend years hardening against exactly that.",
+      "panel": {
+        "big": "0",
+        "small": "answers to the spam question, in the docs"
+      }
+    },
+    {
+      "text": "Another developer asked the more basic question: why build a new federated network at all, instead of extending one that already exists, like Matrix or ActivityPub? **Every new protocol restarts the hardening clock at zero.**"
+    },
+    {
+      "text": "Before you ship something an AI assistant scaffolded, especially anything touching identity, federation, or security: **spend an hour on prior art first.** Ask what already tried this, and why it held up or didn't."
+    },
+    {
+      "text": "When you review AI-written code, you check it for bugs. Start checking it for reinvention too: **is this solving a problem someone already solved,** with the failure modes already known?"
+    },
+    {
+      "text": "Have you shipped, or caught, something AI-assisted that reinvented an existing standard, worse? **Tell me what broke first,** and save this for your next AI-assisted project."
+    }
+  ]
+}
