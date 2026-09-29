@@ -1,0 +1,16 @@
+Fast is not the hard part anymore.
+
+
+#1 on HackerNews this week: developers found that an AI-assisted chat project reinvents about half of XMPP.
+
+
+My rule: before shipping anything AI-scaffolded that touches identity or federation, spend an hour on what already tried this. An hour beats reinventing years of hardening from scratch.
+
+
+What's the last AI-assisted project you shipped where nobody checked the prior art first?
+
+
+Source: Parley by prologic (git.mills.io).
+
+
+#softwareengineering #ai #opensource #protocoldesign #devtools
