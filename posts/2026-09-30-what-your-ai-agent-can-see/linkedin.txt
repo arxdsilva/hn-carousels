@@ -1,0 +1,16 @@
+Do you know what your AI agent's sandbox can see?
+
+
+#7 on HackerNews this week: developers were arguing about whether an always-on AI agent's sandbox can be trusted with real account access.
+
+
+My rule: before any agent gets standing access to an account, check first what its sandbox actually does with the traffic. Can't see that? Build it yourself instead.
+
+
+What's the first thing you'd check before giving an agent access to your inbox?
+
+
+Source: Dots: Always-on agents by OpenAI (openai.com).
+
+
+#softwareengineering #aiagents #security #devtools #automation

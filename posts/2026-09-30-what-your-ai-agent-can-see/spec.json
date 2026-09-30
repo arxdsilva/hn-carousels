@@ -1,0 +1,45 @@
+{
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "Every major AI lab is now shipping agents that run unattended, with standing access to your inbox and accounts. One engineer's first test of OpenAI's version turned up **something worth pausing on** before anyone wires one to a real inbox.",
+      "panel": {
+        "big": "Always-on agents",
+        "small": "unattended, with standing account access"
+      }
+    },
+    {
+      "text": "Testing the agent's sandboxed browser against Gmail, one engineer found the connection wasn't going straight to Google. It came back with an **OpenAI-issued certificate** for gmail.com instead of Google's own."
+    },
+    {
+      "text": "Another developer in the discussion pointed out what that means: traffic inside the sandbox is being intercepted, and most browsers on Linux don't pin certificates, so the interception is **invisible to the agent, and to you.**"
+    },
+    {
+      "text": "That's not automatically malicious. Vendors often inspect sandbox traffic for safety. But it means **the vendor can see everything the agent reads or sends,** including whatever's in that inbox.",
+      "panel": {
+        "big": "MITM",
+        "small": "found inside the agent's own sandbox"
+      }
+    },
+    {
+      "text": "Not everyone in the thread was worried. One developer argued domain-specific always-on agents are genuinely useful: **they avoid overloading one model's context** and give each agent a clearer boundary of what it can touch."
+    },
+    {
+      "text": "Another engineer skipped the vendor product entirely. He built his own always-on agents in dedicated Unix accounts, wired straight into his own mailbox, running **on infrastructure he fully controls.**"
+    },
+    {
+      "text": "A developer in the thread noted how fast the norms moved: months ago, the consensus was never give an agent read or write access to anything sensitive. Now people are wiring these into real inboxes **without checking what's happening on the wire.**"
+    },
+    {
+      "text": "Before you give any agent standing access to your accounts, check its network path first: **is it intercepting your traffic, and where does that data go?** Building it yourself, on infrastructure you control, is still the safer default."
+    },
+    {
+      "text": "Have you checked what your AI agent's sandbox can actually see on the wire? **Tell me what you found,** and save this before you connect one to anything real."
+    }
+  ]
+}

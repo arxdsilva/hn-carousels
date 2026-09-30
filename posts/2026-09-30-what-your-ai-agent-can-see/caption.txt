@@ -1,0 +1,7 @@
+An always-on AI agent's sandbox traffic wasn't going where engineers expected.
+
+Would you trust an agent's sandbox without checking what it sees?
+
+Source: Dots: Always-on agents by OpenAI (openai.com).
+
+#softwareengineering #aiagents #security #devtools #privacy
