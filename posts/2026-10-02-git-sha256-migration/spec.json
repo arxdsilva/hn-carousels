@@ -1,4 +1,5 @@
 {
+  "type": "C",
   "profile": {
     "name": "arxdsilva",
     "handle": "@arxdsilva",
@@ -7,26 +8,17 @@
   },
   "slides": [
     {
-      "text": "**Git 3.0 is swapping its default hash from SHA-1 to SHA-256.**\n\nScott Chacon, GitHub's co-founder, says it will break tooling for years.\n\nFor a threat that barely applies to real attacks.",
+      "text": "**Scott Chacon says Git's SHA-256 migration is a costly mistake.**\n\nI think he's half right.\n\nIt hit 411 comments on Hacker News this week.",
       "image": "posts/2026-10-02-git-sha256-migration/assets/article.jpg"
     },
     {
-      "text": "**SHA-1 counts as \"broken\" on paper.**\n\nNobody has used that break on a real project.",
-      "bullets": [
-        "SHAttered (2017) and Shambles (2020) proved the collision.",
-        "Cost: tens of thousands of dollars in GPU time.",
-        "Cheaper still: about $40k to just buy a maintainer's trust."
-      ]
+      "text": "Scott Chacon co-founded GitHub and wrote Pro Git.\n\nHe says Git 3.0's new default hash will break tooling for years.\n\nFor a threat he says barely applies to real attacks."
     },
     {
-      "text": "Chacon's real point: **trust was never about the hash.**\n\nIt comes from where you pull your code.\n\nAn idea he traces back to Linus Torvalds."
+      "text": "**He's right that trust was never about the hash.**\n\nReal attacks hijack packages, not crack hashes.\n\nOr they just pay off a tired maintainer."
     },
     {
-      "text": "Not everyone agreed.\n\nOne developer said SHAttered was never theoretical.",
-      "panel": {
-        "big": "2017",
-        "small": "when SHAttered proved it as a working exploit"
-      }
+      "text": "**He's wrong to call it purely unnecessary.**\n\nSHA-1 is banned under FIPS 140-2 at some firms.\n\nThat compliance pressure is real, exploit or not."
     },
     {
       "text": "The migration cost is real, too.\n\n**One developer's CI broke outright on SHA-256.**",
@@ -37,17 +29,17 @@
       ]
     },
     {
-      "text": "Others pushed back on \"train wreck.\"\n\nSHA-1 repos keep working, untouched.\n\n**One developer called it a friendly migration.**"
-    },
-    {
-      "text": "**My rule: map the real attack path first.**\n\nOne commenter guessed the real driver is compliance.",
+      "text": "Not everyone bought Chacon's framing.\n\nOne developer pushed back hard in the thread.",
       "panel": {
-        "big": "FIPS 140-2",
-        "small": "bans SHA-1 outright at some firms"
+        "big": "\"A practical proof of concept.\"",
+        "small": "against Chacon's \"theoretical\" framing"
       }
     },
     {
-      "text": "Have you shipped a security fix that broke more than it saved?\n\n**Tell me what happened,** and save this for your next CI migration."
+      "text": "**My rule: map your real attack path first.**\n\nThen check your compliance obligations.\n\nTest your tooling before you flip the default."
+    },
+    {
+      "text": "Is this migration overkill, or is compliance reason enough?\n\n**Tell me where you land,** and save this for when Git 3.0 ships."
     }
   ]
 }

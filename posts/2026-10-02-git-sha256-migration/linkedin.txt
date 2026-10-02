@@ -1,11 +1,17 @@
-1.4 septillion files.
+Unpopular opinion: Git's SHA-256 migration won't make your repos safer.
 
-#10 on HackerNews this week: developers were arguing that Git 3.0's move to SHA-256 fixes a risk nobody has actually exploited.
+Scott Chacon, GitHub's co-founder, calls Git's SHA-256 default a costly mistake.
+He says it defends against an attack nobody has pulled off.
+He's right. Real breaches hijack packages, they don't crack hashes.
+He's wrong to call it pure waste.
+FIPS 140-2 already forces this migration at some firms, exploit or not.
 
-My rule before any security migration: map the real attack path before you touch the default. Here the cheap way in was always bribing a tired maintainer, not cracking a hash.
+Team Chacon ("not needed"), or Team Compliance ("no choice")? Pick a side.
 
-Have you ever pushed a security change that cost more than the risk it fixed?
+Repost if this helps someone on your team.
+
+Follow Arthur Silva for practical takes on what engineers are talking about.
 
 Source: Git 3.0's upcoming SHA-256 default will be a costly mistake by Scott Chacon (blog.gitbutler.com).
 
-#git #softwareengineering #devtools #security
+#git #softwareengineering #devtools

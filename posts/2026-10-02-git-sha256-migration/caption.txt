@@ -1,6 +1,10 @@
-Git is about to force a migration that fixes almost nothing.
+A GitHub co-founder says this "security fix" is a mistake.
 
-What's the costliest "security fix" you've had to roll out at work?
+He's right that real attacks don't crack hashes, they hijack packages or bribe maintainers.
+
+But compliance rules like FIPS 140-2 force this migration either way, exploit or not.
+
+Would you migrate now, or wait for the tooling to catch up?
 
 Source: Git 3.0's upcoming SHA-256 default will be a costly mistake by Scott Chacon (blog.gitbutler.com).
 
