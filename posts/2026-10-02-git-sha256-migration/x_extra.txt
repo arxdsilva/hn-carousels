@@ -1,0 +1,15 @@
+TYPE: C
+QUOTE TARGET: Debian's security-announce post or a clip of Greg Kroah-Hartman's "Security in the LLM age" talk, if posted on X; otherwise post standalone.
+
+The Linux kernel just got hit with 1,313 CVEs in one advisory. Scary number, mostly noise: per Greg Kroah-Hartman, LLM scanners that found 79 vulnerabilities upstream turned up single digits of real bugs. Check what is behind a CVE count before you panic at it.
+
+REPLY:
+Advisory: https://lwn.net/Articles/1097401/
+===
+TYPE: C
+QUOTE TARGET: Earendil's (Pi's maker) own announcement post, if they posted one on X; otherwise post standalone.
+
+Pi 1.0 ships today still calling itself minimal, while adding MCP support, cache warming and six other features. One critic called it 450k SLOC pretending to be small. Minimal was never about line count. It is about four core tools and nothing forced on you.
+
+REPLY:
+Release notes: https://earendil.com/posts/pi-1-0/

@@ -1,0 +1,14 @@
+TYPE: C
+QUOTE TARGET: Scott Chacon's own post sharing this article, if he posted one on X; otherwise GitButler's account; otherwise post standalone.
+IMAGES: slide_01.png
+
+Hot take: Git's SHA-256 migration won't stop a single real attack.
+
+Scott Chacon, GitHub's co-founder, calls it a costly mistake. He's right: real breaches hijack packages, not crack hashes.
+---
+He's wrong to call it pure waste though. FIPS 140-2 already forces this migration at some firms, exploit or not.
+
+Team Chacon, or Team Compliance? Pick a side.
+
+REPLY:
+Chacon's full case: https://blog.gitbutler.com/git-3-sha-256 Full breakdown in the carousel on Instagram/LinkedIn (@arxdsilva).
