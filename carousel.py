@@ -229,17 +229,21 @@ def draw_image(img, box, image_path):
 
 
 BODY_TOP = 78 + 150 + 56
-EXTRA_H = 390  # reserved bottom-box height shared by panel / bullets / image
+PANEL_H = 390   # reserved box height for panel / bullets (inset, 70px bottom margin)
+IMAGE_H = 460   # reserved height for image (full-bleed: no side margin, flush to the bottom edge)
 
 
-def extra_box_height(slide):
-    if slide.get("panel") or slide.get("bullets") or slide.get("image"):
-        return EXTRA_H + 44
+def reserved_height(slide):
+    """Vertical space to leave below the paragraphs for panel / bullets / image."""
+    if slide.get("image"):
+        return IMAGE_H + 30
+    if slide.get("panel") or slide.get("bullets"):
+        return PANEL_H + 44 + 70
     return 0
 
 
 def fitted_size(slide):
-    bottom = H - 70 - extra_box_height(slide)
+    bottom = H - reserved_height(slide)
     size = 54
     while size > 32:
         lines, _, _ = layout_text(slide["text"], size, W - 2 * M)
@@ -252,7 +256,6 @@ def fitted_size(slide):
 def render_slide(profile, slide, size):
     img = Image.new("RGB", (W, H), (255, 255, 255))
     body_top = draw_header(img, profile)
-    extra_h = EXTRA_H if extra_box_height(slide) else 0
     lines, reg, bold = layout_text(slide["text"], size, W - 2 * M)
     draw = ImageDraw.Draw(img)
     lh, gap = int(size * 1.42), int(size * 0.85)
@@ -261,14 +264,12 @@ def render_slide(profile, slide, size):
         for w, b, x in words:
             draw.text((M + x, y), w, font=bold if b else reg, fill=INK)
         y += lh + (gap if end else 0)
-    if extra_h:
-        box = (M, H - 70 - extra_h, W - M, H - 70)
-        if slide.get("panel"):
-            draw_panel(img, box, slide["panel"])
-        elif slide.get("bullets"):
-            draw_bullets(img, box, slide["bullets"], size)
-        elif slide.get("image"):
-            draw_image(img, box, slide["image"])
+    if slide.get("panel"):
+        draw_panel(img, (M, H - 70 - PANEL_H, W - M, H - 70), slide["panel"])
+    elif slide.get("bullets"):
+        draw_bullets(img, (M, H - 70 - PANEL_H, W - M, H - 70), slide["bullets"], size)
+    elif slide.get("image"):
+        draw_image(img, (0, H - IMAGE_H, W, H), slide["image"])  # full-bleed, flush to bottom
     return img
 
 

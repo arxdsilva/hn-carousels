@@ -23,7 +23,7 @@ Posting days are Monday, Wednesday and Friday. A run may happen on the posting d
    - 6 to 10 slides. Slide 1 is the hook: why a developer should care, plus the HN signal (rank, comments). The last slide asks one specific question that invites people to share experiences, and asks them to save the post.
    - One idea per slide. Each slide's `text` is **2 or 3 short, direct paragraphs**, separated by a blank line (`\n\n` in the JSON string). Keep every paragraph small: a sentence or two, no padding, no throat-clearing.
    - When a slide has exactly 2 paragraphs, add one more element to fill the slide: either an `"image"` (a photo from the article, or clearly related to the topic — see "Getting an image" below) or a `"bullets"` list of 2 to 4 short, direct bullet points about the topic. Don't add both to the same slide, and don't add either one to a 3-paragraph slide (it's already full).
-   - Bold (`**like this**`) can be used more than once per slide where it helps a reader scan, not capped at one.
+   - Bold (`**like this**`) can be used more than once per slide where it helps a reader scan, not capped at one. It can wrap a short phrase inside a paragraph, or the whole paragraph when the paragraph itself is the punchline (e.g. a bold hook question as paragraph 1, or a bold one-line takeaway as the last paragraph).
    - A `panel` (the dark number/quote callout) is still available for variety, at most 3 slides, if you want a big stat or line to stand on its own instead of bullets or an image; keep panel text very short (a title, a number with a caption, or a short line). A slide takes at most one of `panel`, `bullets`, `image`.
    - Facts, numbers and quotes come only from the article or the thread, attributed to their author. Never invent a statistic, source, or detail.
    - The take is practical: what this means for the reader's work, what to do differently. Include at least one counterpoint from the thread when there's a real one.
@@ -42,7 +42,7 @@ Posting days are Monday, Wednesday and Friday. A run may happen on the posting d
    {"text": "Short paragraph one.\n\nShort paragraph two.\n\nShort paragraph three."}
    ```
 
-   **Getting an image.** Run `python3 fetch_image.py <article_url> posts/<folder>/assets/<name>.jpg` to pull the article's `og:image`. It prints the saved path on success, or `NO_IMAGE_FOUND` / `FETCH_FAILED` on failure — use `bullets` on that slide instead when it fails. Image paths in `spec.json` are relative to the repo root, same as `profile.avatar`.
+   **Getting an image.** Run `python3 fetch_image.py <article_url> posts/<folder>/assets/<name>.jpg` to pull the article's `og:image`. It prints the saved path on success, or `NO_IMAGE_FOUND` / `FETCH_FAILED` on failure — use `bullets` on that slide instead when it fails. Image paths in `spec.json` are relative to the repo root, same as `profile.avatar`. An `image` slide renders full-bleed: no side margin, flush to the bottom edge of the slide, like a photo card under the text, not inset like the `panel`/`bullets` box.
 5. **Humanize.** Run the humanizer skill (`.claude/skills/humanizer`) in embedded mode over all slide text and the caption. Apply the edits to `spec.json`.
 6. **Render.** Run `python3 carousel.py posts/<folder>/spec.json posts/<folder>/`. Open the PNGs and check that no text overflows and each slide reads well. Fix and re-render if needed.
 7. **Write the other files** in the same folder:
