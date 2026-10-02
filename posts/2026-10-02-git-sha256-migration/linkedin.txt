@@ -1,0 +1,11 @@
+1.4 septillion files.
+
+#10 on HackerNews this week: developers were arguing that Git 3.0's move to SHA-256 fixes a risk nobody has actually exploited.
+
+My rule before any security migration: map the real attack path before you touch the default. Here the cheap way in was always bribing a tired maintainer, not cracking a hash.
+
+Have you ever pushed a security change that cost more than the risk it fixed?
+
+Source: Git 3.0's upcoming SHA-256 default will be a costly mistake by Scott Chacon (blog.gitbutler.com).
+
+#git #softwareengineering #devtools #security

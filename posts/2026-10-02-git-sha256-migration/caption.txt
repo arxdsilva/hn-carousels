@@ -1,0 +1,7 @@
+Git is about to force a migration that fixes almost nothing.
+
+What's the costliest "security fix" you've had to roll out at work?
+
+Source: Git 3.0's upcoming SHA-256 default will be a costly mistake by Scott Chacon (blog.gitbutler.com).
+
+#git #softwareengineering #devtools #security

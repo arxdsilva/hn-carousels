@@ -1,0 +1,38 @@
+{
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "Git 3.0 is switching its default hash from SHA-1 to SHA-256. Scott Chacon, GitHub's co-founder, argues the change will cost the industry **years of broken tooling** for a security problem that barely applies to how real attacks happen."
+    },
+    {
+      "text": "SHA-1 counts as \"broken\" because researchers can manufacture two files with the same hash. Nobody has used that trick to sneak malicious code into a real project, though. The cheaper way in is still paying off a tired maintainer.",
+      "panel": {
+        "big": "$40k",
+        "small": "cheaper than any hash collision, per Chacon"
+      }
+    },
+    {
+      "text": "Chacon's real argument: **trust in Git was never about the hash.** It comes from where you pull code from, an idea he traces back to Linus Torvalds at Git's founding. Real supply-chain attacks come from hijacked packages and compromised maintainers, not engineered collisions."
+    },
+    {
+      "text": "Not everyone bought it. One developer in the discussion pointed out that SHAttered was a working proof of concept in 2017, not theory, and that a collision alone can smuggle malicious code once two repos share a commit hash. **Chacon undersold the risk,** they argued."
+    },
+    {
+      "text": "The migration cost is real too. One developer who tried SHA-256 repos over a year ago found CI runners and actions simply broke. GitHub still doesn't support SHA-256 repositories at all, and **mixing both hash types in submodules** has no clean answer yet."
+    },
+    {
+      "text": "Others pushed back on \"train wreck.\" Git's own migration docs say SHA-1 repos keep working untouched, only new repos default to SHA-256, and the two hash names map one to one. **One developer called it a friendly migration,** not a disaster."
+    },
+    {
+      "text": "My rule before adopting any \"security upgrade\": map the actual attack path first. One commenter guessed the real driver here is compliance, since **SHA-1 is banned outright under FIPS 140-2** at some organizations, not a working exploit anyone has run against Git."
+    },
+    {
+      "text": "Have you shipped a security migration that fixed a theoretical risk and broke real workflows for months? **Tell me what happened,** and save this for when Git 3.0 lands in your CI pipeline."
+    }
+  ]
+}

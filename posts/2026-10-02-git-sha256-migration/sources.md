@@ -1,0 +1,2 @@
+- HN thread: https://news.ycombinator.com/item?id=49924179 — 436 points, 411 comments, rank #10 on the 2026-10-02 front page.
+- Article: [Git 3.0's upcoming SHA-256 default will be a costly mistake](https://blog.gitbutler.com/git-3-sha-256) by Scott Chacon (blog.gitbutler.com).
