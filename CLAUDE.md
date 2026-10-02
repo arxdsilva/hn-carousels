@@ -19,12 +19,30 @@ Posting days are Monday, Wednesday and Friday. A run may happen on the posting d
 1. **Read the front page.** Run `python3 hn_brief.py top`. It lists the top 10 stories with rank, id, points and comment counts, and leaves out any story already linked in a `posts/*/sources.md`.
 2. **Pick one story.** Choose the most-discussed story in the top 10 that a working developer can act on or form an opinion about in their own job: engineering practice, tools, careers, security incidents, AI in development, architecture, performance. Skip politics, non-tech stories, and plain product launches unless there's a clear practical angle. Break ties by comment count.
 3. **Research it.** Run `python3 hn_brief.py story <id>` for the article text and the top comments with their first reply. Note the strongest counterpoints from commenters. Fetch the article URL directly only if the script prints `ARTICLE: could not fetch`.
-4. **Write the carousel** as `posts/YYYY-MM-DD-short-slug/spec.json` (YYYY-MM-DD is the posting date), using `posts/2026-09-23-dont-read-what-you-didnt-write/spec.json` as the format and quality reference. Keep the `profile` block exactly as in that file.
+4. **Write the carousel** as `posts/YYYY-MM-DD-short-slug/spec.json` (YYYY-MM-DD is the posting date), using `posts/2026-09-23-dont-read-what-you-didnt-write/spec.json` for the `profile` block (keep it exactly as in that file) and the examples below for the slide text format.
    - 6 to 10 slides. Slide 1 is the hook: why a developer should care, plus the HN signal (rank, comments). The last slide asks one specific question that invites people to share experiences, and asks them to save the post.
-   - One idea per slide, at most about 55 words. At most one bold phrase per slide (`**like this**`). At most 3 slides with a `panel`; keep panel text very short (a title, a number with a caption, or a short line).
+   - One idea per slide. Each slide's `text` is **2 or 3 short, direct paragraphs**, separated by a blank line (`\n\n` in the JSON string). Keep every paragraph small: a sentence or two, no padding, no throat-clearing.
+   - When a slide has exactly 2 paragraphs, add one more element to fill the slide: either an `"image"` (a photo from the article, or clearly related to the topic — see "Getting an image" below) or a `"bullets"` list of 2 to 4 short, direct bullet points about the topic. Don't add both to the same slide, and don't add either one to a 3-paragraph slide (it's already full).
+   - Bold (`**like this**`) can be used more than once per slide where it helps a reader scan, not capped at one.
+   - A `panel` (the dark number/quote callout) is still available for variety, at most 3 slides, if you want a big stat or line to stand on its own instead of bullets or an image; keep panel text very short (a title, a number with a caption, or a short line). A slide takes at most one of `panel`, `bullets`, `image`.
    - Facts, numbers and quotes come only from the article or the thread, attributed to their author. Never invent a statistic, source, or detail.
    - The take is practical: what this means for the reader's work, what to do differently. Include at least one counterpoint from the thread when there's a real one.
    - First-person claims about the owner's own experience ("in my team we...") must not be invented. Keep the voice first person, but any sentence that states something about his personal experience goes on the REVIEW.md checklist.
+
+   Slide examples:
+   ```json
+   {"text": "Short direct paragraph one making the point.\n\nShort direct paragraph two with **one bold phrase** and maybe **a second**.",
+    "bullets": ["First short, direct point.", "Second short, direct point.", "Third short, direct point."]}
+   ```
+   ```json
+   {"text": "Short direct paragraph one.\n\nShort direct paragraph two.",
+    "image": "posts/2026-10-02-example/assets/article-photo.jpg"}
+   ```
+   ```json
+   {"text": "Short paragraph one.\n\nShort paragraph two.\n\nShort paragraph three."}
+   ```
+
+   **Getting an image.** Run `python3 fetch_image.py <article_url> posts/<folder>/assets/<name>.jpg` to pull the article's `og:image`. It prints the saved path on success, or `NO_IMAGE_FOUND` / `FETCH_FAILED` on failure — use `bullets` on that slide instead when it fails. Image paths in `spec.json` are relative to the repo root, same as `profile.avatar`.
 5. **Humanize.** Run the humanizer skill (`.claude/skills/humanizer`) in embedded mode over all slide text and the caption. Apply the edits to `spec.json`.
 6. **Render.** Run `python3 carousel.py posts/<folder>/spec.json posts/<folder>/`. Open the PNGs and check that no text overflows and each slide reads well. Fix and re-render if needed.
 7. **Write the other files** in the same folder:

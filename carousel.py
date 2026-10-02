@@ -9,10 +9,15 @@ Spec format (JSON):
               "avatar": "assets/avatar.png", "verified": false},
   "slides": [
     {"text": "Paragraph one with **bold words**.\n\nParagraph two.",
-     "panel": {"big": "Big serif line", "small": "optional caption"}}   # panel optional
+     "panel": {"big": "Big serif line", "small": "optional caption"}},  # panel optional
+    {"text": "Short paragraph one.\n\nShort paragraph two.",
+     "bullets": ["Short point one.", "Short point two."]},              # bullets optional
+    {"text": "Short paragraph one.\n\nShort paragraph two.",
+     "image": "posts/<folder>/assets/photo.jpg"}                        # image optional
   ]
 }
-Max 10 slides (Instagram carousel limit). Output: 1080x1350 PNGs (4:5).
+A slide takes at most one of "panel", "bullets", "image". Max 10 slides
+(Instagram carousel limit). Output: 1080x1350 PNGs (4:5).
 """
 import json, os, re, sys
 from PIL import Image, ImageDraw, ImageFont
@@ -171,13 +176,70 @@ def draw_panel(img, box, panel):
         draw.text((x0 + (pw - sf.getlength(small)) / 2, y + 14), small, font=sf, fill=CREAM)
 
 
+def draw_bullets(img, box, bullets, base_size):
+    """Plain bullet list (dot + wrapped text) inside box, below the paragraphs."""
+    x0, y0, x1, y1 = box
+    draw = ImageDraw.Draw(img)
+    size = max(32, base_size - 6)
+    reg, bold = font(F_REG, size), font(F_BOLD, size)
+    space = reg.getlength(" ")
+    indent = 46
+    lh, gap = int(size * 1.3), int(size * 0.55)
+    y = y0
+    marker_d = max(16, int(size * 0.34))
+    for bullet in bullets:
+        words = parse_runs(bullet)
+        marker_y = y + lh * 0.52 - marker_d / 2
+        draw.ellipse([x0 + 8, marker_y, x0 + 8 + marker_d, marker_y + marker_d], fill=INK)
+        cx, line_x = x0 + indent, x0 + indent
+        for w, b in words:
+            f = bold if b else reg
+            wl = f.getlength(w)
+            if line_x + wl > x1 - cx + x0 and line_x > cx:
+                y += lh
+                line_x = cx
+            draw.text((line_x, y), w, font=f, fill=INK)
+            line_x += wl + space
+        y += lh + gap
+    return y
+
+
+def draw_image(img, box, image_path):
+    """Crop-to-fill an image (local path, relative to the repo root) into box."""
+    x0, y0, x1, y1 = box
+    bw, bh = x1 - x0, y1 - y0
+    path = image_path
+    if path and not os.path.isabs(path):
+        path = os.path.join(HERE, path)
+    if not path or not os.path.exists(path):
+        return
+    photo = Image.open(path).convert("RGB")
+    target_ratio = bw / bh
+    ratio = photo.width / photo.height
+    if ratio > target_ratio:
+        new_w = int(photo.height * target_ratio)
+        x_off = (photo.width - new_w) // 2
+        photo = photo.crop((x_off, 0, x_off + new_w, photo.height))
+    else:
+        new_h = int(photo.width / target_ratio)
+        y_off = (photo.height - new_h) // 2
+        photo = photo.crop((0, y_off, photo.width, y_off + new_h))
+    photo = photo.resize((bw, bh), Image.LANCZOS)
+    img.paste(photo, (x0, y0))
+
+
 BODY_TOP = 78 + 150 + 56
-PANEL_H = 390
+EXTRA_H = 390  # reserved bottom-box height shared by panel / bullets / image
+
+
+def extra_box_height(slide):
+    if slide.get("panel") or slide.get("bullets") or slide.get("image"):
+        return EXTRA_H + 44
+    return 0
 
 
 def fitted_size(slide):
-    panel = slide.get("panel")
-    bottom = H - 70 - (PANEL_H + 44 if panel else 0)
+    bottom = H - 70 - extra_box_height(slide)
     size = 54
     while size > 32:
         lines, _, _ = layout_text(slide["text"], size, W - 2 * M)
@@ -190,8 +252,7 @@ def fitted_size(slide):
 def render_slide(profile, slide, size):
     img = Image.new("RGB", (W, H), (255, 255, 255))
     body_top = draw_header(img, profile)
-    panel = slide.get("panel")
-    panel_h = PANEL_H if panel else 0
+    extra_h = EXTRA_H if extra_box_height(slide) else 0
     lines, reg, bold = layout_text(slide["text"], size, W - 2 * M)
     draw = ImageDraw.Draw(img)
     lh, gap = int(size * 1.42), int(size * 0.85)
@@ -200,8 +261,14 @@ def render_slide(profile, slide, size):
         for w, b, x in words:
             draw.text((M + x, y), w, font=bold if b else reg, fill=INK)
         y += lh + (gap if end else 0)
-    if panel:
-        draw_panel(img, (M, H - 70 - panel_h, W - M, H - 70), panel)
+    if extra_h:
+        box = (M, H - 70 - extra_h, W - M, H - 70)
+        if slide.get("panel"):
+            draw_panel(img, box, slide["panel"])
+        elif slide.get("bullets"):
+            draw_bullets(img, box, slide["bullets"], size)
+        elif slide.get("image"):
+            draw_image(img, box, slide["image"])
     return img
 
 
