@@ -20,26 +20,26 @@ Posting days are Monday, Wednesday and Friday. A run may happen on the posting d
 2. **Pick one story.** Choose the most-discussed story in the top 10 that a working developer can act on or form an opinion about in their own job: engineering practice, tools, careers, security incidents, AI in development, architecture, performance. Skip politics, non-tech stories, and plain product launches unless there's a clear practical angle. Break ties by comment count.
 3. **Research it.** Run `python3 hn_brief.py story <id>` for the article text and the top comments with their first reply. Note the strongest counterpoints from commenters. Fetch the article URL directly only if the script prints `ARTICLE: could not fetch`.
 4. **Write the carousel** as `posts/YYYY-MM-DD-short-slug/spec.json` (YYYY-MM-DD is the posting date), using `posts/2026-09-23-dont-read-what-you-didnt-write/spec.json` for the `profile` block (keep it exactly as in that file) and the examples below for the slide text format.
-   - 6 to 10 slides. Slide 1 is the hook: why a developer should care, plus the HN signal (rank, comments). The last slide asks one specific question that invites people to share experiences, and asks them to save the post.
-   - One idea per slide. Each slide's `text` is **2 or 3 short, direct paragraphs**, separated by a blank line (`\n\n` in the JSON string). Keep every paragraph small: a sentence or two, no padding, no throat-clearing.
-   - When a slide has exactly 2 paragraphs, add one more element to fill the slide: either an `"image"` (a photo from the article, or clearly related to the topic — see "Getting an image" below) or a `"bullets"` list of 2 to 4 short, direct bullet points about the topic. Don't add both to the same slide, and don't add either one to a 3-paragraph slide (it's already full).
+   - 6 to 10 slides. Slide 1 is the hook: why a developer should care, plus the HN signal (rank, comments). **It's the highest-leverage slide** — most people decide whether to keep swiping right there — so make it hit hardest: a bold question or claim as paragraph 1, every paragraph a single short sentence, paired with an image. The last slide asks one specific question that invites people to share experiences, and asks them to save the post.
+   - One idea per slide. Each slide's `text` is **2 or 3 short, direct paragraphs**, separated by a blank line (`\n\n` in the JSON string). Keep every paragraph to **one short sentence, roughly 8 to 20 words**. No compound sentences, no padding, no throat-clearing — if a paragraph needs "and" or a comma to hold two ideas, split it or cut one.
+   - Add an `"image"` to most slides (a photo from the article, or clearly related to the topic — see "Getting an image" below), whether the slide has 2 or 3 paragraphs; this is the default, reference-matched format. Use a `"bullets"` list of 2 to 4 short, direct points instead of an image only on a slide where there's no good image. Don't add both `image` and `bullets` to the same slide.
    - Bold (`**like this**`) can be used more than once per slide where it helps a reader scan, not capped at one. It can wrap a short phrase inside a paragraph, or the whole paragraph when the paragraph itself is the punchline (e.g. a bold hook question as paragraph 1, or a bold one-line takeaway as the last paragraph).
-   - A `panel` (the dark number/quote callout) is still available for variety, at most 3 slides, if you want a big stat or line to stand on its own instead of bullets or an image; keep panel text very short (a title, a number with a caption, or a short line). A slide takes at most one of `panel`, `bullets`, `image`.
+   - A `panel` (the dark number/quote callout) is still available for variety, at most 3 slides, if you want a big stat or line to stand on its own instead of an image; keep panel text very short (a title, a number with a caption, or a short line). A slide takes at most one of `panel`, `bullets`, `image`.
    - Facts, numbers and quotes come only from the article or the thread, attributed to their author. Never invent a statistic, source, or detail.
    - The take is practical: what this means for the reader's work, what to do differently. Include at least one counterpoint from the thread when there's a real one.
    - First-person claims about the owner's own experience ("in my team we...") must not be invented. Keep the voice first person, but any sentence that states something about his personal experience goes on the REVIEW.md checklist.
 
    Slide examples:
    ```json
-   {"text": "Short direct paragraph one making the point.\n\nShort direct paragraph two with **one bold phrase** and maybe **a second**.",
-    "bullets": ["First short, direct point.", "Second short, direct point.", "Third short, direct point."]}
-   ```
-   ```json
-   {"text": "Short direct paragraph one.\n\nShort direct paragraph two.",
+   {"text": "**Short bold hook question?**\n\nOne short sentence here.\n\nOne more short sentence, with **one bold phrase**.",
     "image": "posts/2026-10-02-example/assets/article-photo.jpg"}
    ```
    ```json
-   {"text": "Short paragraph one.\n\nShort paragraph two.\n\nShort paragraph three."}
+   {"text": "One short sentence.\n\nAnother short sentence.",
+    "bullets": ["First short, direct point.", "Second short, direct point.", "Third short, direct point."]}
+   ```
+   ```json
+   {"text": "One short sentence.\n\nAnother short sentence.\n\nA closing short sentence."}
    ```
 
    **Getting an image.** Run `python3 fetch_image.py <article_url> posts/<folder>/assets/<name>.jpg` to pull the article's `og:image`. It prints the saved path on success, or `NO_IMAGE_FOUND` / `FETCH_FAILED` on failure — use `bullets` on that slide instead when it fails. Image paths in `spec.json` are relative to the repo root, same as `profile.avatar`. An `image` slide renders full-bleed: no side margin, flush to the bottom edge of the slide, like a photo card under the text, not inset like the `panel`/`bullets` box.
