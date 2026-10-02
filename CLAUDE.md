@@ -131,16 +131,62 @@ Each posting day has a default type, so the feed gets a mix every week:
      - **No links anywhere in `linkedin.txt`.** Links in the post body cut reach. If the owner wants the article link, it goes in a comment after the first hour (mention this in the notification).
      - Separate each part with a blank line. Run the humanizer over it.
    - The hook (on all LinkedIn files) must differ from that day's Instagram slide 1 and caption hook, and from the immediately preceding post's LinkedIn hook, while still following the type's hook formula. See `ROUTINE.md` for the scheduled routine's specific hook-rotation and voice rules; follow those when running under that routine, and use your own judgment otherwise. Where they conflict with this file's type formulas, the type formulas win.
+
+8b. **Write the X assets**
+
+These are manual-post assets for the owner. There's no X API integration here; nothing is published.
+
+Why X is different. On X, multi-page carousels don't exist and reposted LinkedIn content performs poorly. What gets bookmarked on X is long text that states a principle or lesson, a single explainer diagram with a plain title, and first-hand "I tried it" notes. News on X is mostly covered by quoting the source's own post and adding a short take. Replies drive same-day reach; bookmarks drive lasting reach.
+
+`x.txt` is the X version of the day's post, written for its type (A, B or C from `spec.json`).
+
+Format of the file:
+
+```
+TYPE: A|B|C
+QUOTE TARGET: <who to quote, e.g. "the article author's or company's own post announcing this, if one exists; otherwise post standalone">
+IMAGES: <slide filenames to attach, in order, or "none">
+
+<post part 1>
+---
+<post part 2>
+---
+<post part 3, etc.>
+
+REPLY:
+<the reply the owner posts under it>
+```
+
+- **Parts.** Write the post as 1 to 6 parts separated by a line containing only `---`. Every part must be 280 characters or fewer, and part 1 must stand alone as a complete post. The owner can paste the parts as one long post or as a thread.
+- **First line.** The first line of part 1 is the hook and follows the type's hook formula from "The three post types". On X it should be blunter and shorter than on LinkedIn.
+- **Type A (Rediscovered), 3 to 6 parts.** Open with the parallel, for example `The last time [X] happened was [era/system]. We're about to relearn the same lesson.` or `[New thing] just rediscovered [old problem].` Then what happened (from the article), the old problem and why it happens, the fix or rule in one bold-free plain sentence, and one counterpoint from the thread. `IMAGES:` slide 1.
+- **Type B (Explainer), 1 to 3 parts.** Part 1 is just the title (`How X works`, `X vs Y`) plus one line on why it matters now. The images do the explaining. `IMAGES:` up to 4 slides: the cheat-sheet slide first, then the 1 to 3 slides that best show how it works. Optional part 2: the numbered points in `N Term: one-line explanation` form, kept under 280 characters.
+- **Type C (Hot take), 1 to 2 parts.** Open with `Hot take:` or the stance itself in one sentence. Then where the claim is right, where it breaks, and a closing question that asks people to pick a side. Keep the whole thing short; this type is built for replies. `IMAGES:` none, or slide 1 if there's no quote target.
+- **Voice.** First person, plain, direct. No hashtags, no emojis, no "🧵", no "A thread:". No em dashes. The same rule as everywhere else applies: never invent the owner's personal experience. Any first-person experience claim or stance goes on `REVIEW.md`.
+- **Sources.** Name the article's author and site in the body when you cite something ("per <author> at <site>"). Facts, numbers and quotes come only from the article or the HN thread.
+- **`REPLY:`** One line with the article link, plus a short pointer like "Full breakdown in the carousel on Instagram/LinkedIn (@arxdsilva)." Links go in the reply, never in the post parts.
+- **Quote target.** Describe who to quote (the author, the company, or the project's official account). Don't guess a handle or URL. The owner finds and quotes the post if it exists.
+- Run the humanizer over every part and the reply.
+
+`x_extra.txt` covers the volume gap: X rewards posting much more often than three times a week.
+
+- Write 2 extra standalone posts about 2 other stories from the same `hn_brief.py top` list (not the main story). Pick stories a working developer would have an opinion on.
+- For each, run `python3 hn_brief.py story <id>` and base the post only on the article and thread.
+- Each post is one part, 280 characters or fewer, written as type A or C (the best fit), with a `REPLY:` line holding the article link. Separate the two posts with a line containing only `===`, and put `TYPE:` and `QUOTE TARGET:` lines above each.
+- Run the humanizer over both.
+- Record both stories in `x_sources.md` (HN thread link, points, comments, rank, article link), not in `sources.md`, so they stay eligible as future main posts.
+
+Before committing, check every part in both files is 280 characters or fewer (count with `python3 -c "import sys;[print(len(p.strip()),p.strip()[:40]) for p in open(sys.argv[1]).read().split('---')]" posts/<folder>/x.txt` and fix any that are over).
 9. **Commit and push.** Follow "Publish to GitHub" below with the commit message `post: <folder>`.
 10. **Send to Metricool for review.** Follow "Send to Metricool" below, scheduled for 11:00 AM on the posting date. If that time has already passed, use the next Monday, Wednesday or Friday at 11:00 AM.
-11. **Notify the owner.** Send a push notification saying the post is waiting for approval in Metricool, with the posting date and time, the post type and its one-line angle, the story title, the Metricool planner link, the number of open items in `REVIEW.md` (calling out the stance for type C), the raw GitHub URLs to `linkedin.pdf` (types A and B) and `linkedin.png`, the full text of `linkedin.txt` inline so it can be copied straight into a manual LinkedIn post, and a reminder to reply to comments in the first hour and to add the article link as a comment only after that hour. If push notifications aren't available, send an email to arxdsilva@gmail.com with the same content instead.
+11. **Notify the owner.** Send a push notification saying the post is waiting for approval in Metricool, with the posting date and time, the post type and its one-line angle, the story title, the Metricool planner link, the number of open items in `REVIEW.md` (calling out the stance for type C), the raw GitHub URLs to `linkedin.pdf` (types A and B) and `linkedin.png`, the full text of `linkedin.txt` inline so it can be copied straight into a manual LinkedIn post, and a reminder to reply to comments in the first hour and to add the article link as a comment only after that hour. Also include the full text of `x.txt` and `x_extra.txt`, the raw GitHub URLs of the images listed under `IMAGES:` in `x.txt`, and the `QUOTE TARGET:` line, so the owner can post to X by hand. If push notifications aren't available, send an email to arxdsilva@gmail.com with the same content instead.
 12. **Finish** with a short summary: which story and type, why it was chosen over the others, what needs review, and the Metricool planner link.
 
 ## Publish to GitHub
 
 1. Delete any `slide_NN.png` left over from an earlier render with more slides.
-2. Stage only the post folder (`git add posts/<folder>/`), including `REVIEW.md`, `linkedin.png`, `linkedin.txt` and (types A and B) `linkedin.pdf`, which stay in the repo as a record. `metricool.json` is gitignored and stays local. Commit with the given message and run `git push origin main`. Never commit anything outside that folder, and never amend, force-push, or skip hooks. If the push fails, report the error and stop.
-3. Take the commit SHA (`git rev-parse HEAD`) and build the slide URLs in order: `https://raw.githubusercontent.com/arxdsilva/hn-carousels/<sha>/posts/<folder>/slide_NN.png`, plus the LinkedIn file URLs the same way: `.../posts/<folder>/linkedin.png` and `.../posts/<folder>/linkedin.pdf`. Use the SHA, not `main`, so a rewrite never serves Metricool (or the owner) a cached older image.
+2. Stage only the post folder (`git add posts/<folder>/`), including `REVIEW.md`, `linkedin.png`, `linkedin.txt`, `x.txt`, `x_extra.txt`, `x_sources.md` and (types A and B) `linkedin.pdf`, which stay in the repo as a record. `metricool.json` is gitignored and stays local. Commit with the given message and run `git push origin main`. Never commit anything outside that folder, and never amend, force-push, or skip hooks. If the push fails, report the error and stop.
+3. Take the commit SHA (`git rev-parse HEAD`) and build the slide URLs in order: `https://raw.githubusercontent.com/arxdsilva/hn-carousels/<sha>/posts/<folder>/slide_NN.png`, plus the LinkedIn file URLs the same way: `.../posts/<folder>/linkedin.png` and `.../posts/<folder>/linkedin.pdf`. Use the SHA, not `main`, so a rewrite never serves Metricool (or the owner) a cached older image. Also build the raw URLs for the slides listed under `IMAGES:` in `x.txt` the same way; they're already part of the slide list above, so there's nothing new to upload.
 4. Check that each URL, including the LinkedIn files, returns HTTP 200 (`curl -sI`). A fresh push can take a minute to show up, so retry a few times before reporting a URL as unreachable and stopping.
 
 ## Send to Metricool
@@ -157,7 +203,7 @@ Run this only when the owner asks, for example "rewrite posts/<folder>: <what to
 
 1. **Edit.** Apply the owner's feedback to `spec.json` and `caption.txt`, following the same slide rules and the post's type as in the scheduled run. Run the humanizer over any text you changed. Update `REVIEW.md` for any new claim, number or stance.
 2. **Re-render** with `carousel.py` and check the PNGs as in the scheduled run.
-3. **Update the LinkedIn assets** if the rewrite changes the type, topic, claim, or hook, or changes any slide (types A and B: rebuild `linkedin.pdf` from the new slides): edit `linkedin.txt` and re-render `linkedin.png` with `linkedin_card.py`, following the same rules as step 8 of the scheduled run. If the rewrite only fixes a typo or small wording in the caption and the hook still holds, leave them as they are.
+3. **Update the LinkedIn assets** if the rewrite changes the type, topic, claim, or hook, or changes any slide (types A and B: rebuild `linkedin.pdf` from the new slides): edit `linkedin.txt` and re-render `linkedin.png` with `linkedin_card.py`, following the same rules as step 8 of the scheduled run. If the rewrite only fixes a typo or small wording in the caption and the hook still holds, leave them as they are. If the rewrite changes the type, topic, claim or hook, also rewrite `x.txt` following step 8b.
 4. **Commit and push.** Follow "Publish to GitHub" with the commit message `post: <folder> (rewrite)`.
 5. **Update Metricool.** Read `posts/<folder>/metricool.json` (or find the post with `getScheduledPosts` by date if the file is missing). Update the post with `updateScheduledPost` using the new slide URLs and caption, keeping every other field as it was. If it was in review, send it back with `sendScheduledPostForReview` using the same reviewer and approval system. Save the new `id` to `metricool.json`.
 6. **Notify** the owner as in the scheduled run, saying the rewrite is waiting for approval. If the LinkedIn assets changed, include the refreshed `linkedin.pdf` / `linkedin.png` URLs and `linkedin.txt` text so the owner can re-post manually.
@@ -172,3 +218,6 @@ Run this only when the owner asks, for example "rewrite posts/<folder>: <what to
 - Never write a roundup ("5 things on HN this week") or a post whose hook is just the news headline. One story, one lesson or stance.
 - Never put a link in `linkedin.txt`.
 - Never put an emoji in `linkedin.txt`.
+- Never commit or push a post folder without its `x.txt`, unless the owner explicitly says to skip X for that post.
+- Never cross-post the Instagram/LinkedIn carousel to X as-is. X gets its own text written for the platform.
+- Never add stories used in `x_extra.txt` to `sources.md`. They go in `x_sources.md` so they stay available as future main posts.
