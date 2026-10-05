@@ -1,0 +1,14 @@
+TYPE: B
+QUOTE TARGET: Niko1221's own announcement post about Strata, if one exists on X; otherwise post standalone.
+IMAGES: slide_07.png, slide_03.png, slide_04.png, slide_05.png
+
+How Strata runs a 125-billion-parameter model on one gaming GPU.
+
+It only loads the slice of the model each token actually needs.
+---
+1 MoE: only a few of 24,576 experts fire per token.
+2 Offloading: hot experts stay on the GPU, cold ones wait in RAM or on disk.
+3 Quantization: shrinks each expert to 2 or 3-bit, trading accuracy for speed.
+
+REPLY:
+Repo: https://github.com/Niko1221/Strata Full breakdown in the carousel on Instagram/LinkedIn (@arxdsilva).

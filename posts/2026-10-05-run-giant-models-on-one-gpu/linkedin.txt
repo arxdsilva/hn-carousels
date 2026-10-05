@@ -1,0 +1,15 @@
+A 125-billion-parameter model on one gaming GPU is not free.
+
+#9 on HackerNews this week: developers were testing a project that runs a 125-billion-parameter model on a single RTX 4090.
+
+My rule: tokens per second is a hardware benchmark, not a quality benchmark. Test the model on your own task before you trust someone else's demo.
+
+Would you ship a quantized local model, or stick with a hosted one you trust?
+
+Repost if this helps someone on your team.
+
+Follow Arthur Silva for practical takes on what engineers are talking about.
+
+Source: Strata by Niko1221 (github.com).
+
+#MachineLearning #LLM #softwareengineering

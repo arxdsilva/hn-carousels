@@ -1,0 +1,7 @@
+A 125-billion-parameter model, running on one gaming GPU.
+
+Which trade-off would you make: raw speed, or answer quality?
+
+Source: Strata by Niko1221 (github.com).
+
+#MachineLearning #LLM #opensource #softwareengineering #GPU

@@ -1,0 +1,15 @@
+TYPE: A
+QUOTE TARGET: post standalone (no single official account for this breach).
+
+Denmark's CPR breach just rediscovered the oldest identity bug: an ID number was never a secret. 8.8 million records leaked through one company's own legitimate access to the CPR system. A government ID is a username, not a password, so stop verifying anyone with one.
+
+REPLY:
+Official notice: https://ufm.dk/aktuelt/pressemeddelelser/2026/oktober/omfattende-uautoriseret-adgang-til-borgeres-cpr-oplysninger/
+===
+TYPE: C
+QUOTE TARGET: Cloudflare's own Web Search API announcement, if posted on X; otherwise post standalone.
+
+Hot take: selling bot-blocking and web-search access at the same time is just the business model now. One developer in the discussion put it as "create bot detection, then sell crawlers." Control the gate, and you get to charge both sides of it.
+
+REPLY:
+Announcement: https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/

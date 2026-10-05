@@ -1,0 +1,57 @@
+{
+  "type": "B",
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "**How Strata runs a 125-billion-parameter model on one gaming GPU.**\n\nDevelopers are split on whether this is a real trick or just hype.\n\nEither way, the technique behind it is worth understanding.",
+      "panel": {"big": "125B", "small": "params squeezed onto a single 24GB GPU"}
+    },
+    {
+      "text": "**Strata is a runtime built by developer Niko1221 to run huge models on small GPUs.**\n\nIt only loads the slice of the model a given token actually needs."
+    },
+    {
+      "text": "Qwen3.8-Flash-Next is a mixture-of-experts model with 24,576 tiny expert networks.\n\nEach token only activates a handful of those experts.",
+      "bullets": [
+        "24,576 experts make up the full model.",
+        "Only a few experts fire per token.",
+        "Most of the model sits idle for any given word."
+      ]
+    },
+    {
+      "text": "Strata keeps the busiest experts sitting on the GPU itself.\n\nEverything else waits in system RAM, or further out on disk.",
+      "bullets": [
+        "Hot experts live in the 24GB of VRAM.",
+        "Cold experts live in RAM, then SSD.",
+        "A lookup table decides where to fetch each one from."
+      ]
+    },
+    {
+      "text": "Two more tricks buy extra speed, at a small cost.\n\nBoth trade a bit of accuracy for a lot more throughput.",
+      "bullets": [
+        "Quantization shrinks each expert to 2 or 3-bit.",
+        "A draft model guesses several tokens at once.",
+        "The big model only checks the draft."
+      ]
+    },
+    {
+      "text": "**Speed and quality are not the same win here.**\n\nOne developer's vision test tripled the error rate against llama.cpp.\n\nAnother found the lowest quantization setting hurt real coding accuracy."
+    },
+    {
+      "text": "The short version, if you want to try this yourself.",
+      "bullets": [
+        "Only a few experts fire per token.",
+        "Hot experts on GPU, cold in RAM or disk.",
+        "Low-bit quantization buys speed, costs accuracy.",
+        "Test quality on your own task first."
+      ]
+    },
+    {
+      "text": "Would you run a smaller model fully in VRAM, or a bigger one split across GPU and RAM?\n\n**Save this if you're experimenting with local models.**"
+    }
+  ]
+}
