@@ -1,0 +1,49 @@
+{
+  "type": "A",
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "**AI agents just rediscovered telegraphese.**\n\nOne instruction gets models writing in 1866-style telegraph shorthand.\n\nThe trick cuts their output tokens by up to 49%."
+    },
+    {
+      "text": "Writer Travis Smith ran a benchmark he calls the Telegraph Test.\n\nHe told several models to answer in terse, cablese-style records.\n\nOther models, never shown an example, read those records back at full accuracy."
+    },
+    {
+      "text": "This is an old problem: compressing language when every word is metered.\n\nSMS and early Twitter forced the same shorthand culture, decades later.",
+      "panel": {
+        "big": "$10 a word",
+        "small": "the transatlantic telegraph rate, 1866"
+      }
+    },
+    {
+      "text": "The compressed style isn't something anyone had to invent.\n\nIt's already baked into training data, from telegrams to text messages.\n\nThat's why models write fluent cablese cold, with zero examples."
+    },
+    {
+      "text": "The savings only show up if you compress in the right spot.",
+      "bullets": [
+        "Compress once content is settled.",
+        "Use it in scratchpads and handoffs.",
+        "Expand it back for human readers.",
+        "Skip models forced to reason."
+      ]
+    },
+    {
+      "text": "Not everyone in the discussion was convinced this is new.",
+      "panel": {
+        "big": "\"Just AI slop dressed up as caveman-speak.\"",
+        "small": "one engineer, unconvinced"
+      }
+    },
+    {
+      "text": "**My rule: compress for the model, not the person.**\n\nOutput tokens cost three to five times more than input tokens.\n\nThat tax disappears the moment the reader is another model."
+    },
+    {
+      "text": "Where have you had to write for an audience that wasn't really reading?\n\n**Tell me in the comments,** and save this before your next agent run."
+    }
+  ]
+}

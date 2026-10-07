@@ -1,0 +1,7 @@
+Your agents are paying telegraph-era prices for every word they write.
+
+Where else have you had to write for a reader that was never going to savor the prose?
+
+Source: Write Like It's 1866: LLMs Relearn Telegraphese by Travis Smith (fiveminutesforward.com).
+
+#AIagents #LLM #promptengineering #softwareengineering #tokencost

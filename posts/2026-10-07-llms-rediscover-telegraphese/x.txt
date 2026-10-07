@@ -1,0 +1,18 @@
+TYPE: A
+QUOTE TARGET: Travis Smith's own post announcing the Telegraph Test, if he posted one; otherwise post standalone.
+IMAGES: slide_01.png
+
+AI agents just rediscovered telegraphese. One instruction gets models writing in 1866-style shorthand, cutting their output tokens by up to 49%, per a new benchmark.
+---
+Telegraph companies charged $10 a word in 1866, about $2,600 today, per the article. That price is what invented telegraphese: terse, no filler, every fact kept.
+---
+Writer Travis Smith built the Telegraph Test. He told several models to answer in that terse "cablese" style, then had other models, never shown an example, read the records back. They matched or beat plain-English accuracy.
+---
+This is the oldest problem in metered communication: compress or pay per word. SMS and early Twitter forced the same shorthand decades later. The register is already in every model's training data, so they produce it zero-shot.
+---
+The fix: compress only after content is settled, in scratchpads, memory stores and agent handoffs, never while a model is still composing. Expand back to plain text only when a human reads it.
+---
+Not everyone in the thread bought it. One commenter called it just another AI-slop version of the old "caveman" dialect.
+
+REPLY:
+Article: https://fiveminutesforward.com/post/2026-10-04-telegraph-test/ Full breakdown in the carousel on Instagram/LinkedIn (@arxdsilva).

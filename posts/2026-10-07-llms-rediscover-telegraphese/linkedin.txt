@@ -1,0 +1,18 @@
+How much of what your agents write does anyone actually read?
+
+
+#5 on HackerNews this week: developers were testing whether models could write in telegraph-era shorthand without losing any meaning.
+
+
+My rule: compress for the model, spell it out for the person. Output tokens cost three to five times more than input tokens, and that's where the real savings sit.
+
+
+Where have you hit the cost of writing for a reader who was never really reading?
+
+Repost if this helps someone on your team.
+
+Follow Arthur Silva for practical takes on what engineers are talking about.
+
+Source: Write Like It's 1866: LLMs Relearn Telegraphese by Travis Smith (fiveminutesforward.com).
+
+#AIagents #LLM #softwareengineering

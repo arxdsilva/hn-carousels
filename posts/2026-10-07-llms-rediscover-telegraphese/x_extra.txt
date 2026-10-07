@@ -1,0 +1,15 @@
+TYPE: C
+QUOTE TARGET: the Chrome team's own announcement post about shipping JPEG XL, if one exists; otherwise post standalone.
+
+Hot take: Google didn't ship JPEG XL in Chrome because developers finally asked nicely. Per one HN commenter, Adobe folding JPEG XL into the PDF spec meant every browser needed the decoder anyway. Developer demand got the credit; the PDF spec forced the hand.
+
+REPLY:
+Article: https://developer.chrome.com/blog/jpeg-xl-in-chrome
+===
+TYPE: A
+QUOTE TARGET: post standalone, no official announcement to quote.
+
+Rust's derive macros just rediscovered the old inlining trade-off. #[derive(Debug)] silently adds #[inline], and one team found removing it shrank their binary by 160KB, per the article. Blind inlining heuristics have burned C and C++ programs for decades too.
+
+REPLY:
+Article: https://yossarian.net/til/post/rust-s-derive-often-implies-inline/
