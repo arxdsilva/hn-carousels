@@ -1,0 +1,15 @@
+TYPE: A
+QUOTE TARGET: post standalone, no official announcement post to quote.
+
+Microsoft's new AI agent sandbox just rediscovered the old process-isolation problem. Per commenters, it's a clean SDK over bubblewrap and seatbelt, useful mainly because hand-rolling that config is hard. Fine-grained network rules are still missing on macOS.
+
+REPLY:
+Article: https://github.com/microsoft/mxc
+===
+TYPE: C
+QUOTE TARGET: post standalone, no official announcement to quote.
+
+Hot take: the cute part of "AI agents draw arrows on your screen" isn't the real story. One commenter asked the question that matters: if an agent can draw over your screen, what stops it from drawing a fake decline button over the real one?
+
+REPLY:
+Article: https://github.com/franzenzenhofer/big-arrow-on-the-screen

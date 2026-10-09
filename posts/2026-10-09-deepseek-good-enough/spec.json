@@ -1,0 +1,35 @@
+{
+  "type": "C",
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "**One developer says cheap open models are now frontier-grade. I think that's half right.**\n\nDeepSeek 4.1 Flash is the latest test case.\n\nIt kicked off one of the biggest debates among developers this week.",
+      "panel": {"big": "784 comments", "small": "on one blog post about a cheap model"}
+    },
+    {
+      "text": "The claim: DeepSeek 4.1 Flash behaves like a frontier model, at a fraction of the cost.\n\nThe article's author says frontier labs should be \"freaking out\" because China is closing the gap.\n\nHis daily sessions cost under $2, versus $20 to $100+ on frontier subscriptions."
+    },
+    {
+      "text": "He's right that \"good enough\" changes how people work.\n\nDevelopers in the discussion confirmed running all-day agent sessions on Flash for a dollar or two.\n\nAt that price, you stop thinking twice before handing a task to the model."
+    },
+    {
+      "text": "Where it breaks: most people aren't comparing real costs.\n\nOne developer in the discussion tried the cheapest provider on the open market and burned $50 in days, a quarter of a full frontier subscription's usage.\n\n**The savings are mostly subsidized subscriptions, not a true price gap.**",
+      "bullets": ["Subsidized plans hide real API pricing.", "Quality claims are subjective and task-specific.", "\"A month or two behind\" is doing a lot of work."]
+    },
+    {
+      "text": "The strongest pushback came from another developer in the discussion, directly disputing the article's timeline.",
+      "panel": {"big": "\"It's plausible that open models are 6-12 months behind... leading labs have nothing to fear.\"", "small": "one developer in the discussion"}
+    },
+    {
+      "text": "What to do Monday: measure your own tasks instead of going on vibes.\n\nRun your real workload through a cheap and a frontier model, both at list price.\n\nThen use the cheap one for bulk work and keep a frontier model for review and planning."
+    },
+    {
+      "text": "Are \"good enough\" models already running your bulk work, or are you still all-in on frontier?\n\n**Tell me where you land,** and save this before you pick your next default model."
+    }
+  ]
+}

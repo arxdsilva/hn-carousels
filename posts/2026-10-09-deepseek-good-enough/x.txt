@@ -1,0 +1,10 @@
+TYPE: C
+QUOTE TARGET: post standalone, no official announcement to quote (this is a third-party blog post on model economics, not a product launch).
+IMAGES: none
+
+Hot take: claims that DeepSeek 4.1 Flash is now frontier-grade are half right. One developer's daily sessions run under $2, and that's real: cheap models are changing how people work.
+---
+But most of that gap is a subsidized subscription, not real pricing. One developer who paid full price burned $50 in a few days. Which side are you on: good enough, or not there yet?
+
+REPLY:
+Article: https://www.dgt.is/blog/2026-10-07-deepseek-freek-out/ Full breakdown in the carousel on Instagram/LinkedIn (@arxdsilva).

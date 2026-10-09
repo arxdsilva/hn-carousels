@@ -1,0 +1,15 @@
+The "free" model cost $50 in days.
+
+#6 on HackerNews this week: developers were arguing that cheap open models like DeepSeek 4.1 Flash are now frontier-grade.
+
+My take: half right. The model is good enough for bulk work, but most of the savings people report come from a subsidized subscription, not a real price gap against frontier models.
+
+Are you running your bulk work on a cheap model yet, or still defaulting to frontier for everything?
+
+Repost if this helps someone on your team.
+
+Follow Arthur Silva for practical takes on what engineers are talking about.
+
+Source: Why Isn't The Industry Freaking Out About DeepSeek 4.1 Flash? (dgt.is).
+
+#AI #LLM #softwareengineering
