@@ -1,0 +1,17 @@
+TYPE: C
+QUOTE TARGET: post standalone, no single official account for this one, it's a GitHub Enhancement Proposal thread
+
+QGIS just banned AI-assisted contributions outright. Half right. Reviewing slop PRs burns more maintainer time than writing the fix does, so the instinct is fair. But banning the tool instead of the lazy process punishes people who do read and test their diffs.
+
+REPLY:
+https://github.com/qgis/QGIS-Enhancement-Proposals/pull/387
+
+===
+
+TYPE: A
+QUOTE TARGET: Lukas Lalinsky's own post announcing zt, if he posted one; otherwise post standalone
+
+Zig's new HTML templating library just rediscovered Go's Templ: compile typed templates to real code, so a typo in a field name is a build error, not a 2am prod bug. Same fix PHP, Smarty and Soy all reached for, just with a faster compiler this time.
+
+REPLY:
+https://lalinsky.com/2026/10/11/type-safe-html-templating-in-zig.html

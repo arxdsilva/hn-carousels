@@ -1,0 +1,57 @@
+{
+  "type": "B",
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "Cookies are going away.\n\nTracking isn't going anywhere.\n\n**Your hardware alone is enough to identify you.**",
+      "panel": {
+        "big": "How browser fingerprinting works"
+      }
+    },
+    {
+      "text": "A fingerprint is a hash built from small device signals.\n\nYour GPU, CPU, fonts and screen size each leak details.\n\n**Enough signals combined become almost unique to you.**"
+    },
+    {
+      "text": "Fingerprints come from two places.\n\nYour network, and your hardware.",
+      "bullets": [
+        "Network: IP and headers. Easy to change.",
+        "Hardware: GPU, CPU, memory. Surprisingly stable.",
+        "Fonts, screen size and audio add more detail."
+      ]
+    },
+    {
+      "text": "Each new signal narrows down who you could be.\n\nThat idea has a name: information entropy.\n\n**A fingerprint just needs to be rare, not unique.**",
+      "panel": {
+        "big": "60%",
+        "small": "of Americans: ZIP, birth date, sex"
+      }
+    },
+    {
+      "text": "Cookies and fingerprinting both track you.\n\nThey behave nothing alike.",
+      "bullets": [
+        "Cookies: a file on your device. You can delete it.",
+        "Fingerprints: built from your hardware. Nothing to delete.",
+        "Cookies need consent. Fingerprinting runs silently."
+      ]
+    },
+    {
+      "text": "Privacy extensions feel like the obvious fix.\n\nDevelopers in the discussion flagged a catch.\n\n**Running one makes you rarer, which makes you easier to spot.**"
+    },
+    {
+      "text": "Save this version, it's short enough to screenshot.\n\nNo single trick beats protection built into the browser itself.",
+      "bullets": [
+        "Test yours free at coveryourtracks.eff.org",
+        "Chrome and Edge stop at isolation, not fingerprinting",
+        "Brave, Tor and Mullvad add real protection by design"
+      ]
+    },
+    {
+      "text": "Which browser do you actually trust not to fingerprint you?\n\n**Save this before you run your own test and get surprised.**"
+    }
+  ]
+}

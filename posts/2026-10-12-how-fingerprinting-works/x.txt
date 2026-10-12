@@ -1,0 +1,14 @@
+TYPE: B
+QUOTE TARGET: the article author's own post announcing it, if royfish posted it to X; otherwise post standalone, it's an independent blog post with no company account
+IMAGES: slide_07.png, slide_03.png, slide_04.png, slide_05.png
+
+How browser fingerprinting works.
+
+It doesn't need a cookie, or your consent, to track you.
+---
+1 Network signals: IP, headers. Easy to change.
+2 Hardware signals: GPU, CPU, memory. Stable.
+3 Entropy: each signal narrows who you could be.
+
+REPLY:
+Full breakdown: https://royfish.dev/fingerprints-are-the-new-cookies (per royfish). More in the carousel on Instagram/LinkedIn (@arxdsilva).

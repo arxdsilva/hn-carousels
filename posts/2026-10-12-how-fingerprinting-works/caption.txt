@@ -1,0 +1,7 @@
+Cookies are on the way out. Tracking isn't.
+
+Which browser do you actually trust not to fingerprint you?
+
+Source: Fingerprints are the new cookies by royfish (royfish.dev).
+
+#webdev #privacy #browsers #softwareengineering #devtools
