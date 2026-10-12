@@ -20,15 +20,9 @@ A new event, tool or incident from HN, connected to an old, well-known engineeri
 
 - **Fits:** postmortems, outages, "how we built X" write-ups, migrations, a new tool that hits a classic limit (consistency, caching, retries, queues, N+1, clock skew, backpressure, cache invalidation, idempotency).
 - **Hook formula (slide 1, paragraph 1):** `**[New thing] just rediscovered [old problem].**` or `**[Company] hit the oldest bug in [area].**`
-- **Slide structure:**
-  1. Hook + one-line what happened + HN signal.
-  2. What happened, in plain terms (from the article only).
-  3. Name the old problem and say where it has shown up before.
-  4. Why it happens (the mechanism, one idea per slide; 1–2 slides).
-  5. The known fixes or patterns (bullets work well here).
-  6. Counterpoint from the thread.
-  7. The rule to take away, in bold.
-  8. Closing question + save.
+- **Slide structure** (2 slides):
+  1. Hook + what happened, in plain terms (from the article only), paired with an image when one exists.
+  2. The old problem this rediscovers, the fix or pattern (bullets), a counterpoint from the thread if there's a real one, and the rule to take away in bold, then the closing question + save.
 
 ### Type B: Explainer ("How X works" / "X vs Y")
 
@@ -36,14 +30,9 @@ When the HN story is about a technology, explain the technology itself. The stor
 
 - **Fits:** a new release or protocol, a deep-dive article, a technology the thread is confused or arguing about, a "why is X fast/slow" post.
 - **Hook formula:** a plain title, no clever wording. One of: `**How [X] works**`, `**[X] vs [Y]**`, `**[N] things to know before you use [X]**`, `**If you want to get good at [X], learn these [N] ideas**`. Paragraph 2 says in one sentence why it matters right now (the HN story).
-- **Slide structure:**
-  1. Title hook + why now + HN signal.
-  2. The one-sentence definition.
-  3. How it works, step by step (2–4 slides; bullets for steps, image or panel for the key moment).
-  4. For "X vs Y": a side-by-side comparison slide using bullets, then "when to pick which".
-  5. The common mistake or misconception (counterpoint from the thread goes here).
-  6. Cheat-sheet summary slide: 3–4 bullets someone would screenshot.
-  7. Closing question + save.
+- **Slide structure** (2 slides):
+  1. Title hook + the one-sentence why-now, paired with an image when one exists (a panel if not).
+  2. The cheat-sheet: 3–4 bullets that explain how it works, compare X vs Y, or name the common mistake, whichever matters most for this story, then the closing question + save.
 
 ### Type C: Hot take (an opinion on what HN is arguing about)
 
@@ -51,14 +40,9 @@ When the thread is a debate, take a clear side. Reference: Gergely Orosz on DHH 
 
 - **Fits:** threads where comments are split, career and practice debates, "AI will replace X" claims, controversial engineering opinions, big-name statements.
 - **Hook formula:** `**[Person/company] says [claim]. [I think they're right / half right / wrong].**` or `**Unpopular opinion: [claim].**` The stance must be one sentence.
-- **Slide structure** (shorter: 6–8 slides):
-  1. Hook with the stance + HN signal.
-  2. The claim, fairly stated and attributed.
-  3. Where it's right.
-  4. Where it breaks (the take; 1–2 slides).
-  5. The strongest opposing comment from the thread, quoted and attributed.
-  6. What to actually do on Monday.
-  7. A question that asks people to pick a side + save.
+- **Slide structure** (2 slides):
+  1. Hook with the stance, the claim fairly stated and attributed, paired with an image when one exists.
+  2. Where it's right, where it breaks (the take), the strongest opposing comment from the thread (bullets or a short attributed line), and a question that asks people to pick a side + save.
 - **The stance is a draft.** Always add it to `REVIEW.md` as a checkbox ("Stance: I think X. Do you agree?") so the owner confirms or flips it before it goes out.
 
 ## Picking the type for the day
@@ -89,14 +73,14 @@ Each posting day has a default type, so the feed gets a mix every week:
 2. **Pick the type and the story together.** Start from the day's default type (see "Picking the type for the day"). Among the top 10, choose the story that best fits that type and that a working developer can act on or form an opinion about: engineering practice, tools, careers, security incidents, AI in development, architecture, performance. Skip politics, non-tech stories, and plain product launches unless there's a clear practical angle. Break ties by comment count. Before writing, state the angle in one line: for A, "[new thing] rediscovered [old problem]"; for B, the exact title; for C, the one-sentence stance. If you can't write that line, the story doesn't fit the type; try another story or type.
 3. **Research it.** Run `python3 hn_brief.py story <id>` for the article text and the top comments with their first reply. Note the strongest counterpoints from commenters. For type C, also note the strongest comment on each side. Fetch the article URL directly only if the script prints `ARTICLE: could not fetch`.
 4. **Write the carousel** as `posts/YYYY-MM-DD-short-slug/spec.json` (YYYY-MM-DD is the posting date), using `posts/2026-09-23-dont-read-what-you-didnt-write/spec.json` for the `profile` block (keep it exactly as in that file), the slide structure for the chosen type above, and the examples below for the slide text format. Add the top-level `"type"` field.
-   - 6 to 10 slides (type C: 6 to 8). Slide 1 is the hook, written with the type's hook formula. **It's the highest-leverage slide** — most people decide whether to keep swiping right there — so make it hit hardest: the bold title, claim or stance as paragraph 1, every paragraph a single short sentence, paired with an image. The HN signal (rank, comments) goes in slide 1 as a short supporting line, never as the hook itself. The hook names the lesson or the stance, not the news event.
-   - The last slide asks one specific question and asks people to save the post. Match the question to the type: A, "Where have you hit [old problem]?"; B, "What would you add?" or "Which do you use, X or Y?"; C, a question that asks them to pick a side.
-   - One idea per slide. Each slide's `text` is **2 or 3 short, direct paragraphs**, separated by a blank line (`\n\n` in the JSON string). Keep every paragraph to **one short sentence, roughly 8 to 20 words**. No compound sentences, no padding, no throat-clearing — if a paragraph needs "and" or a comma to hold two ideas, split it or cut one.
-   - Add an `"image"` to most slides (a photo from the article, or clearly related to the topic — see "Getting an image" below), whether the slide has 2 or 3 paragraphs; this is the default, reference-matched format. Use a `"bullets"` list of 2 to 4 short, direct points instead of an image only on a slide where there's no good image, and on the type B steps, comparison and cheat-sheet slides and the type A fixes slide, where bullets are the point. Don't add both `image` and `bullets` to the same slide.
+   - **Exactly 2 images.** Slide 1 is the hook, written with the type's hook formula. **It's the highest-leverage slide** — most people decide whether to keep swiping right there — so make it hit hardest: the bold title, claim or stance as paragraph 1, every paragraph a single short sentence, paired with an image whenever one is available (see "Getting an image" below — reusing an image from the article is the priority, before falling back to a panel). The HN signal (rank, comments) goes in slide 1 as a short supporting line, never as the hook itself. The hook names the lesson or the stance, not the news event.
+   - Slide 2 carries everything else the type's slide structure calls for, compressed: the mechanism, the comparison, the counterpoint, the cheat-sheet, whatever matters most for this story. It closes with one specific question and asks people to save the post. Match the question to the type: A, "Where have you hit [old problem]?"; B, "What would you add?" or "Which do you use, X or Y?"; C, a question that asks them to pick a side. Because everything lands on one slide, use `bullets` to carry the density (2 to 4 short, direct points — test render and cut a bullet if it overflows, rather than shrinking text past readability) and keep the `text` paragraphs very short.
+   - Each slide's `text` is **1 to 3 short, direct paragraphs**, separated by a blank line (`\n\n` in the JSON string). Keep every paragraph to **one short sentence, roughly 8 to 20 words**. No compound sentences, no padding, no throat-clearing — if a paragraph needs "and" or a comma to hold two ideas, split it or cut one. Slide 2's `text` should usually be on the shorter end of that range, since the bullets do most of the work.
+   - Add an `"image"` to slide 1 whenever one is available; this is the default, reference-matched format for the hook slide. Use a `"bullets"` list of 2 to 4 short, direct points on slide 1 only when no image exists; slide 2 is almost always `bullets` (it's the cheat-sheet). Don't add both `image` and `bullets` to the same slide.
    - Bold (`**like this**`) can be used more than once per slide where it helps a reader scan, not capped at one. It can wrap a short phrase inside a paragraph, or the whole paragraph when the paragraph itself is the punchline (e.g. a bold hook as paragraph 1, or a bold one-line takeaway as the last paragraph).
-   - A `panel` (the dark number/quote callout) is still available for variety, at most 3 slides, if you want a big stat or line to stand on its own instead of an image; keep panel text very short (a title, a number with a caption, or a short line). It works well for the type C opposing-comment slide and the type A "old problem" name. A slide takes at most one of `panel`, `bullets`, `image`.
+   - A `panel` (the dark number/quote callout) is the fallback for slide 1 when no image exists, or an alternative to bullets on slide 2 if you want one big stat or line to stand on its own; keep panel text very short (a title, a number with a caption, or a short line). A slide takes at most one of `panel`, `bullets`, `image`.
    - Facts, numbers and quotes come only from the article or the thread, attributed to their author. Never invent a statistic, source, or detail. For type A, any claim about where the old problem showed up before must be general engineering knowledge or come from the thread; never invent a specific incident.
-   - The take is practical: what this means for the reader's work, what to do differently. Include at least one counterpoint from the thread when there's a real one.
+   - The take is practical: what this means for the reader's work, what to do differently. Include at least one counterpoint from the thread when there's a real one and there's room for it on slide 2.
    - First-person claims about the owner's own experience ("in my team we...") must not be invented. Keep the voice first person, but any sentence that states something about his personal experience goes on the REVIEW.md checklist, and so does the stance in a type C post.
 
    Slide examples:
@@ -112,7 +96,7 @@ Each posting day has a default type, so the feed gets a mix every week:
    {"text": "One short sentence.\n\nAnother short sentence.\n\nA closing short sentence."}
    ```
 
-   **Getting an image.** Run `python3 fetch_image.py <article_url> posts/<folder>/assets/<name>.jpg` to pull the article's `og:image`. It prints the saved path on success, or `NO_IMAGE_FOUND` / `FETCH_FAILED` on failure — use `bullets` on that slide instead when it fails. Image paths in `spec.json` are relative to the repo root, same as `profile.avatar`. An `image` slide renders full-bleed: no side margin, flush to the bottom edge of the slide, like a photo card under the text, not inset like the `panel`/`bullets` box.
+   **Getting an image.** Reusing an image from the article is the priority — generating or sourcing one from elsewhere is a last resort. Run `python3 fetch_image.py <article_url> posts/<folder>/assets/<name>.jpg`. It tries the article's `og:image`/`twitter:image` meta tags first, then falls back to the first substantial `<img>` in the page body (skipping icons, logos and avatars) when no meta image is set — so it reaches for a diagram, screenshot or illustration the article actually embeds, not just its social-preview image. It prints the saved path on success, or `NO_IMAGE_FOUND` / `FETCH_FAILED` on failure — use `bullets` or a `panel` on slide 1 instead when it fails. Open whatever it saves: an image that doesn't crop well into a 1080×460 full-bleed strip (a tall screenshot, a dense multi-panel comic) usually needs a manual crop first — pick the single most legible, self-contained region (one panel, one row, the key screenshot area) rather than the whole source, save that as the asset, and only then reference it from `spec.json`; letting the renderer center-crop a tall or busy image automatically tends to cut through the content that matters. Image paths in `spec.json` are relative to the repo root, same as `profile.avatar`. An `image` slide renders full-bleed: no side margin, flush to the bottom edge of the slide, like a photo card under the text, not inset like the `panel`/`bullets` box. If the reused image isn't the article author's own work (a comic, a chart from elsewhere, a screenshot of another site), credit its real source and license in `caption.txt`, `linkedin.txt` and `sources.md`, and flag it in `REVIEW.md` for a quick look before posting.
 5. **Humanize.** Run the humanizer skill (`.claude/skills/humanizer`) in embedded mode over all slide text and the caption. Apply the edits to `spec.json`. Keep the type's hook formula intact; the humanizer can change wording, not the shape of the title.
 6. **Render.** Run `python3 carousel.py posts/<folder>/spec.json posts/<folder>/`. Open the PNGs and check that no text overflows and each slide reads well. Fix and re-render if needed.
 7. **Write the other files** in the same folder:
@@ -160,7 +144,7 @@ REPLY:
 - **Parts.** Write the post as 1 to 6 parts separated by a line containing only `---`. Every part must be 280 characters or fewer, and part 1 must stand alone as a complete post. The owner can paste the parts as one long post or as a thread.
 - **First line.** The first line of part 1 is the hook and follows the type's hook formula from "The three post types". On X it should be blunter and shorter than on LinkedIn.
 - **Type A (Rediscovered), 3 to 6 parts.** Open with the parallel, for example `The last time [X] happened was [era/system]. We're about to relearn the same lesson.` or `[New thing] just rediscovered [old problem].` Then what happened (from the article), the old problem and why it happens, the fix or rule in one bold-free plain sentence, and one counterpoint from the thread. `IMAGES:` slide 1.
-- **Type B (Explainer), 1 to 3 parts.** Part 1 is just the title (`How X works`, `X vs Y`) plus one line on why it matters now. The images do the explaining. `IMAGES:` up to 4 slides: the cheat-sheet slide first, then the 1 to 3 slides that best show how it works. Optional part 2: the numbered points in `N Term: one-line explanation` form, kept under 280 characters.
+- **Type B (Explainer), 1 to 3 parts.** Part 1 is just the title (`How X works`, `X vs Y`) plus one line on why it matters now. The images do the explaining. `IMAGES:` both slides, the cheat-sheet (slide 2) first, then the hook image (slide 1). Optional part 2: the numbered points in `N Term: one-line explanation` form, kept under 280 characters.
 - **Type C (Hot take), 1 to 2 parts.** Open with `Hot take:` or the stance itself in one sentence. Then where the claim is right, where it breaks, and a closing question that asks people to pick a side. Keep the whole thing short; this type is built for replies. `IMAGES:` none, or slide 1 if there's no quote target.
 - **Voice.** First person, plain, direct. No hashtags, no emojis, no "🧵", no "A thread:". No em dashes. The same rule as everywhere else applies: never invent the owner's personal experience. Any first-person experience claim or stance goes on `REVIEW.md`.
 - **Sources.** Name the article's author and site in the body when you cite something ("per <author> at <site>"). Facts, numbers and quotes come only from the article or the HN thread.

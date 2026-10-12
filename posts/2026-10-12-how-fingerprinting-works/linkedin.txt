@@ -6,6 +6,6 @@ My take: deleting cookies never did much. Your hardware was always the stronger 
 
 Which browser do you actually trust with this stuff?
 
-Source: Fingerprints are the new cookies by royfish (royfish.dev).
+Source: Fingerprints are the new cookies by royfish (royfish.dev). Chart: xkcd.com/936 by Randall Munroe (CC BY-NC 2.5).
 
 #privacy #webdev #browsers #softwareengineering

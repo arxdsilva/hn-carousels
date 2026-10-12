@@ -1,6 +1,6 @@
 TYPE: B
 QUOTE TARGET: the article author's own post announcing it, if royfish posted it to X; otherwise post standalone, it's an independent blog post with no company account
-IMAGES: slide_07.png, slide_03.png, slide_04.png, slide_05.png
+IMAGES: slide_02.png, slide_01.png
 
 How browser fingerprinting works.
 
