@@ -8,19 +8,15 @@
   },
   "slides": [
     {
-      "text": "**TV4 just hit the oldest bug in production pipelines.**\n\nThe final cut of The Challenge is gone.\n\nThe premiere just slipped to 2027.",
-      "bullets": [
-        "Headlines say an AI agent deleted it",
-        "TV4 only confirms a 'technical failure'",
-        "Developers in the discussion are split on which it was"
-      ]
+      "text": "**Anthropic just rediscovered the monorepo problem Google solved a decade ago.**\n\nTheir coding agents pushed git past its limits.\n\nSo they built their own version control from scratch.",
+      "image": "posts/2026-10-14-untested-backup/assets/scion-merges-chart.jpg"
     },
     {
-      "text": "**The real bug is untested backups.**\n\nWhere have you been burned by one?\n\nSave this for your next backup review.",
+      "text": "Google and Meta already solved this with Piper and Sapling.\n\n**Where have you outgrown a tool built for human scale? Save this.**",
       "bullets": [
-        "Cheap storage without versioning invites this",
-        "Nobody restores until it's too late",
-        "One engineer in the discussion: 'AI or not, it's a human's fault'"
+        "Merges jumped from 2,500 to over 30,000 a day in four months",
+        "Git assumes offline clients. Anthropic's are always-online agents",
+        "Developers in the discussion warn: don't copy this unless you're Anthropic-scale"
       ]
     }
   ]

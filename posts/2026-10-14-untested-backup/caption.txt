@@ -1,7 +1,7 @@
-A deleted final cut just exposed how many teams never test their backups.
+Anthropic just rediscovered a problem Google solved a decade ago.
 
-When did you last actually restore from a backup, not just take one?
+Where have you outgrown a tool built for human scale?
 
-Source: TV4 postpones The Challenge by Sweden Herald (swedenherald.com).
+Source: Redesigning source control at Anthropic (anthropic.com/engineering).
 
-#softwareengineering #backups #incidentresponse #devops
+#softwareengineering #git #ai #devtools #architecture

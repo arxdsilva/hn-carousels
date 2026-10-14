@@ -1,6 +1,7 @@
-# Review — 2026-10-14-untested-backup
+# Review — 2026-10-14-untested-backup (redone: Anthropic Scion)
 
-- [ ] HN signal (35 points, 17 comments, rank #3) was accurate at research time; may have shifted slightly by posting time.
-- [ ] The article itself could not be fetched (403 Forbidden). All facts are sourced from HN thread comments quoting TV4's statement, not the article text directly — worth a quick read of the original Swedish coverage if you want to double-check.
-- [ ] The "AI agent deleted it" claim is disputed: TV4 only confirmed a "technical failure," not that an AI agent was involved. The post treats this as unconfirmed on purpose — flag if you'd rather drop the AI angle entirely or lean into it harder.
+- [ ] This story wasn't in today's HN top-10 snapshot (`hn_brief.py top`) because it was posted 2026-10-13 and had already rolled off the front page by the time this run happened. The owner specifically asked for it, so it was researched and sourced directly (HN item 50073633, 835 pts / 905 comments) rather than picked from the day's top list. Flagging in case that departure from the normal picking process matters to you.
+- [ ] The "Google solved this a decade ago" framing: the article itself names Google's Piper and Meta's Sapling as prior art for this pattern, but doesn't give a founding date for Piper. "A decade ago" is a reasonable approximation (Piper has been Google's internal VCS since the mid-2000s/early 2010s by public account) but isn't a number from the article itself — worth a sanity check if you want it more precise or hedged.
+- [ ] Numbers to double-check: 2,500 merges/day (May 2026) to 30,000+/day (September 2026), and the "30,401 merged on Sep 9" callout — all from Anthropic's own article and its embedded chart.
+- [ ] Slide 1's image is Anthropic's own "Changes merged per day" chart, cropped from the article to fit the slide (lost the chart title and legend in the crop, kept the curve, axis and the "30,401" callout). It's Anthropic's own data visualization, not generated or sourced from a third party, so no separate licensing concern like the previous post's reused xkcd comic.
 - [ ] No first-person claims about your own experience in this post — nothing else to confirm here.
