@@ -1,0 +1,16 @@
+TYPE: A
+QUOTE TARGET: TV4's or the production company's own post about the delay, if one exists; otherwise post standalone.
+IMAGES: slide_01.png
+
+TV4 just rediscovered the oldest bug in production pipelines: an untested backup is not a backup.
+---
+A Swedish TV production lost the final cut of its show. The premiere is now pushed to 2027. TV4 only confirmed a "technical failure," not that an AI agent caused it.
+---
+This isn't new. Teams keep backups for years without ever running a real restore test. The first real test lands the day you need it, and by then it's too late.
+---
+The fix is boring: put restore drills on the calendar, same as deploys. A backup nobody has restored is a hope, not a plan.
+---
+Per one engineer in the discussion, AI or not, the fault sits with whoever skipped testing the recovery process, not the tool that triggered the failure.
+
+REPLY:
+Article: https://swedenherald.com/article/tv4-postpones-the-challenge-until-2027-after-technical-failure-erases-edited-footage. Full breakdown in the carousel on Instagram/LinkedIn (@arxdsilva).

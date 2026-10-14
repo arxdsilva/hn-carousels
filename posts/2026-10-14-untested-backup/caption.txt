@@ -1,0 +1,7 @@
+A deleted final cut just exposed how many teams never test their backups.
+
+When did you last actually restore from a backup, not just take one?
+
+Source: TV4 postpones The Challenge by Sweden Herald (swedenherald.com).
+
+#softwareengineering #backups #incidentresponse #devops

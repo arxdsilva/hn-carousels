@@ -1,0 +1,15 @@
+TYPE: A
+QUOTE TARGET: Timescale's own announcement post for pg_vectorsearch, if one exists; otherwise post standalone.
+
+pg_vectorsearch claims to beat pgvector's HNSW and IVFFlat using partitioning instead of graphs. Classic rediscovery: a faster index always means a tradeoff somewhere. One HN commenter asked the right question: where are the independent benchmarks?
+
+REPLY:
+https://github.com/timescale/pg_vectorsearch
+===
+TYPE: A
+QUOTE TARGET: Scott Aaronson's own posts about the oracle, if one exists; otherwise post standalone.
+
+A 70-year-old Bell Labs trick still beats most humans at being random. It's literally the same game your CPU's branch predictor plays with your code, per one engineer in today's discussion, and the predictor usually wins too.
+
+REPLY:
+https://aaronsonoracle.com/

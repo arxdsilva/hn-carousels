@@ -1,0 +1,27 @@
+{
+  "type": "A",
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "**TV4 just hit the oldest bug in production pipelines.**\n\nThe final cut of The Challenge is gone.\n\nThe premiere just slipped to 2027.",
+      "bullets": [
+        "Headlines say an AI agent deleted it",
+        "TV4 only confirms a 'technical failure'",
+        "Developers in the discussion are split on which it was"
+      ]
+    },
+    {
+      "text": "**The real bug is untested backups.**\n\nWhere have you been burned by one?\n\nSave this for your next backup review.",
+      "bullets": [
+        "Cheap storage without versioning invites this",
+        "Nobody restores until it's too late",
+        "One engineer in the discussion: 'AI or not, it's a human's fault'"
+      ]
+    }
+  ]
+}
