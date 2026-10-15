@@ -1,0 +1,7 @@
+Spyware reached Al Jazeera devices through targeted ads, and nobody had to click.
+
+Which rung are you on: browser blocker, ad ID off, or gateway blocking?
+
+Source: Exposing AdFection by Bill Marczak, Wolfie Christl, John Scott-Railton et al. (citizenlab.ca).
+
+#cybersecurity #privacy #adtech #infosec #softwareengineering

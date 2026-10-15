@@ -1,0 +1,11 @@
+3 ways to stop ad spyware. Your browser extension is the weakest.
+
+#10 on HackerNews last week: Citizen Lab showed spyware reaching Al Jazeera devices the moment a targeted ad rendered. Good is an ad blocker in every browser, but it never sees the ads inside apps. Better is turning off the mobile ad ID, through MDM on work phones, which Citizen Lab says directly blocks the vendor's current method.
+
+Best is blocking ads at the gateway, or on the router at home. My rule: block ads where the traffic leaves the network, so nobody's safety depends on an extension they remembered to install.
+
+Which rung is your team on?
+
+Source: Exposing AdFection by Bill Marczak, Wolfie Christl, John Scott-Railton et al. (citizenlab.ca).
+
+#cybersecurity #privacy #softwareengineering

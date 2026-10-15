@@ -1,0 +1,18 @@
+STRUCTURE: ladder
+QUOTE TARGET: Citizen Lab's own post announcing the AdFection report, if one exists; otherwise post standalone
+IMAGES: slide_02.png, slide_01.png
+
+How to stop ads from delivering spyware: good, better, best.
+
+Per Citizen Lab, Candiru spyware reached Al Jazeera devices through targeted ads. Rendering the ad was enough to infect a device.
+---
+Good: an ad blocker in every browser.
+Better: turn off or reset the mobile ad ID, via MDM on work phones.
+Best: block ads at the gateway, or on your home router.
+
+All three are the report's own recommendations.
+---
+One gap a developer raised in the discussion: the report shows an ad network delivering JavaScript, but doesn't fully show how that turned into a DLL on the victim's machine.
+
+REPLY:
+https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/ Full breakdown in the carousel on Instagram/LinkedIn (@arxdsilva).

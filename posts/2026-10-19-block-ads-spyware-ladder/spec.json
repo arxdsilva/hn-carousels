@@ -1,0 +1,23 @@
+{
+  "structure": "ladder",
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "**How to keep ads from delivering spyware: good, better, best.**\n\nCitizen Lab traced Candiru spyware on Al Jazeera devices back to targeted ads.\n\nPer the report, a device could be infected **the moment the ad rendered.**",
+      "image": "posts/2026-10-19-block-ads-spyware-ladder/assets/adfection-strip.jpg"
+    },
+    {
+      "text": "All three rungs come from the report's own recommendations.\n\n**Which rung are you on? Save this.**",
+      "bullets": [
+        "Good: an ad blocker in every browser. Easy, but apps still show ads.",
+        "Better: turn off the mobile ad ID, via MDM at work. Ads still load, less targeted.",
+        "Best: block ads at the gateway or router. Covers apps, not phones off that network."
+      ]
+    }
+  ]
+}

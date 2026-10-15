@@ -1,0 +1,17 @@
+STRUCTURE: precondition
+QUOTE TARGET: the sunshowers.io author's own post about this, if they posted it on X; otherwise post standalone
+
+No engineering write-up holds up if it hides where the design came from. The author of sunshowers.io, who led Mononoke's data model work at Meta, says Anthropic's Scion copies it down to the changesets and credits only Sapling. Their point: copying is fine with credit.
+
+REPLY:
+https://sunshowers.io/posts/anthropic-mononoke-2/
+
+===
+
+STRUCTURE: precondition
+QUOTE TARGET: the Simons Foundation's own post announcing the program; otherwise post standalone
+
+No AI tool helps a field until it agrees how to check what the tool produced. That's where the Simons Foundation, Anthropic and OpenAI put $15M: work to evaluate AI-assisted math and set standards. One developer asked if token credits just mean more model use.
+
+REPLY:
+https://www.simonsfoundation.org/news/simons-foundation-launches-15m-effort-to-help-mathematicians-navigate-ai-era/
