@@ -1,0 +1,23 @@
+{
+  "structure": "myth",
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "**Myth: mathematicians crying over AI is just bruised ego.**\n\nDerek Thompson argues they're mourning the human conversation of discovery.\n\nFields medalist Hugo Duminil-Copin: \"They have annihilated my field of research.\"",
+      "image": "posts/2026-10-16-mathematicians-grief-myth/assets/weep.jpg"
+    },
+    {
+      "text": "I think programmers face the same question about solving things ourselves.\n\n**Grief or bruised ego? Pick a side, then save this.**",
+      "bullets": [
+        "Strogatz at Cornell describes \"enormous grief\" in his field.",
+        "Thompson grants some ego, but says AI is \"interrupting the thousand-year conversation.\"",
+        "One developer disagreed: \"almost all bruised egos and feeling of wasted time.\""
+      ]
+    }
+  ]
+}

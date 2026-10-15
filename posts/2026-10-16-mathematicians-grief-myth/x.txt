@@ -1,0 +1,14 @@
+STRUCTURE: myth
+QUOTE TARGET: Derek Thompson's own post sharing "I Know Why the Mathematicians Weep", if he posted one; otherwise post standalone
+IMAGES: none if quoting Thompson's post; slide_01.png if posting standalone
+
+Myth: mathematicians crying over AI is just bruised ego.
+
+Derek Thompson grants some of it is. He argues they also mourn the human conversation of discovery, which OpenAI's proofs are "interrupting."
+
+I think programmers face the same question. Grief or ego?
+---
+The best counter from developers in the discussion: it's "almost all bruised egos and feeling of wasted time." Another pointed out that software engineers losing jobs to AI get far less sympathy than mathematicians do.
+
+REPLY:
+Article by Derek Thompson: https://www.derekthompson.org/p/i-know-why-the-mathematicians-weep. Full breakdown in the carousel on Instagram/LinkedIn (@arxdsilva).

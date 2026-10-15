@@ -1,0 +1,11 @@
+A Fields medalist cried after OpenAI's latest math release.
+
+#5 on HackerNews this week: developers were arguing over whether mathematicians grieving AI are just nursing bruised egos.
+
+Derek Thompson grants the ego part, but says they're also mourning "the thousand-year conversation" of discovery. My take: programming has the same question coming, and "it's just ego" is too easy an answer for either field.
+
+Grief or bruised ego: which side are you on?
+
+Source: I Know Why the Mathematicians Weep by Derek Thompson (derekthompson.org). Image: Wiki Sinaloa on Unsplash.
+
+#softwareengineering #ai #programming

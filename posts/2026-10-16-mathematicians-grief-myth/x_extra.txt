@@ -1,0 +1,25 @@
+STRUCTURE: myth
+QUOTE TARGET: fortran-lang's official post about the 70th anniversary, if one exists; otherwise post standalone
+
+Myth: Fortran is a dead language.
+
+Its first manual came out 70 years ago this week. Climate and nuclear engineering code still runs on it, per Joe Wallwork at fortran-lang.org. One developer calls it the best language for numerical work.
+
+Dead or just unfashionable?
+
+REPLY:
+https://fortran-lang.org/news/2026/09-15-Fortran-birthday/
+
+===
+
+STRUCTURE: proof
+QUOTE TARGET: Libreboot's or Leah Rowe's own post announcing 26.10, if one exists; otherwise post standalone
+
+Libreboot added 233 Chromebooks in one release.
+
+Leah Rowe wrote a tool, mrimport, that generates the build configs from the MrChromebox coreboot distro, then tweaked them by hand.
+
+The catch: only Baytrail (Kip) is listed as tested so far, and it's source-only.
+
+REPLY:
+https://libreboot.org/news/libreboot2610.html
