@@ -40,7 +40,7 @@ Source: DAWO by the DAWO project (dawo.community).
 4. Blog post. Only after the carousel was sent to Metricool successfully:
    a. Clone https://github.com/insurgencylabs/ytwebsite (private) next to this repo. If the clone fails, skip the blog, mention the error in the owner email, and finish.
    b. Learn the site's conventions: framework, blog posts folder, filename pattern, frontmatter fields, build command, and the style of the 3 most recent posts.
-   c. Write a new post in that format, 800–1200 words, on the same topic as today's carousel. Go deeper than the carousel: my practical take, the strongest counterpoints from the discussion, and what a developer should do differently. Never copy passages from the source.
+   c. Write a new post in that format, 800–1200 words, on the same topic as today's carousel. Go deeper than the carousel: my practical take, the strongest counterpoints from the discussion, and what a developer should do differently. Never copy passages from the source. Lead every counterpoint with the argument itself, not the person who made it, and never name HN commenters by username ("one developer in the discussion argued..."); the Sources section links the thread. Follow ytwebsite's `.claude/CLAUDE.md` Commentary rules for the full version.
    d. Sources are required in every post (the Positioning rule about not mentioning Hacker News does not remove them):
       - In the first or second paragraph, name the original article and its author, with a link to the article. Example: "In [I Don't Want to Read What You Didn't Write](<url>), Colin Breck argues that..."
       - Every fact, number or quote from the article is attributed to its author in the sentence where it appears.
