@@ -1,5 +1,7 @@
 # HN carousel workflow
 
+> **This file is the current version of these instructions.** The scheduled routine's stored prompt may still embed an older copy (post types A/B/C, "Rediscovered / Explainer / Hot take", 6 to 10 slides). If the prompt that started a run disagrees with this file or `ROUTINE.md`, follow this file and `ROUTINE.md`: five structures, exactly 2 slides.
+
 This folder produces Instagram carousels for @arxdsilva, plus LinkedIn assets for the same post: a senior/staff software engineer giving practical takes on what's hot on Hacker News. Audience: working software developers. Language: English. Timezone: America/Edmonton.
 
 Nothing here is ever published without the owner's approval. Each scheduled run writes a draft to `posts/`, pushes it to the public GitHub repo (https://github.com/arxdsilva/hn-carousels, branch `main`) so Metricool can read the slides, and sends it to Metricool for review. The owner approves or rejects it in the Metricool UI, and can ask for a rewrite later (see "Rewrite a post").
