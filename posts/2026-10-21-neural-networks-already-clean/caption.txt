@@ -1,0 +1,7 @@
+The messy neurons in AI models may have been a tooling problem all along.
+
+Would you trust a model more if you could read what each neuron does?
+
+Source: Neural Networks Are Already Clean by Nick Cammarata (already-clean.goodfire.com).
+
+#machinelearning #interpretability #ai #llm #softwareengineering

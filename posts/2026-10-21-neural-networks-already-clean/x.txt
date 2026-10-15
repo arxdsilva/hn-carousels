@@ -1,0 +1,21 @@
+STRUCTURE: proof
+QUOTE TARGET: Nick Cammarata's own post launching the essay (the thread mentions he posted a launch post on X), or Goodfire's official account post about it if his can't be found; otherwise post standalone
+IMAGES: slide_01.png
+
+Goodfire says roughly 90% of neurons in Qwen3-32B have one main job.
+
+Per Nick Cammarata, the "tangled" neurons the field blamed on superposition came from ordinary problems you can fix.
+---
+What they changed:
+1 Broader, longer-context data. Short contexts made long-context neurons look mixed.
+2 Describe the pattern a neuron shares, often "better understood as a verb than a noun." The cat and car neurons were shape detectors.
+---
+3 Better metrics. Reward explanations that are right over ones that only simulate activations.
+4 Modern architecture. Residual connections and LayerNorm stop deep layers overflowing. He also reports 99-100% of a retrained InceptionV1 variant's last layer is easy to read.
+---
+He calls it a working hypothesis, and the audit numbers move with the thresholds. One researcher in the discussion wouldn't rush to call superposition wrong. Others just wanted a shorter version: it's a 65-minute read.
+---
+I care because a model I can read is one I can debug, the way I debug code. One developer in the discussion called that the main reason open weights matter.
+
+REPLY:
+Essay: https://already-clean.goodfire.com/ (Nick Cammarata, Goodfire). Full breakdown in the carousel on Instagram/LinkedIn (@arxdsilva).

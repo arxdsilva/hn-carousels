@@ -1,0 +1,23 @@
+{
+  "structure": "proof",
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "**Goodfire says 90% of neurons in a 32B model have one main job.**\n\nThey got there by fixing ordinary problems the field had blamed on superposition.\n\nNick Cammarata calls it a working hypothesis from a preliminary audit.",
+      "image": "posts/2026-10-21-neural-networks-already-clean/assets/clean-vs-knot.jpg"
+    },
+    {
+      "text": "A model you can read is a model you can debug.\n\nOne researcher in the discussion isn't ready to drop superposition.\n\n**Which step would you skip? Save this.**",
+      "bullets": [
+        "Longer contexts: short ones made long-context neurons look mixed",
+        "Name the shared pattern: the cat-and-car neuron detected a shape",
+        "Residuals and LayerNorm kept deep layers from overflowing"
+      ]
+    }
+  ]
+}

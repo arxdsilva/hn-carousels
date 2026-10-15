@@ -1,0 +1,17 @@
+STRUCTURE: myth
+QUOTE TARGET: the DEsk author's own post announcing the release, if one exists; otherwise post standalone
+
+Myth: flat design won because it's easier to use. DEsk, a new Wayland desktop, turns windows into paper on a walnut desk. Developers in the discussion said flat UIs threw out the discoverability lessons of 90s user testing. Others say skeuomorphism died for a reason. Your side?
+
+REPLY:
+https://github.com/fyzugx/DEsk
+
+===
+
+STRUCTURE: precondition
+QUOTE TARGET: Krea's official account post announcing Krea 3, if one exists; otherwise post standalone
+
+No speedup saves an image editing model until its edits stay inside the box. Krea 3 claims 4x faster than Nano Banana Pro and edits that change only what you ask. Testers in the discussion still saw scrambled sign text and a shirt print drawn over a new jacket.
+
+REPLY:
+https://www.krea.ai/krea-3
