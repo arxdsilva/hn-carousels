@@ -1,11 +1,11 @@
-When did you last actually restore from a backup?
+Would your version control survive 30,000 merges a day?
 
-#3 on HackerNews this week: developers were debating whether an AI agent deleted a Swedish TV show's final cut, or TV4's own "technical failure" did.
+This was Hacker News's biggest thread this week: 835 points, over 900 comments, arguing over whether Anthropic needed to build its own git replacement at all.
 
-My take: it doesn't matter which one it was. If nobody has restored from a backup, you don't actually know it works.
+My take: most teams don't need Scion. They need to notice early when a tool built for human scale quietly becomes the bottleneck.
 
-Where have you been burned by one?
+Where have you outgrown a tool built for human scale?
 
-Source: TV4 postpones The Challenge by Sweden Herald (swedenherald.com).
+Source: Redesigning source control at Anthropic (anthropic.com/engineering).
 
-#softwareengineering #backups #incidentresponse
+#softwareengineering #git #ai #devtools

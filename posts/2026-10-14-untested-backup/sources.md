@@ -1,6 +1,6 @@
 Type: A (Rediscovered)
-Angle: A TV production just rediscovered the oldest rule in backups: an untested backup isn't a backup.
+Angle: Anthropic's Scion rediscovered the centralized monorepo pattern Google's Piper and Meta's Sapling already solved, because agent-driven commit volume broke git's distributed design.
 
-- HN thread: https://news.ycombinator.com/item?id=50085323 — 35 points, 17 comments, rank #3 on the 2026-10-14 front page.
-- Article: [TV4 postpones show after AI agent erases edited material](https://swedenherald.com/article/tv4-postpones-the-challenge-until-2027-after-technical-failure-erases-edited-footage) (swedenherald.com). Article text was not fetchable (HTTP 403); all facts below come from the HN thread.
-- Per commenter SiempreViernes (quoting Aftonbladet/TV4's press contact), TV4 confirmed a "technical failure" (teknisk haveri) erased already-edited material, forcing a re-edit and pushing the premiere of "The Challenge" to 2027. TV4 did not confirm an AI agent was the cause; the "AI agent" framing is the HN submission title and other headlines, not TV4's own statement — flagged as disputed in the post.
+- HN thread: https://news.ycombinator.com/item?id=50073633 — 835 points, 905 comments, posted 2026-10-13 (not in the 2026-10-14 top-10 snapshot since it had already rolled off the front page by research time, but still the live, highest-engagement discussion of this story).
+- Article: [Redesigning source control at Anthropic](https://www.anthropic.com/engineering/redesigning-source-control) (anthropic.com/engineering).
+- Slide 1 image: cropped from the article's own "Changes merged per day" chart (Anthropic monorepo, Jan–Sep 2026), showing the 2,500/day to 30,401/day (Sep 9) growth. Anthropic's own chart, reused directly from the article.
