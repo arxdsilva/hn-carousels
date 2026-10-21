@@ -1,10 +1,20 @@
 Would you trust a model more if 90% of it was readable?
 
-#2 on HackerNews last week: Nick Cammarata at Goodfire argued that roughly 90% of the neurons in Qwen3-32B have one main job.
+#2 on HackerNews last week: in a preliminary audit, roughly 90% of the neurons in a 32B model had one main job.
 
-His fixes were plain: longer contexts, naming the pattern a neuron shares, and modern layers like LayerNorm. My rule: if I can't read a system, I can't debug it, and models shouldn't get a pass.
+What Goodfire changed to get there:
 
-What would you try first?
+1. Longer contexts. Short ones made long-context neurons look mixed.
+
+2. Describe the pattern a neuron shares. The famous cat-and-car neuron was detecting a shape.
+
+3. Better metrics. Reward explanations that are right over ones that only mimic activations.
+
+4. Modern layers. Residual connections and LayerNorm keep deep layers from overflowing.
+
+My rule: if I can't read a system, I can't debug it, and models shouldn't get a pass.
+
+Which step would you skip?
 
 Source: Neural Networks Are Already Clean by Nick Cammarata (already-clean.goodfire.com).
 

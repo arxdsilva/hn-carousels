@@ -9,3 +9,10 @@
 - [ ] linkedin.txt source line contains the domain "already-clean.goodfire.com", same format as earlier posts. LinkedIn may auto-link it; drop the domain if you want zero links.
 - [ ] x_extra.txt post 1 is a myth call: "Myth: flat design won because it's easier to use." Evidence is developers in the DEsk discussion (discoverability lessons from 90s/00s user testing), with the counterpoint that skeuomorphism faded for a reason. Agree, or flip it?
 - [ ] x_extra.txt post 2 (Krea 3): "4x faster than Nano Banana Pro" is from the title; "10x faster, 3x cheaper than GPT Image 2" is from the page's headline. The page's animated per-image price and seconds didn't scrape cleanly, so they're left out. Confirm the 10x/3x claim on krea.ai/krea-3.
+
+## Rewrite (2026-10-20): new "Presenting solutions" rules
+
+Only linkedin.txt changed (numbered steps). Slides, caption, x.txt and the Metricool draft are unchanged.
+
+- [ ] Steps carry the reason for each fix, not a cost: the essay doesn't give per-step costs, so none are invented. The overall limit ("preliminary audit") sits in the opening line.
+- [ ] Step 3 (better metrics) is new to linkedin.txt, from the essay: tools rewarded explanations that simulate activations over ones that are right.
