@@ -80,6 +80,36 @@ The usual fixes all fail until one basic thing is in place.
 
 Elimination and Myth are built on "not this". State each beat as its own plain claim with its reason ("Mirrors only bought time: they got harder to run as merges kept climbing."). Don't compress a beat into the "it's not X, it's Y" sentence tic; the humanizer flags that, and it must keep the beats themselves.
 
+## Presenting solutions
+
+Whenever a post hands the reader fixes (the Ladder rungs, the Proof steps, the plan that works in Elimination, what to do in Precondition), each one must be something they could do today. The owner's hand edit of the 2026-10-19 LinkedIn post is the reference:
+
+```
+3 ways to stop ad spyware. Your browser extension is the weakest.
+
+#10 on HackerNews last week: spyware reaching devices once a targeted ad rendered.
+
+To protect your devices:
+1. Good: an ad blocker in every browser, but it never sees the ads inside apps.
+
+2. Better: turn off the mobile ad ID, through MDM on work phones, which Citizen Lab says directly blocks the vendor's current method.
+
+3. Best: block ads at the gateway, or on the router at home.
+
+My rule: block ads where the traffic leaves the network, so nobody's safety depends on an extension they remembered to install (a DNS filter on the router, like Pi-hole, AdGuard Home or NextDNS).
+
+Which level is your team at?
+```
+
+- **Number the fixes.** One fix per numbered item, in order, never run together in a paragraph. Open the list with a short line saying who it protects or what it's for ("To protect your devices:").
+- **Each item is the fix plus its limit.** What to do, then in the same sentence what it misses or costs ("but it never sees the ads inside apps").
+- **Name the tool.** When a fix is a category ("a DNS filter on the router"), name 2 or 3 real, widely used tools for it (Pi-hole, AdGuard Home or NextDNS). Tool names are general knowledge, not from the article, so list them on `REVIEW.md`. Never name a product you aren't sure exists and does that job.
+- **Check the fix does what you claim.** Before writing "covers every device" or "nobody depends on X", check the obvious exceptions: devices off that network, ways around it, what it can't see. Narrow the claim or name the exception rather than overclaim.
+- **Keep the setup line short.** The line before the list says what happened in the reader's terms ("spyware reaching devices once a targeted ad rendered"). Credit the source where its fact is used and in the source line; don't stack names into the setup.
+- **Reader words, not our words.** "Level", "option" or "step" in reader-facing text, never "rung" or "beat". The structure names are for us.
+
+Myth posts have no fix list and stay in prose.
+
 ## Picking the structure for the day
 
 Each posting day has a default, so the feed gets a mix every week:
@@ -148,7 +178,7 @@ Each posting day has a default, so the feed gets a mix every week:
      - **Body, Proof:** one sentence on what happened (with the HN ranking), one with the result and its number, then 3 to 5 numbered steps.
      - **Body, Elimination:** one sentence on why now (with the HN ranking), then the three plans as `N Plan` on one line and `↳ why it fails` (or `↳ why it works`, for the last) on the next.
      - **Body, Myth:** the myth, why it's wrong, the evidence (attributed), what's actually true, in 4 to 6 short lines. No list.
-     - **Body, Ladder:** one sentence on why now (with the HN ranking), then the rungs as `N Good/Better/Best: term` on one line and `↳ what it buys and what it costs` on the next.
+     - **Body, Ladder:** one sentence on what happened (with the HN ranking), then a short line opening the list, then the levels as a numbered list (`1. Good: ...`, `2. Better: ...`, `3. Best: ...`), each the fix plus its limit, then the owner's rule naming the tools. See "Presenting solutions".
      - **Body, Precondition:** one sentence on what happened (with the HN ranking), one naming the precondition, then 3 to 5 numbered lines of what to do.
      - **Ending, every structure:** the structure's closing question on its own line; then "Repost if this helps someone on your team."; then "Follow Arthur Silva for practical takes on what engineers are talking about."; then the same source line format as `caption.txt`; then at most 3 hashtags. No emoji anywhere in `linkedin.txt`.
      - **No links anywhere in `linkedin.txt`.** Links in the post body cut reach. If the owner wants the article link, it goes in a comment after the first hour (mention this in the notification).
