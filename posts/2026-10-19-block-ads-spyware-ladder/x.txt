@@ -6,11 +6,11 @@ How to stop ads from delivering spyware: good, better, best.
 
 Per Citizen Lab, Candiru spyware reached Al Jazeera devices through targeted ads. Rendering the ad was enough to infect a device.
 ---
-Good: an ad blocker in every browser.
-Better: turn off or reset the mobile ad ID, via MDM on work phones.
-Best: block ads at the gateway, or on your home router.
+1 Good: an ad blocker in every browser. Misses ads inside apps.
+2 Better: turn off the mobile ad ID, via MDM on work phones.
+3 Best: a DNS filter on your router (Pi-hole, AdGuard Home, NextDNS). Misses phones off that network.
 
-All three are the report's own recommendations.
+The three levels are the report's own advice.
 ---
 One gap a developer raised in the discussion: the report shows an ad network delivering JavaScript, but doesn't fully show how that turned into a DLL on the victim's machine.
 

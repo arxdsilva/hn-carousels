@@ -9,3 +9,11 @@
 - [ ] HN numbers in linkedin.txt / sources.md: #10, 185 points, 30 comments on 2026-10-15 (187 points when drafted).
 - [ ] x_extra.txt post 1 (Scion vs Mononoke) reports the sunshowers.io author's claim that Scion copied Mononoke. It's attributed as their claim, and Anthropic hadn't responded in the article. Comfortable posting about it?
 - [ ] x_extra.txt post 2 (Simons Foundation) frames the $15M as "agree how to check AI-assisted results first". The stance is mine; confirm.
+
+## Rewrite (2026-10-20): new "Presenting solutions" rules
+
+Instagram went out on 2026-10-20 with the original slides and caption; this rewrite only changes the files you post by hand (linkedin.txt, linkedin.pdf, x.txt). caption.txt is updated for the record.
+
+- [ ] linkedin.txt follows your hand edit: numbered levels, each with its limit. Your rule now adds "and push the same filter to every work phone", so it holds for phones off the home network.
+- [ ] Tool names are general knowledge, not from the report: Pi-hole, AdGuard Home, NextDNS (linkedin.txt, slide 2, x.txt).
+- [ ] "but the ads still load" (level 2) is general knowledge, not from the report.
