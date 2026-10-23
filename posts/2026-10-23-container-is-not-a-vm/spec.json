@@ -1,0 +1,26 @@
+{
+  "structure": "myth",
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "**Myth: a container is a small virtual machine.**\n\nIt's an ordinary process on your host's kernel, with limits wrapped around it.\n\nA developer building their own runtime found that out the fun way.",
+      "panel": {
+        "big": "5 kernel features",
+        "small": "in a trenchcoat, per Code and Cake"
+      }
+    },
+    {
+      "text": "My rule: code I don't trust runs in a VM.\n\n**VM or just a process? Pick a side, then save this.**",
+      "bullets": [
+        "Its processes show up in the host's /proc, Code and Cake found.",
+        "Namespaces and cgroups fence it in, but the kernel is shared.",
+        "One engineer's reply: processes are just abstractions too."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+Your container shares a kernel with everything else on the host.
+
+Would you run untrusted code in a container, or only in a VM?
+
+Source: Docker is weird by Nick (codeandcake.dev).
+
+#docker #containers #linux #devops #softwareengineering

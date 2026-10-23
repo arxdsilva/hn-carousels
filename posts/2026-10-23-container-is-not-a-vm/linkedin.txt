@@ -1,0 +1,17 @@
+Myth: a container is a sandbox. It's 5 kernel features in a trenchcoat.
+
+#6 on HackerNews this week: developers were arguing about what a container really is.
+
+Nick at Code and Cake is writing a container runtime for fun. The container turned out to be a host process you can find in /proc, fenced in by namespaces and cgroups, with a Docker daemon that usually runs as root.
+
+So the kernel is shared. One developer in the discussion said containers never became secure enough; another now unpacks Docker images into Firecracker VMs to get a secure workload. My rule: code I don't trust runs in a VM, and containers handle the packaging.
+
+Sandbox or just a process: which side are you on?
+
+Repost if this helps someone on your team.
+
+Follow Arthur Silva for practical takes on what engineers are talking about.
+
+Source: Docker is weird by Nick (codeandcake.dev).
+
+#docker #containers #softwareengineering

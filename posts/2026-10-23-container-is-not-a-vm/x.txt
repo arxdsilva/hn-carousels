@@ -1,0 +1,12 @@
+STRUCTURE: myth
+QUOTE TARGET: Nick's (Code and Cake) own post sharing "Docker is weird", if one exists; otherwise post standalone
+IMAGES: none if quoting Nick's post; slide_01.png if posting standalone
+
+Myth: a container is a small VM.
+
+It's a process on your host's kernel. Namespaces hide the host, cgroups cap resources, and you can find it in /proc, per Nick at Code and Cake.
+
+Untrusted code goes in a VM for me. Sandbox or just a process?
+
+REPLY:
+Article by Nick at Code and Cake: https://codeandcake.dev/posts/2026-10-22-docker-is-weird. Full breakdown in the carousel on Instagram/LinkedIn (@arxdsilva).
