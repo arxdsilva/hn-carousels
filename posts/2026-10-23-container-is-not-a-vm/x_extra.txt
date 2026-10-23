@@ -3,7 +3,7 @@ QUOTE TARGET: none, post standalone
 
 Myth: English is the next programming language.
 
-Dijkstra called that foolish in 1978. Developers in the discussion say agents prove him right: you delegate in English, but the program is still the Rust or Python in your repo.
+Dijkstra called that foolish in 1978. Developers in the discussion say agents prove the essay right: you delegate in English, but the program is still the Rust or Python in your repo.
 
 Agree?
 
@@ -15,7 +15,7 @@ QUOTE TARGET: Drew Silcock's own post sharing "Is this the new cyber normal?", i
 
 No patch schedule will save you until you can patch the same day.
 
-PHP2Shell was exploited in the wild before its patch shipped, per Drew Silcock. His point: LLMs cut the gap from CVE notice to working exploit to hours.
+PHP2Shell was exploited in the wild before its patch shipped, per Drew Silcock. The post argues LLMs cut the gap from CVE notice to working exploit to hours.
 
 REPLY:
 Drew Silcock's write-up: https://drew.silcock.dev/blog/is-this-the-new-cyber-normal/
