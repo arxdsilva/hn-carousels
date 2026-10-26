@@ -1,0 +1,26 @@
+{
+  "structure": "ladder",
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "**How to make a web page print well: good, better, best.**\n\nBrennen Puth hit Ctrl-P on his own blog and got oversized text and gray links.\n\nFixing it took him **a morning of CSS.**",
+      "panel": {
+        "big": "Ctrl-P",
+        "small": "the export button you already shipped"
+      }
+    },
+    {
+      "text": "Each level builds on the last.\n\n**Which level is your site at? Save this.**",
+      "bullets": [
+        "Good: just Ctrl-P. The nav and gray links print too.",
+        "Better: @media print. Black links, but code blocks split.",
+        "Best: add page-break rules. Backgrounds still drop."
+      ]
+    }
+  ]
+}

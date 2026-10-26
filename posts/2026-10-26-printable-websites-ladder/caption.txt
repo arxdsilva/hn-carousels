@@ -1,0 +1,7 @@
+Your users already have a PDF export button. Most pages break it.
+
+Have you ever written a print stylesheet, or does Ctrl-P wreck your pages?
+
+Source: Websites Should Be Printable by Brennen Puth (brennenputh.me).
+
+#webdev #css #frontend #softwareengineering

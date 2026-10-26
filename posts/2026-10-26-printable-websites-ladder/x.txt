@@ -1,0 +1,16 @@
+STRUCTURE: ladder
+QUOTE TARGET: Brennen Puth's own post sharing "Websites Should Be Printable", if one exists; otherwise post standalone
+IMAGES: slide_02.png, slide_01.png
+
+How to make a web page print well: good, better, best.
+
+Brennen Puth hit Ctrl-P on his own blog and got oversized text and gray links. Ctrl-P is the PDF export your users already have.
+---
+Good: do nothing. The nav and gray links print too.
+Better: an @media print block. Hide the nav, 12pt text, black links. Code blocks still split.
+Best: add break-inside: avoid and render PDFs from the same page in headless Chrome. Backgrounds still drop.
+---
+The pushback in the discussion: one developer said print support sits low on their list, below on-screen UX and accessibility. Another replied that it's exactly why they do it from day one, since it heads off the "can we get a PDF?" request.
+
+REPLY:
+https://brennenputh.me/blog/printable-websites/ Full breakdown in the carousel on Instagram/LinkedIn (@arxdsilva).

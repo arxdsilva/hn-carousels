@@ -1,0 +1,23 @@
+STRUCTURE: proof
+QUOTE TARGET: Ubicloud's own post announcing "Fixing Tool-Call Accuracy in vLLM", if one exists; otherwise post standalone
+
+Ubicloud got Kimi K2.6 tool calls from 92% to 100% schema accuracy.
+
+At 92%, 2 in 25 calls broke. Per Jesse Donkervliet and Junhao Li, the fix was constrained decoding, a server flag since vLLM 0.31.
+
+Open model worse than its benchmarks? Check your serving stack first.
+
+REPLY:
+https://www.ubicloud.com/blog/fixing-tool-call-accuracy-in-vllm
+===
+STRUCTURE: myth
+QUOTE TARGET: Typemill's own post sharing "Tasks as Code", if one exists; otherwise post standalone
+
+Myth: AI agents need your tickets in the repo.
+
+Typemill argues for Markdown tasks in Git. Developers pushed back: tickets change faster than code, and stakeholders without repo access still need them. An API or MCP link gets the agent the same text.
+
+Repo or tracker?
+
+REPLY:
+https://typemill.net/knowledge-hub/tasks-as-code

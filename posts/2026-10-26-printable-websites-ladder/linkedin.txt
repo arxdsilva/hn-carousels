@@ -1,0 +1,25 @@
+3 ways to make web pages print well. The best one replaces your PDF export.
+
+#8 on HackerNews this week: Brennen Puth was arguing that websites should be printable.
+
+He hit Ctrl-P on his own blog and got oversized text, an ugly header and gray links. Fixing it took him a morning.
+
+To get clean prints and PDFs from the pages you already have:
+
+1. Good: do nothing. Anyone can print the page, but the nav, the screen-sized type and the gray links all land on paper.
+
+2. Better: a short @media print block that hides the nav, sets 12pt text and turns links black, like Puth's. Code blocks still split across pages.
+
+3. Best: add page-break rules (break-inside: avoid on code blocks and figures), then render PDFs from the same page in a headless browser. Browsers still drop background colors by default, so anything drawn with them needs print-color-adjust or an SVG.
+
+My rule: for invoices, tickets and resumes, write the print stylesheet before anyone asks for "download as PDF", then generate the file with Puppeteer or Playwright instead of keeping a second PDF template.
+
+Which level is your site at?
+
+Repost if this helps someone on your team.
+
+Follow Arthur Silva for practical takes on what engineers are talking about.
+
+Source: Websites Should Be Printable by Brennen Puth (brennenputh.me).
+
+#webdev #css #frontend
