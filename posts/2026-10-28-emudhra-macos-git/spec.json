@@ -1,0 +1,26 @@
+{
+  "structure": "elimination",
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "**Updating macOS won't fix your git. Neither will fixing it once by hand.**\n\nThe git, curl and python3 that ship with macOS still trust eight compromised certificates.\n\nAnyone on your network path could **swap the code you clone.**",
+      "panel": {
+        "big": "10 days",
+        "small": "and Apple's git still trusts the bad certs"
+      }
+    },
+    {
+      "text": "Three plans, per Dennis Jackson's write-up.\n\n**Which did you try first? Save this.**",
+      "bullets": [
+        "Wait for Apple: macOS 27.2 shipped without the fix.",
+        "Fix it by hand once: 27.2 undid that fix.",
+        "Works: fix it by hand, then rerun his git check after every update."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+Your Mac's git can still be fooled by a bad certificate. The update didn't help.
+
+Do you check your developer tools after an OS update, or trust it worked?
+
+Source: Apple's git still trusts the compromised eMudhra certificates by Dennis Jackson (emudhra.we-have-a-problem.com).
+
+#security #git #macos #devsecops #softwareengineering

@@ -1,0 +1,21 @@
+STRUCTURE: proof
+QUOTE TARGET: Lexifina's own post announcing "Git for the US Code", if one exists; otherwise post standalone
+
+Lexifina replayed every amendment to nine titles of the US Code since 2017. 361 of 365 changes rebuilt the next official release exactly.
+
+Why bother: in a Munich study, one model got 24% of post-cutoff law questions right alone, 87% with the text retrieved.
+
+REPLY:
+https://lexifina.com/blog/git-for-the-us-code
+===
+STRUCTURE: myth
+QUOTE TARGET: Ghostty's official account post announcing 1.4, if one exists; otherwise post standalone
+
+Myth: printing untrusted output in a terminal is harmless.
+
+Ghostty 1.4 fixed bugs where just displaying malicious output could crash it, or in limited cases read or delete files. Another let cd into a crafted repo dir replace your clipboard.
+
+Myth or fair warning?
+
+REPLY:
+https://ghostty.org/docs/install/release-notes/1-4-0

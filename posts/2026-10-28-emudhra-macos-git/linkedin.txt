@@ -1,0 +1,26 @@
+An update won't fix your Mac's git. Neither will one patch.
+
+#1 on HackerNews today: ten days after Apple was told, the git, curl and python3 that ship with macOS still trust eight compromised eMudhra certificates.
+
+Anyone on the network path can serve you a fake GitHub, swap the code you clone and read your tokens.
+
+1 Wait for Apple's update
+↳ fails: macOS 27.2 shipped on October 26 without the fix. Safari is protected, the command-line tools are not.
+
+2 Remove the bad roots by hand, once
+↳ fails: 27.2 put them back, and Apple's own guidance says updates may revert the fix.
+
+3 Remove them, then recheck after every update
+↳ works: the one-line git ls-remote test from Dennis Jackson's write-up tells you in seconds whether you're exposed again.
+
+My rule: put that check in the post-update checklist for every Mac, macOS CI runners included, and use SSH remotes for git where you can. SSH doesn't rely on certificate authorities, though it still trusts the host key the first time you connect.
+
+Which did you try first?
+
+Repost if this helps someone on your team.
+
+Follow Arthur Silva for practical takes on what engineers are talking about.
+
+Source: Apple's git still trusts the compromised eMudhra certificates by Dennis Jackson (emudhra.we-have-a-problem.com).
+
+#security #git #macos

@@ -1,0 +1,18 @@
+STRUCTURE: elimination
+QUOTE TARGET: Dennis Jackson's own post sharing the "Apple's git still trusts the compromised eMudhra certificates" page, if one exists; otherwise post standalone
+IMAGES: slide_02.png, slide_01.png
+
+Updating macOS won't fix your git. Neither will fixing it once.
+
+Per Dennis Jackson, the git, curl and python3 Apple ships still trust eight compromised eMudhra certs, ten days after Apple was told. Anyone on your network path can fake GitHub.
+---
+Plan A, wait for Apple: macOS 27.2 shipped on Oct 26 without the fix. Safari is protected. The command-line tools aren't.
+---
+Plan B, remove the roots by hand: 27.2 undid that workaround, and Apple's own guidance says updates may revert it.
+---
+What works: remove them, then rerun the one-line git ls-remote check from his page after every update. Do it on macOS CI runners too.
+---
+One developer in the discussion said: move git remotes to SSH, this will keep happening. Another replied that SSH just trades CAs for blindly trusting the host key on first connect.
+
+REPLY:
+https://emudhra.we-have-a-problem.com/apple.html Full breakdown in the carousel on Instagram/LinkedIn (@arxdsilva).
