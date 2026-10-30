@@ -1,0 +1,21 @@
+STRUCTURE: myth
+QUOTE TARGET: Mistral AI's own post announcing the Mistral Large 4 weights, if one exists; otherwise post standalone
+
+Myth: open weights means open source.
+
+Mistral Large 4's license is a modified MIT. If you sell it as a hosted model, you need a separate commercial license, developers in the discussion pointed out.
+
+Open weights or just weights available?
+
+REPLY:
+Mistral's announcement: https://mistral.ai/news/mistral-large-4-oss/
+===
+STRUCTURE: precondition
+QUOTE TARGET: none, post standalone
+
+No batch file will launch some programs until it sets the working directory.
+
+Double-click in Explorer and Windows sets it to the program's folder. A batch file doesn't, per Raymond Chen. His customer's fix: pushd to that folder, run it, popd.
+
+REPLY:
+Raymond Chen, The Old New Thing: https://devblogs.microsoft.com/oldnewthing/20261026-00/?p=112797/

@@ -1,0 +1,7 @@
+Updating the extension didn't remove the attacker's SSH key.
+
+Would you trust the fixed update, or check every laptop by hand?
+
+Source: Backdoors in official Claude Code extensions by Kevin Beaumont (cyberplace.social).
+
+#supplychainsecurity #vscode #claudecode #devsecops #softwareengineering

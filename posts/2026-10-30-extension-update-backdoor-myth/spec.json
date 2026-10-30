@@ -1,0 +1,26 @@
+{
+  "structure": "myth",
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "**Myth: the fixed update removes the backdoor.**\n\nThe bad Claude Code extension planted an SSH key outside itself.\n\nThe fixed version leaves it in place, per Kevin Beaumont.",
+      "panel": {
+        "big": "svc-telemetry",
+        "small": "the SSH key an update leaves behind"
+      }
+    },
+    {
+      "text": "My rule: a bad extension means checking the whole machine.\n\n**Update or full cleanup? Pick a side, then save this.**",
+      "bullets": [
+        "Uninstalling isn't enough either, Cursor warns.",
+        "Check for the svc-telemetry key, then rotate secrets.",
+        "Counterpoint: the SSH step mostly failed without admin."
+      ]
+    }
+  ]
+}

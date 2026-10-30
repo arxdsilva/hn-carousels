@@ -1,0 +1,12 @@
+STRUCTURE: myth
+QUOTE TARGET: Kevin Beaumont's own post saying the replacement Claude Code extension versions don't remove the backdoor, if you can find it; otherwise post standalone
+IMAGES: none if quoting Beaumont's post; slide_01.png if posting standalone
+
+Myth: the fixed update removes the backdoor.
+
+The bad Claude Code extension (2.1.313) wrote an attacker SSH key to authorized_keys. Kevin Beaumont confirmed 2.1.314 leaves it there.
+
+Update and move on, or check every machine?
+
+REPLY:
+Cursor's notice has the check and cleanup scripts: https://cursor.com/blog/claude-code-extension-security-notice. Full breakdown in the carousel on Instagram/LinkedIn (@arxdsilva).

@@ -1,0 +1,17 @@
+Myth: one update cleaned 5,000 backdoored dev machines.
+
+#2 on HackerNews this week: a backdoored build of the Claude Code extension for VS Code and Cursor.
+
+Version 2.1.313 added an attacker's SSH key to authorized_keys and set up scripts that retry a reverse tunnel every minute. Cursor says at most 5,000 of its users got it. The fixed 2.1.314 auto-updated overnight, and Kevin Beaumont confirmed it leaves the key and the scripts in place. Cursor warns that uninstalling may not be enough either.
+
+Without admin rights, though, the step that turns on SSH failed on most Macs and Windows machines, and the attacker's server is now offline. My rule: a bad extension means checking the whole machine. Look for the svc-telemetry key, run Cursor's cleanup script, and rotate the secrets that laptop could reach.
+
+Update or full cleanup: which side are you on?
+
+Repost if this helps someone on your team.
+
+Follow Arthur Silva for practical takes on what engineers are talking about.
+
+Source: Backdoors in official Claude Code extensions by Kevin Beaumont (cyberplace.social).
+
+#cybersecurity #supplychainsecurity #softwareengineering
