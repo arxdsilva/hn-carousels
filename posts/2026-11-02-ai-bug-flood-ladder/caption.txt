@@ -1,0 +1,7 @@
+AI finds bugs faster than humans fix them. Postgres 19 is late because of it.
+
+How is your team handling the AI-found bug reports?
+
+Source: Postgres 19 is late, and it's AI's fault by Robert Haas (rhaas.blogspot.com).
+
+#postgresql #softwareengineering #ai #codereview #opensource

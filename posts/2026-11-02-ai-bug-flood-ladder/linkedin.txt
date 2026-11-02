@@ -1,0 +1,23 @@
+3 ways to keep up with AI-found bugs. Triage alone won't do it.
+
+#2 on HackerNews this weekend: Robert Haas was arguing that Postgres 19 is late because LLMs now find bugs faster than committers can fix them.
+
+To keep shipping when the bug reports pile up:
+
+1. Good: triage every report by severity and set a cut-off, but the niche bugs stay open for good.
+
+2. Better: pause feature work until the security backlog shrinks, as one developer in the discussion said their company did, but the roadmap stalls while you catch up.
+
+3. Best: run the same AI bug hunt on every pull request before merge, with compiler warnings treated as errors. It only covers new code, and the fixes still need a human reviewer, since Haas notes LLM-drafted patches aren't always correct.
+
+My rule: find the bug at merge time, before a stranger with an LLM finds it after release (CodeQL or Semgrep in CI, plus an AI reviewer like GitHub Copilot code review or Claude Code on every pull request).
+
+Which level is your team at?
+
+Repost if this helps someone on your team.
+
+Follow Arthur Silva for practical takes on what engineers are talking about.
+
+Source: Postgres 19 is late, and it's AI's fault by Robert Haas (rhaas.blogspot.com).
+
+#postgresql #softwareengineering #codereview

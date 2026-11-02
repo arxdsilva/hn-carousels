@@ -1,0 +1,23 @@
+{
+  "structure": "ladder",
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "**How to keep up with AI-found bugs: good, better, best.**\n\nPostgres 19 is running late because LLMs find bugs faster than humans can fix them.\n\nRobert Haas counts **back-patched commits up more than 60%** in one year.",
+      "image": "posts/2026-11-02-ai-bug-flood-ladder/assets/postgres-late.jpg"
+    },
+    {
+      "text": "Each level builds on the last.\n\n**Which level is your team at? Save this.**",
+      "bullets": [
+        "Good: triage reports by severity with a cut-off. Niche bugs stay open forever.",
+        "Better: pause feature work until the backlog shrinks. The roadmap stalls.",
+        "Best: run the bug hunt on every PR before merge. Fixes still need a human reviewer."
+      ]
+    }
+  ]
+}

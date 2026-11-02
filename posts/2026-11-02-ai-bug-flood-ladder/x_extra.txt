@@ -1,0 +1,21 @@
+STRUCTURE: precondition
+QUOTE TARGET: none; post standalone (the source is an Ask HN thread)
+
+No privacy setting will save you until your smart TV never touches the internet.
+
+The top advice from developers: skip the Wi-Fi setup and plug a box you trust into HDMI. The catch: some sets nag or show ads offline anyway.
+
+REPLY:
+https://news.ycombinator.com/item?id=50328896
+===
+STRUCTURE: proof
+QUOTE TARGET: Andrej Karpathy's own post announcing HackerTube, if one exists; otherwise post standalone
+
+Andrej Karpathy built a YouTube alternative in about 2 hours: 6,454 videos pulled from 40K HN comments since 2007.
+
+His only manual steps were a Google API key, a VPS and a domain. Claude did the rest.
+
+The top complaint: no sort by date.
+
+REPLY:
+https://karpathy.bearblog.dev/hacker-tube/

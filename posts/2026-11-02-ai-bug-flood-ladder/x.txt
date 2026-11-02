@@ -1,0 +1,16 @@
+STRUCTURE: ladder
+QUOTE TARGET: Robert Haas's or Neon's own post sharing "Postgres 19 is late, and it's AI's fault", if one exists; otherwise post standalone
+IMAGES: slide_02.png, slide_01.png
+
+Keeping up with AI-found bugs: good, better, best.
+
+Postgres 19 is late because LLMs find bugs faster than committers fix them. Back-patched commits rose more than 60% in a year, per Postgres developer Robert Haas.
+---
+Good: triage by severity with a cut-off. Niche bugs stay open forever.
+Better: pause feature work until the backlog shrinks. The roadmap stalls.
+Best: run the bug hunt on every PR before merge. Old code isn't covered, and fixes still need a human.
+---
+The pushback in the discussion: discovery stopped being the bottleneck, verification didn't. More reports don't mean faster fixes when the same few maintainers still review every one.
+
+REPLY:
+http://rhaas.blogspot.com/2026/10/postgres-19-is-late-and-its-ais-fault.html Full breakdown in the carousel on Instagram/LinkedIn (@arxdsilva).
