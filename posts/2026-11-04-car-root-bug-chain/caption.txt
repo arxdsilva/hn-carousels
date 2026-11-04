@@ -1,0 +1,7 @@
+A harmless log bug and a crashing binary gave one engineer root on his car.
+
+Would your team have filed that log bug as low severity?
+
+Source: Jailbreaking my car's navigation system just so I can change the time by Rasmus Moorats (nns.ee).
+
+#embeddedsecurity #reverseengineering #linux #appsec #softwareengineering

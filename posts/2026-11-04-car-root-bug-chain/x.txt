@@ -1,0 +1,20 @@
+STRUCTURE: elimination
+QUOTE TARGET: Rasmus Moorats's own post sharing "Jailbreaking my car's navigation system just so I can change the time", if one exists; otherwise post standalone
+IMAGES: slide_02.png, slide_01.png
+
+Patching the update won't root this car. Neither will its shell command.
+
+Rasmus Moorats just wanted to change the clock on his 2014 Renault. Without the right DRM'd map SD card, the settings menu doesn't even exist. So he rooted it.
+---
+Plan A, modify the update image: the unit refused it. The image carried a signature he couldn't forge.
+---
+Plan B, the script engine's shell command: one token, no arguments, and every writable mount was noexec. He could only run binaries already on the read-only rootfs.
+---
+What worked: a path traversal in the LOG command wrote "|/bin/sh payload.sh" into /proc/sys/kernel/core_pattern. Then he ran dbus-monitor, which aborts with no system bus. The kernel ran his script as root.
+---
+The actual fix: one number in settings.dat. UTC offset 180 minutes, changed to 120.
+
+One developer in the discussion said he should have just bought the SD card. He replied the old one was already in the trash, and a replacement was about 60 EUR.
+
+REPLY:
+https://blog.nns.ee/2026/11/02/renault-hack/ Full breakdown in the carousel on Instagram/LinkedIn (@arxdsilva).

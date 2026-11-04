@@ -1,0 +1,23 @@
+{
+  "structure": "elimination",
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "**A modified update won't root this car. Neither will its shell command.**\n\nRasmus Moorats only wanted to fix the clock on his 2014 Renault.\n\n**Two bugs that looked harmless got him root together.**",
+      "image": "posts/2026-11-04-car-root-bug-chain/assets/headunit.jpg"
+    },
+    {
+      "text": "Three plans, per his write-up.\n\n**Which would you try first? Save this.**",
+      "bullets": [
+        "Patch the update image: a signature check blocked it.",
+        "Use the script's shell command: one token, noexec mounts.",
+        "Works: a log bug set core_pattern, a crash ran his script."
+      ]
+    }
+  ]
+}

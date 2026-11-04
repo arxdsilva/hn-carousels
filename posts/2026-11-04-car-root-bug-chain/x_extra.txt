@@ -1,0 +1,23 @@
+STRUCTURE: myth
+QUOTE TARGET: IEEE Spectrum's own post sharing "The PHP2Shell Vulnerability Heralds Cybersecurity Hell", if one exists; otherwise post standalone
+
+Myth: a crash bug is just a crash.
+
+The bug behind PHP2Shell was reported in 2024 and left alone as a crash. Per IEEE Spectrum, a Calif researcher with AI tools turned it into remote code execution within two weeks.
+
+Do you triage crashes as exploits?
+
+REPLY:
+https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability
+===
+STRUCTURE: myth
+QUOTE TARGET: none, post standalone
+
+Myth: paying for Gemini keeps your chats out of training.
+
+Google's own help pages say personal-account chats train models while Keep Activity is on. Chats picked for human review are kept up to three years, even after you delete them.
+
+Deal-breaker or expected?
+
+REPLY:
+https://support.google.com/gemini/answer/13594961

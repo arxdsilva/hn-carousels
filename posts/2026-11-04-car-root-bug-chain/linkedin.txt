@@ -1,0 +1,26 @@
+Signed updates won't stop this root. Neither will noexec. Will your triage?
+
+#10 on HackerNews this week: Rasmus Moorats rooted his car's navigation unit just to change the clock.
+
+The unit had signed updates and noexec mounts, and both held.
+
+1 Patch the update image
+↳ fails: it carried a signature he couldn't forge, so the unit refused his version.
+
+2 Run his own script through the built-in shell command
+↳ fails: it took one token with no arguments, and every writable mount was noexec.
+
+3 Chain two weak bugs
+↳ works: a path traversal in the log command wrote a shell pipe into the kernel's core_pattern, then a binary that crashes on start made the kernel run his script as root.
+
+My rule: score a bug by what it can combine with. A log command that writes anywhere is low severity only until it reaches a file the kernel reads.
+
+Which did you try first?
+
+Repost if this helps someone on your team.
+
+Follow Arthur Silva for practical takes on what engineers are talking about.
+
+Source: Jailbreaking my car's navigation system just so I can change the time by Rasmus Moorats (nns.ee).
+
+#security #embedded #linux
