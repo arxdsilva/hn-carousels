@@ -1,0 +1,21 @@
+STRUCTURE: myth
+QUOTE TARGET: the sshhole.com author's own post about the bug, if one exists; otherwise post standalone
+
+Myth: a * in /etc/shadow means nobody logs in.
+
+On musl sshd without PAM, a 257+ char password made crypt() fail and return "*". It matched. Alpine's cloud images were exposed, per sshhole.com.
+
+Fix: OpenSSH 10.6p2, or PasswordAuthentication no.
+
+REPLY:
+The write-up: https://sshhole.com
+===
+STRUCTURE: precondition
+QUOTE TARGET: none, post standalone
+
+No Windows Update run will patch Paint until you check the Store.
+
+CVE-2026-83844 is a remote code execution bug in Paint before 11.2605.91.0. One developer said Windows Update showed nothing; Paint ships through the Microsoft Store now.
+
+REPLY:
+CVE record: https://www.cve.org/CVERecord?id=CVE-2026-83844

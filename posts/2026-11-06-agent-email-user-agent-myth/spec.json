@@ -1,0 +1,26 @@
+{
+  "structure": "myth",
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "**Myth: your coding agent only sends what you typed.**\n\nClaude Code put users' emails in the User-Agent header of web requests.\n\nThe account email sat in the model's context all along.",
+      "panel": {
+        "big": "53",
+        "small": "tool calls that sent one user's email"
+      }
+    },
+    {
+      "text": "My rule: anything in the agent's context is something it can send.\n\n**Fair warning or overblown? Pick a side, then save this.**",
+      "bullets": [
+        "Subagents ran curl with an email, a name or even a repo in the header.",
+        "The Claude Code team is removing the email from the model's context.",
+        "Counterpoint: it mostly hit sites like the SEC, which require an email."
+      ]
+    }
+  ]
+}

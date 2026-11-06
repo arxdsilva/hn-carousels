@@ -1,0 +1,7 @@
+Your coding agent knows your email. Some websites found out too.
+
+Has your agent ever sent something you never typed?
+
+Source: Bug Report: Privacy violation in User-Agent header by taylor-edwards (github.com).
+
+#claudecode #aiagents #privacy #devsecops #softwareengineering

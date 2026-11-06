@@ -1,0 +1,17 @@
+Myth: your agent can't leak what you never typed. One user counted 53 requests carrying their email.
+
+#3 on HackerNews this week: developers were arguing that Claude Code sends your email address to websites.
+
+Signed-in users had their account email in the model's context, a Claude Code team member confirmed. When a site asked who was calling, subagents ran curl with that email in the User-Agent header. Others found their name, team and repo in it.
+
+The fair counterpoint: it mostly happened on sites like the SEC, whose API rejects requests without a contact email. The next release drops the email from context, and a built-in privacy mod has blocked it since 2.1.317. My rule: anything in the agent's context is something it can send, so check what leaves your machine.
+
+Fair warning or overblown?
+
+Repost if this helps someone on your team.
+
+Follow Arthur Silva for practical takes on what engineers are talking about.
+
+Source: Bug Report: Privacy violation in User-Agent header by taylor-edwards (github.com).
+
+#aiagents #privacy #softwareengineering

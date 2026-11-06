@@ -1,0 +1,12 @@
+STRUCTURE: myth
+QUOTE TARGET: the Claude Code team's own post about removing the account email from the model's context, if one exists; otherwise post standalone
+IMAGES: none if quoting; slide_01.png if posting standalone
+
+Myth: your coding agent only sends what you typed.
+
+Claude Code had the account email in its context. Subagents put it in the User-Agent of curl calls to websites. One user found 53.
+
+Fair, since sites like the SEC demand an email? Or a leak?
+
+REPLY:
+The bug report: https://github.com/anthropics/claude-code/issues/107757. Full breakdown in the carousel on Instagram/LinkedIn (@arxdsilva).
