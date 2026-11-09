@@ -1,0 +1,23 @@
+STRUCTURE: myth
+QUOTE TARGET: none; post standalone
+
+Myth: with AI, you should just build your own tools now.
+
+A KetchUp thread had the best counter: one engineer who keeps several personal tools said they're always more work than they look, and you end up building tools more than using them.
+
+Build or buy?
+
+REPLY:
+https://ketchup3d.github.io/app/
+===
+STRUCTURE: myth
+QUOTE TARGET: Nicolas Chagnet's own post sharing "You should try Gleam", if one exists; otherwise post standalone
+
+Myth: the language stops mattering once an LLM writes the code.
+
+We still read that code. Efficiency, security and compliance don't go away because an agent typed it, as one developer put it in a thread about Gleam.
+
+Do you still pick languages for humans?
+
+REPLY:
+https://nchagnet.eu/blog/you-should-try-gleam

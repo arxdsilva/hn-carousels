@@ -1,0 +1,23 @@
+{
+  "structure": "ladder",
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "**How to protect an internal admin tool: good, better, best.**\n\nShubham Shah and Sam Curry unlocked an automaker's cars from just a number plate.\n\nThe way in was an internet-facing admin tool called **TEST HARNESS**.",
+      "image": "posts/2026-11-09-admin-tool-exposure-ladder/assets/test-harness.jpg"
+    },
+    {
+      "text": "Even the best level leaves the app's own APIs public.\n\n**Which level is your admin tool on? Save this.**",
+      "bullets": [
+        "Good: WAF rules. An encoded URL got past.",
+        "Better: auth on every API. A leaked key undoes it.",
+        "Best: reachable only through a VPN."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+One encoded URL got past the WAF guarding a carmaker's admin API.
+
+Could someone outside your company reach your admin tools today?
+
+Source: Unlocking any car from X brand in most of the world by Shubham Shah (shubs.io).
+
+#appsec #websecurity #softwareengineering #zerotrust #devops

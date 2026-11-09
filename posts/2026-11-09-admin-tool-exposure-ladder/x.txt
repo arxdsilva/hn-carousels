@@ -1,0 +1,16 @@
+STRUCTURE: ladder
+QUOTE TARGET: Shubham Shah's or Sam Curry's own post sharing "Unlocking any car from X brand in most of the world", if one exists; otherwise post standalone
+IMAGES: slide_02.png, slide_01.png
+
+Protecting an admin tool: good, better, best.
+
+Shubham Shah and Sam Curry unlocked an automaker's cars from a number plate. The way in was an internal admin tool anyone on the internet could reach.
+---
+Good: WAF rules on admin paths. An encoded path got past them.
+Better: auth on every endpoint, no secrets in shipped JS. A staging admin login from a vendor bundle worked in prod.
+Best: VPN or access proxy only. The app's public APIs still need auth.
+---
+The pushback in the discussion: the cloud shouldn't be able to unlock the car at all. One developer suggested pairing the phone with the car once, so the car only accepts commands signed by the phone's key.
+
+REPLY:
+https://shubs.io/unlocking-any-car-from-x-brand-in-most-of-the-world/ Full breakdown in the carousel on Instagram/LinkedIn (@arxdsilva).

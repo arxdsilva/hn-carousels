@@ -1,0 +1,23 @@
+3 ways to protect an internal admin tool. The WAF is the weakest.
+
+#9 on HackerNews this weekend: Shubham Shah and Sam Curry showed how they unlocked an automaker's cars from just a number plate, starting at an admin tool anyone could reach.
+
+To keep your admin tool from becoming the way in:
+
+1. Good: WAF rules that block the admin paths, but a URL-encoded path traversal walked straight past them.
+
+2. Better: real auth on every admin endpoint and no keys in the JavaScript you ship, but one leaked secret still opens it, like the staging admin login that also worked in production.
+
+3. Best: reach admin tools only through a VPN or an identity-aware proxy, though the endpoints your public app calls stay on the internet and still need level 2.
+
+My rule: if only staff use it, the internet shouldn't reach it (Tailscale, Cloudflare Access or Google Cloud IAP in front, plus Gitleaks or TruffleHog in CI to catch secrets before they ship).
+
+Which level is your admin tool on?
+
+Repost if this helps someone on your team.
+
+Follow Arthur Silva for practical takes on what engineers are talking about.
+
+Source: Unlocking any car from X brand in most of the world by Shubham Shah (shubs.io).
+
+#cybersecurity #appsec #softwareengineering
