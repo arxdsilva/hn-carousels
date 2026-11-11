@@ -1,0 +1,7 @@
+One script that copies your SSH key file gets into every server you use.
+
+Where do your SSH keys live right now?
+
+Source: Protecting SSH Keys with macOS Secure Enclave by Serge Gatezh (gatezh.com).
+
+#ssh #devsecops #macos #infosec #softwareengineering

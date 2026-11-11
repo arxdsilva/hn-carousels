@@ -1,0 +1,20 @@
+STRUCTURE: elimination
+QUOTE TARGET: Serge Gatezh's own post sharing "Protecting SSH Keys with macOS Secure Enclave", if one exists; otherwise post standalone
+IMAGES: slide_02.png, slide_01.png
+
+File permissions won't protect your SSH keys. Neither will a password vault.
+
+Serge Gatezh moved his into his Mac's Secure Enclave. The key is created on the chip and never leaves it. Every SSH connection now waits for Touch ID.
+---
+Plan A, a key file in ~/.ssh: any script that reaches your filesystem can copy it and get into every server. A fake interview repo you clone and run is enough.
+---
+Plan B, the SSH agent in 1Password or Bitwarden: encrypted at rest, decrypted in memory when used. He wanted a key nobody could extract, even from a fully compromised Mac.
+---
+What works: sc_auth create-ctk-identity -k p-256-ne -t bio. The key can't be exported, and every signature needs Touch ID, so malware can't use it quietly.
+
+The catch: no backups. Put a YubiKey's key in authorized_keys too.
+---
+The pushback in the discussion: hardware keys need a human present, which breaks headless AI agents. One developer called that the point. No agent touches his production servers unless his finger is on the key.
+
+REPLY:
+https://gatezh.com/posts/macos-secure-enclave-ssh-keys/ Full breakdown in the carousel on Instagram/LinkedIn (@arxdsilva).

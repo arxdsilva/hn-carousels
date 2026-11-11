@@ -1,0 +1,24 @@
+Where does your SSH key live? File permissions won't protect it. Neither will your password vault.
+
+#3 on HackerNews this week: Serge Gatezh moved his SSH keys off his disk and into his Mac's Secure Enclave.
+
+1 Keep the key file in ~/.ssh with tight permissions
+↳ fails: any script that can read your files can copy it, and a fake take-home repo you clone and run is enough.
+
+2 Move it into 1Password or Bitwarden and use their SSH agent
+↳ fails: the key is encrypted at rest, but it's decrypted in memory every time it signs.
+
+3 Create the key inside hardware, the Secure Enclave or a YubiKey
+↳ works: the private key can't be exported, and with Touch ID on every use nothing can use it silently. The cost is no backup, so each server needs a second key.
+
+My rule: one hardware key per laptop, plus a YubiKey in every server's authorized_keys as the way back in when the laptop dies.
+
+Which did you try first?
+
+Repost if this helps someone on your team.
+
+Follow Arthur Silva for practical takes on what engineers are talking about.
+
+Source: Protecting SSH Keys with macOS Secure Enclave by Serge Gatezh (gatezh.com).
+
+#cybersecurity #ssh #devsecops

@@ -1,0 +1,23 @@
+STRUCTURE: precondition
+QUOTE TARGET: the author's own post sharing "Smart home devices should work without the internet" (Do Code That Matters), if one exists; otherwise post standalone
+
+No smart home app will save you until the house works with the internet unplugged.
+
+Rule one after ten years, per Do Code That Matters. His Nest integration worked until Google broke the API. Alexa is one way in, never the only one.
+
+What in your house needs a vendor's server?
+
+REPLY:
+https://docodethatmatters.com/home-automation-overnight-success/
+===
+STRUCTURE: myth
+QUOTE TARGET: Greg Kurtzer's own post about Ginux, if one exists; otherwise post standalone
+
+Myth: a container isolates untrusted code.
+
+Namespaces still expose the whole Linux kernel as attack surface, one engineer argued in a thread on Greg Kurtzer's Ginux. Userspace kernels like gVisor shrink it, at a real speed cost.
+
+Containers or sandboxes for your agents?
+
+REPLY:
+https://github.com/gmkurtzer/ginux

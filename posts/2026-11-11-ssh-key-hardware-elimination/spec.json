@@ -1,0 +1,23 @@
+{
+  "structure": "elimination",
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "**File permissions won't protect your SSH keys. Neither will a password vault.**\n\nSerge Gatezh moved his keys into his Mac's Secure Enclave.\n\n**Now every SSH connection waits for his fingerprint.**",
+      "image": "posts/2026-11-11-ssh-key-hardware-elimination/assets/touchid-wide.jpg"
+    },
+    {
+      "text": "Three plans, per his write-up.\n\n**Which did you try first? Save this.**",
+      "bullets": [
+        "Key file in ~/.ssh: any script that reads your disk can copy it.",
+        "Password vault: the key still gets decrypted in memory to sign.",
+        "Works: a key made in hardware that never leaves it, Touch ID on every use."
+      ]
+    }
+  ]
+}
