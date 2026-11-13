@@ -1,0 +1,19 @@
+Myth: the safest dependency is the one published 3 hours ago.
+
+#5 on HackerNews this week: Rust 1.100 shipped dependency cooldowns in Cargo.
+
+Malicious versions are usually caught within hours or days, by scanners or the community, the Rust Release Team writes. Pull a release on day one and you skip that check. With a min-publish-age set, Cargo skips anything newer and tells you what it held back.
+
+It has limits. cargo install ignores the setting, and the Rust team says cooldowns are no complete defense against supply chain attacks. An urgent fix still goes through with a one-off override.
+
+My rule: give new versions a few days before they reach your build, and keep the override for urgent fixes. Outside Rust, Renovate's minimumReleaseAge or Dependabot's cooldown setting does the same job.
+
+Fair default or false comfort?
+
+Repost if this helps someone on your team.
+
+Follow Arthur Silva for practical takes on what engineers are talking about.
+
+Source: Announcing Rust 1.100.0 by the Rust Release Team (blog.rust-lang.org).
+
+#supplychainsecurity #rust #softwareengineering

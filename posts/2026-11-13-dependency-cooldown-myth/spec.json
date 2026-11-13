@@ -1,0 +1,26 @@
+{
+  "structure": "myth",
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "**Myth: updating to the newest dependency version right away is safest.**\n\nMalicious versions usually get caught within hours or days, the Rust team writes.\n\nRust 1.100 now lets Cargo wait out that window.",
+      "panel": {
+        "big": "3 days",
+        "small": "the cooldown in Cargo's example"
+      }
+    },
+    {
+      "text": "My rule: let new versions age a few days before they reach your build.\n\n**Fair default or false comfort? Pick a side, then save this.**",
+      "bullets": [
+        "Cargo skips versions newer than your min-publish-age and lists what it held back.",
+        "Need a fix today? One env var overrides it for a single update.",
+        "Counterpoint: cargo install ignores it, and the Rust team calls it no complete defense."
+      ]
+    }
+  ]
+}

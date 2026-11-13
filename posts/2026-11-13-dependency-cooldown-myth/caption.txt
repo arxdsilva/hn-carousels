@@ -1,0 +1,7 @@
+A version published three hours ago hasn't been checked by anyone yet.
+
+Would you make your team wait three days for every dependency update?
+
+Source: Announcing Rust 1.100.0 by the Rust Release Team (blog.rust-lang.org).
+
+#rust #supplychainsecurity #dependencies #devsecops #softwareengineering

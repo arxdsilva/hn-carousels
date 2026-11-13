@@ -1,0 +1,12 @@
+STRUCTURE: myth
+QUOTE TARGET: the Rust project's official post announcing Rust 1.100, if one exists; otherwise post standalone
+IMAGES: none if quoting; slide_01.png if posting standalone
+
+Myth: update dependencies the day a new version ships.
+
+Malicious versions usually get caught within hours or days, per the Rust Release Team at blog.rust-lang.org. Rust 1.100 lets Cargo wait that out with min-publish-age.
+
+Smart default or false comfort?
+
+REPLY:
+The release notes: https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/ Full breakdown in the carousel on Instagram/LinkedIn (@arxdsilva).

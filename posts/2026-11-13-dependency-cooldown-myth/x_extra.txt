@@ -1,0 +1,19 @@
+STRUCTURE: precondition
+QUOTE TARGET: Anthropic's or Claude's status post about the 2026-11-13 login errors, if one exists; otherwise post standalone
+
+No AI tool will save your workday until your project knowledge lives outside it.
+
+Claude login errors hit claude.ai and Claude Code for about two hours this morning. One developer's worry: how much project knowledge now sits only in agent workflows.
+
+REPLY:
+The incident report: https://status.claude.com/incidents/nn11wk485zfn
+===
+STRUCTURE: proof
+QUOTE TARGET: the author's own post about the zigzag app, if one exists; otherwise post standalone
+
+A $300 embroidery machine wanted a subscription. Its owner built a replacement app and put it on GitHub.
+
+Developers in the discussion report the same with card printers and studio gear. Subscription-locked hardware is getting cheap to work around.
+
+REPLY:
+The project: https://github.com/simpsoka/zigzag
