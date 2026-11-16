@@ -1,0 +1,23 @@
+STRUCTURE: myth
+QUOTE TARGET: Smitty van Bodegom's own post sharing "Universal XSS in uBlock Origin from website-driven element picker", if one exists; otherwise post standalone
+
+Myth: your browser extensions patch themselves.
+
+uBlock Origin just fixed a one-click universal XSS, per Smitty van Bodegom. Developers in the discussion found they were still on the old version. Check you're on 1.75.4 or later.
+
+Do you trust auto-update?
+
+REPLY:
+https://iter.ca/post/ubo-uxss/
+===
+STRUCTURE: myth
+QUOTE TARGET: Steve Blank's own post sharing "What's Next for Nvidia?", if one exists; otherwise post standalone
+
+Myth: CUDA lock-in keeps Nvidia safe.
+
+Steve Blank names customers becoming competitors as the threat. One engineer in the discussion went further: with agents, big buyers can build their own abstraction layers and debug tools.
+
+Moat or myth?
+
+REPLY:
+https://steveblank.com/2026/11/15/whats-next-for-nvidia/

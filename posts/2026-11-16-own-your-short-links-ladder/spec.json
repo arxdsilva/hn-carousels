@@ -1,0 +1,23 @@
+{
+  "structure": "ladder",
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "**How to keep your old links from being hijacked: good, better, best.**\n\nSomeone re-registered Bitly links from 2011 Burger King and McDonald's tweets.\n\nNobody touched their accounts. **The link changed hands.**",
+      "image": "posts/2026-11-16-own-your-short-links-ladder/assets/bitly-crop.jpg"
+    },
+    {
+      "text": "Old tweets and printed QR codes stay on the level you picked.\n\n**Which level are your links on? Save this.**",
+      "bullets": [
+        "Good: a public shortener. The vendor decides where it points.",
+        "Better: your own short domain. A stale CNAME can be taken.",
+        "Best: redirects on your main site. Keep the domain renewed."
+      ]
+    }
+  ]
+}

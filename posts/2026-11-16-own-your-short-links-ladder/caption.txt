@@ -1,0 +1,7 @@
+Burger King's account was never hacked. Someone re-registered the Bitly link in its 2011 tweet.
+
+Who controls the links in your old posts and printed QR codes?
+
+Source: Old Bitly links hijacked in Burger King, McDonald's and Trump tweets by the Ransomnews Research Team (ransomnews.com).
+
+#linkrot #urlshortener #websecurity #softwareengineering #devops

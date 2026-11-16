@@ -1,0 +1,23 @@
+3 ways to share a short link. Bitly is the weakest.
+
+#9 on HackerNews this weekend: someone re-registered the Bitly links in 2011 Burger King and McDonald's tweets and pointed them at Wikipedia pages on Nazi camps and 9/11.
+
+To keep your old links going where you meant:
+
+1. Good: a public shortener like Bitly, but the vendor decides where the link goes for as long as it exists, and Ransomnews found 56 of 97 old Trump links had been created again after the tweets.
+
+2. Better: short links on a domain you own, but a DNS record still pointing at a domain you let lapse can be bought and used by someone else, as two developers in the discussion described.
+
+3. Best: plain redirects on your main site (yoursite.com/locator), kept in your repo, though they last only as long as you renew the domain.
+
+My rule: never print a link whose destination someone else controls. If you need short codes, run a self-hosted shortener like YOURLS, Shlink or Kutt on your own domain, and put that domain on auto-renew.
+
+Which level are your links on?
+
+Repost if this helps someone on your team.
+
+Follow Arthur Silva for practical takes on what engineers are talking about.
+
+Source: Old Bitly links hijacked in Burger King, McDonald's and Trump tweets by the Ransomnews Research Team (ransomnews.com).
+
+#softwareengineering #websecurity #devops

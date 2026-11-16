@@ -1,0 +1,16 @@
+STRUCTURE: ladder
+QUOTE TARGET: Ransomnews's own post sharing its Bitly hijack investigation, or Bitly's post confirming the issue, if either exists; otherwise post standalone
+IMAGES: slide_02.png, slide_01.png
+
+Keeping old links from being hijacked: good, better, best.
+
+Someone re-registered Bitly links in 2011 Burger King and McDonald's tweets. Their accounts were never touched. The link just has a new owner.
+---
+Good: Bitly. The vendor decides where it points.
+Better: short links on your own domain. A stale CNAME to a lapsed domain can be bought.
+Best: plain redirects on your main site, in your repo. Keep the domain renewed.
+---
+Per Ransomnews, 56 of 97 Bitly links in old Trump tweets were created after the tweets. Bitly's help pages say a back-half can't be reused. Bitly has since confirmed the issue and is disabling the affected links.
+
+REPLY:
+https://ransomnews.com/burger-king-tweet-bitly-link-hijack-2026/ Full breakdown in the carousel on Instagram/LinkedIn (@arxdsilva).
