@@ -1,0 +1,23 @@
+{
+  "structure": "elimination",
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "**A proxy won't stop Java4Shell. Neither will -XX:UseAVX=2.**\n\nSixty-four A's and one = can corrupt an OpenJDK server's heap.\n\n**Calif turned it into remote code execution in Jenkins, Jira and Keycloak.**",
+      "image": "posts/2026-11-18-java4shell-mitigation-elimination/assets/java4shell-wide.jpg"
+    },
+    {
+      "text": "Three plans, per Calif's own write-up.\n\n**Which did you try first? Save this.**",
+      "bullets": [
+        "Buffering proxy: Calif's Elasticsearch chain needs only one request.",
+        "-XX:UseAVX=2: a JVM on ARM won't even start.",
+        "Works: patch, with -XX:-UseBASE64Intrinsics until you can."
+      ]
+    }
+  ]
+}

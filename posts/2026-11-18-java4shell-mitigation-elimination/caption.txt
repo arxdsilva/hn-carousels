@@ -1,0 +1,7 @@
+One malformed Base64 string can corrupt the heap of your Java server.
+
+Which mitigation did your team reach for first?
+
+Source: Java4Shell: Write once, RCE everywhere by Quang Luong and Calif (calif.io). Artwork by Michal Zalewski.
+
+#java #appsec #cybersecurity #devops #jvm

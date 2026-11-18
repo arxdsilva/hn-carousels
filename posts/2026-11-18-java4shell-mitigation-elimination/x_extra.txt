@@ -1,0 +1,23 @@
+STRUCTURE: myth
+QUOTE TARGET: Revscope's own post sharing "Google's AI Overviews cut clicks to websites by 40%", if one exists; otherwise post standalone
+
+Myth: GEO will win back the clicks Google's AI answers take.
+
+In a randomized test, an AI Overview cut outside clicks from 0.62 to 0.37 per search, per Revscope. AI assistants sent sites 0.3% of their traffic in March.
+
+Still writing for rankings, or for citations?
+
+REPLY:
+https://revscope.co/blog/search-seo-geo-2026/
+===
+STRUCTURE: precondition
+QUOTE TARGET: Cloudflare's or Quad9's own post about Quad9 leaving France, if one exists; otherwise post standalone
+
+No failover plan will save you until you know which DNS resolver each box uses.
+
+Quad9 is leaving France after a court fined it daily for not blocking sites, per Cloudflare. It can't warn the hospitals on it. Their DNS just stops.
+
+Where is 9.9.9.9 hardcoded in your stack?
+
+REPLY:
+https://blog.cloudflare.com/quad9-withdrawal-from-france/

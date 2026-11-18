@@ -1,0 +1,24 @@
+Is your JVM patched yet? A proxy won't stop Java4Shell. Neither will -XX:UseAVX=2.
+
+#3 on HackerNews this week: Calif showed that 64 A's and one = can corrupt the heap of an OpenJDK server.
+
+1 Put a proxy that buffers request bodies in front, as nginx does by default
+↳ fails: it only breaks the attacks that need a streamed request. Calif's Elasticsearch chain runs from one complete request, and WebSocket frames skip the buffer.
+
+2 Start the JVM with -XX:UseAVX=2 to turn off AVX-512
+↳ fails across a mixed fleet: OpenJDK on ARM doesn't recognize the flag and won't start.
+
+3 Patch, and start any JVM you can't patch yet with -XX:-UseBASE64Intrinsics
+↳ works: Oracle shipped the patch on Nov 17, and the flag turns off the hand-written decoder where the bug lives. You pay with slower Base64 until the patch lands.
+
+My rule: patch the Java clients too, since Calif showed a program that only opens a TLS connection to a malicious server can be compromised.
+
+Which did you try first?
+
+Repost if this helps someone on your team.
+
+Follow Arthur Silva for practical takes on what engineers are talking about.
+
+Source: Java4Shell: Write once, RCE everywhere by Quang Luong and Calif (calif.io). Artwork by Michal Zalewski.
+
+#java #cybersecurity #devops

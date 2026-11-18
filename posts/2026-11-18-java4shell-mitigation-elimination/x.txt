@@ -1,0 +1,18 @@
+STRUCTURE: elimination
+QUOTE TARGET: Calif's own post announcing Java4Shell (CVE-2026-114938), if one exists; otherwise post standalone
+IMAGES: slide_02.png, slide_01.png
+
+A proxy won't stop Java4Shell. Neither will -XX:UseAVX=2.
+
+Per Calif, 64 A's and one = make OpenJDK's AVX-512 Base64 decoder write 62 bytes past the end of its array. They got remote code execution in Jenkins, Jira and Keycloak.
+---
+Plan A, a proxy that buffers request bodies (nginx does by default): it only breaks attacks that need a streamed request. Calif's Elasticsearch chain runs from one complete request.
+---
+Plan B, -XX:UseAVX=2 to turn off AVX-512: fine on x86-64, but OpenJDK on ARM doesn't recognize it and won't start. Roll it out fleet-wide and your ARM hosts go down.
+---
+What works: patch. Oracle shipped one on Nov 17. Until your distro catches up, start the JVM with -XX:-UseBASE64Intrinsics. It turns off the hand-written decoder where the bug lives.
+---
+The pushback: Calif says there's no universal exploit. Each target needs its own profile, and the heap grooming is sensitive to network jitter. One developer still pointed out that a Keycloak heap leak could dump live tokens.
+
+REPLY:
+https://calif.io/java4shell/ Full breakdown in the carousel on Instagram/LinkedIn (@arxdsilva).
