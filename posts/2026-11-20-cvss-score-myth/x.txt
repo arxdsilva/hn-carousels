@@ -1,0 +1,12 @@
+STRUCTURE: myth
+QUOTE TARGET: the OpenSSL project's own post about CVE-2026-121481, if one exists; otherwise post standalone
+IMAGES: none if quoting; slide_01.png if posting standalone
+
+Myth: a CVSS 9.8 means patch tonight.
+
+OpenSSL's new 9.8 needs about 1.6 GB base64-encoded in one call and only hits 4.x. The score is CISA's worst case. Ubuntu rates it Medium.
+
+Score sets the ceiling, exposure sets the date. Agree, or patch anyway?
+
+REPLY:
+The fix: https://github.com/openssl/openssl/pull/33652 and a plain-English assessment: https://tldrcve.com/openssl-encodeblock/ Full breakdown in the carousel on Instagram/LinkedIn (@arxdsilva).

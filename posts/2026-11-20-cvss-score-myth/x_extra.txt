@@ -1,0 +1,21 @@
+STRUCTURE: myth
+QUOTE TARGET: Architect Labs' own post announcing Frostbite, if one exists; otherwise post standalone
+
+Myth: AI designed this CPU on its own.
+
+Architect Labs reports 4.59x perf per watt from agent swarms. Humans still picked the 25 workloads and built the checker, one developer noted, and the baseline is an in-order core.
+
+Credit to the agents or the harness?
+
+REPLY:
+The write-up: https://architectlabs.com/blog/frostbite
+===
+STRUCTURE: proof
+QUOTE TARGET: Andrew Healey's own post about soksolv, if one exists; otherwise post standalone
+
+One dev plus ~430 subagents built a Sokoban solver with 24 world-first level solves.
+
+Andrew Healey's setup: one immutable incumbent, one hypothesis per experiment, a frozen verifier so agents can't cheat. Agents climb hills well, so keep the hill fixed.
+
+REPLY:
+The write-up: https://healeycodes.com/introducing-the-worlds-strongest-sokoban-solver

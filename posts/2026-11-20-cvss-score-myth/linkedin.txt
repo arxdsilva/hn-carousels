@@ -1,0 +1,19 @@
+Myth: every CVSS 9.8 needs a patch tonight. This one needs 1.6 GB of input.
+
+#4 on HackerNews this week: developers were arguing that OpenSSL's new critical bug isn't critical for most of them.
+
+The overflow only fires when EVP_EncodeBlock() base64-encodes about 1.6 GB in one call, and it's only in OpenSSL 4.0 and 4.1. Most distros still ship 3.x, developers in the discussion pointed out. The 9.8 is CISA's score, which assumes a remote attacker with no login. Ubuntu rates the same bug Medium, per the tldrcve write-up.
+
+The catch: apps bundle their own OpenSSL, so your distro's version isn't the whole answer.
+
+My rule: the score sets the ceiling, and your exposure sets the date. List the OpenSSL versions you run, bundled copies included, and patch on the normal cycle unless untrusted input can reach the bug.
+
+Myth or fair warning?
+
+Repost if this helps someone on your team.
+
+Follow Arthur Silva for practical takes on what engineers are talking about.
+
+Source: Buffer overflow in EVP_EncodeBlock() (PR #33652) by the OpenSSL project (github.com).
+
+#cybersecurity #openssl #devops

@@ -1,0 +1,7 @@
+A critical 9.8 that only fires on 1.6 GB of input in a single call.
+
+Do you patch every 9.8 the same day, or check your exposure first?
+
+Source: Buffer overflow in EVP_EncodeBlock() (PR #33652) by the OpenSSL project (github.com).
+
+#cybersecurity #openssl #vulnerabilitymanagement #devops #infosec

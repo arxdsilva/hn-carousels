@@ -1,0 +1,26 @@
+{
+  "structure": "myth",
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "**Myth: a CVSS 9.8 means you patch tonight.**\n\nThe score assumes a remote attacker with no login, not your setup.\n\nOpenSSL's new base64 bug shows how far apart those can be.",
+      "panel": {
+        "big": "1.6 GB",
+        "small": "input needed in one call to trigger it"
+      }
+    },
+    {
+      "text": "My rule: the score sets the ceiling, and your exposure sets the date.\n\n**Myth or fair warning? Pick a side, then save this.**",
+      "bullets": [
+        "It needs about 1.6 GB base64-encoded in one call, and only OpenSSL 4.x has it.",
+        "The 9.8 comes from CISA, while Ubuntu rates the same bug Medium.",
+        "Counterpoint: apps bundle their own OpenSSL, so check before you shrug."
+      ]
+    }
+  ]
+}
