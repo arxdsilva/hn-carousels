@@ -1,0 +1,7 @@
+Start local AI on a cheap card. Buy the expensive one last.
+
+What hardware are you running models on today?
+
+Source: A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth by Jerry James (gpupartner.com).
+
+#localai #llm #selfhosted #gpu #softwareengineering

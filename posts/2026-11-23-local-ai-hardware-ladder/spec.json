@@ -1,0 +1,23 @@
+{
+  "structure": "ladder",
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "**3 ways to run a coding model at home, from good to best.**\n\nOpen models like Qwen and Inkling 2 Mini now fit on one graphics card.\n\n**Your card's memory decides which model you can run.**",
+      "image": "posts/2026-11-23-local-ai-hardware-ladder/assets/gpu-crop.jpg"
+    },
+    {
+      "text": "Rent a GPU for an hour and test your real tasks before you buy.\n\n**Which level are you on? Save this.**",
+      "bullets": [
+        "Good: a used 24GB Tesla P40, about $300. Slow, fiddly setup.",
+        "Better: a 16GB card, MoE model half in RAM. Low quants feel worse.",
+        "Best: a 32GB card or big Mac, 27B model at 4-bit. Costs thousands."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+STRUCTURE: myth
+QUOTE TARGET: micjm's own post sharing "Yes, 17M lines of Lean is a lot", if one exists; otherwise post standalone
+
+Myth: a 17M-line proof means a hard problem.
+
+Line count says more about the writer. Per micjm, the AI-written Fermat's Last Theorem proof is about 450x longer than the human Lean project. Any proof can be padded at will, one developer noted.
+
+Hard problem or verbose model?
+
+REPLY:
+https://micjm.com/blog/yes-17m-lines-of-lean-is-a-lot/
+===
+STRUCTURE: myth
+QUOTE TARGET: OpenAI's or Jakub Pachocki's own post announcing "Perplexity and Intelligence"; otherwise post standalone
+
+Myth: benchmarks are the best way to track AI progress.
+
+Jakub Pachocki at OpenAI argues they saturate fast, while perplexity on held-out data kept tracking every jump: ~0.99 for GPT-3.5, ~0.91 for GPT-4, now under 0.8.
+
+One shared metric, or one more number to game?
+
+REPLY:
+https://openai.com/index/perplexity-and-intelligence/

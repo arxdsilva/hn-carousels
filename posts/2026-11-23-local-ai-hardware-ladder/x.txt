@@ -1,0 +1,16 @@
+STRUCTURE: ladder
+QUOTE TARGET: GPU Partner's or Jerry James's own post sharing the local AI guide, if one exists; otherwise post standalone
+IMAGES: slide_02.png, slide_01.png
+
+Running a coding model at home: good, better, best.
+
+Open models like Qwen and Inkling 2 Mini now fit on one graphics card. Your card's memory decides which one you can run.
+---
+Good: a used 24GB Tesla P40, about $300. Slow, fiddly setup.
+Better: a 16GB card with an MoE model partly in system RAM. Low-bit versions feel worse.
+Best: a 32GB card or unified-memory Mac, 27B model at 4-bit. Costs thousands.
+---
+My rule: rent a GPU by the hour on RunPod or Vast.ai and run your real tasks before you buy any card.
+
+REPLY:
+https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth Full breakdown in the carousel on Instagram/LinkedIn (@arxdsilva).

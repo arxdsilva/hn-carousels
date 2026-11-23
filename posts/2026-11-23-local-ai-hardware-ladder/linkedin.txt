@@ -1,0 +1,23 @@
+How to run AI models at home: good, better, best. Don't start at best.
+
+#7 on HackerNews this weekend: developers arguing over what hardware a local coding model really needs.
+
+To run one on your own machine:
+
+1. Good: a used 24GB Tesla P40, about $300 according to one developer, but it runs a 27B model at around 14 tokens a second and needs extra setup to work.
+
+2. Better: a 16GB card running a mixture-of-experts model with the rest in system RAM, which Jerry James's calculator puts near 47 tokens a second, but low-bit versions feel noticeably worse than the full model.
+
+3. Best: a 32GB card or a unified-memory Mac running a 27B model at 4-bit with a long context, but the hardware costs thousands.
+
+My rule: rent a GPU by the hour on RunPod or Vast.ai and run your real tasks through LM Studio or llama.cpp before you buy any card.
+
+Which level are you on?
+
+Repost if this helps someone on your team.
+
+Follow Arthur Silva for practical takes on what engineers are talking about.
+
+Source: A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth by Jerry James (gpupartner.com).
+
+#localai #llm #softwareengineering
