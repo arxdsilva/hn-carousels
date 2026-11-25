@@ -1,0 +1,24 @@
+{
+  "structure": "proof",
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "**Rida F'kih took an iOS Safari web app from 60 to 120 FPS.**\n\nIt works without a settings flag, using the scroll compositor and OffscreenCanvas.\n\nBy default, Safari holds animation frames and touch events to 60 Hz on a 120 Hz screen.",
+      "image": "posts/2026-11-25-ios-safari-120hz-proof/assets/article-wide.jpg"
+    },
+    {
+      "text": "Four steps from the write-up.\n\nApple keeps the web at 60 Hz to save battery, one developer pointed out.\n\n**Which step would you try first? Save this.**",
+      "bullets": [
+        "Read input from an invisible scroller the compositor moves.",
+        "Poll scrollTop via MessageChannel, locked to vsync: 80 reads/s.",
+        "Add an empty rAF loop (90/s), then a tiny scroller for 120 Hz.",
+        "Draw via transferControlToOffscreen to skip the 60 Hz pass."
+      ]
+    }
+  ]
+}

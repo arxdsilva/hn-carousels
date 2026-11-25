@@ -1,0 +1,27 @@
+Rida F'kih got an iPhone web app to 120 FPS, with no settings flag.
+
+#10 on HackerNews this week: a write-up on getting past Safari's 60 FPS limit on 120 Hz iPhones.
+
+By default, Safari holds requestAnimationFrame and touch events to 60 Hz, which is why even good mobile sites feel slow under your finger.
+
+The steps, from the write-up:
+
+1. Read touch input from an invisible scroller laid over the element, so the compositor moves it instead of JavaScript. scrollTop rounds to whole points, so scale the scroller up by the device pixel ratio.
+
+2. Poll scrollTop on a MessageChannel, throttled with setTimeout and locked to vsync with requestAnimationFrame timestamps. That gets 80 reads a second; a free-running loop got 50,000 reads with only 80 distinct values and pinned a CPU core.
+
+3. Keep an empty requestAnimationFrame loop running so Safari flushes every scroll position (90 a second), and smooth-scroll a tiny hidden scroller to push the screen to 120 Hz. That holds the display at 120 Hz, so turn it on only during touches and animations.
+
+4. Draw with canvas.transferControlToOffscreen(). WebKit doesn't wait for the 60 Hz render pass when an OffscreenCanvas pushes a frame, though one developer found the canvas demo worse on Android.
+
+My rule: treat 120 Hz as a budget you spend during a gesture, the way Rida does, and measure it on a real iPhone with the Timelines tab in Safari's Web Inspector before you ship it.
+
+Which step would you skip?
+
+Repost if this helps someone on your team.
+
+Follow Arthur Silva for practical takes on what engineers are talking about.
+
+Source: Bypassing iOS Safari's 60 FPS Limit to Build Web Applications That Feel Native by Rida F'kih (rida.dev).
+
+#webdev #ios #javascript

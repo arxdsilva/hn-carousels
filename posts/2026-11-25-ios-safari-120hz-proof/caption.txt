@@ -1,0 +1,7 @@
+Safari caps iPhone web apps at 60 FPS. Four steps get you to 120.
+
+Would you ship a workaround like this in production?
+
+Source: Bypassing iOS Safari's 60 FPS Limit to Build Web Applications That Feel Native by Rida F'kih (rida.dev).
+
+#webdev #ios #safari #javascript #frontend

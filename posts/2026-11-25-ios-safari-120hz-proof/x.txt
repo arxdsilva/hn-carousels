@@ -1,0 +1,20 @@
+STRUCTURE: proof
+QUOTE TARGET: Rida F'kih's own post on X sharing the write-up or the 120 Hz demo video, if one exists; otherwise post standalone
+IMAGES: slide_01.png
+
+Rida F'kih got an iPhone web app to 120 FPS. No Safari flag.
+
+Safari caps rAF and touch events at 60 Hz on 120 Hz screens. Per Rida at rida.dev, the fix is to read input from the compositor and draw through OffscreenCanvas.
+---
+Step 1: lay an invisible scroller over the element. The compositor moves it without JavaScript, so you read its position like a trackpad.
+
+Step 2: poll scrollTop on a MessageChannel locked to vsync. 80 reads a second, without pinning a CPU core.
+---
+Step 3: an empty rAF loop makes Safari flush every scroll position (90/s). A tiny hidden smooth-scroller pushes ProMotion to 120 Hz.
+
+Step 4: canvas.transferControlToOffscreen(). WebKit stops waiting for the 60 Hz render pass.
+---
+The pushback: Apple caps the web on purpose. Native iOS turns on 120 Hz only for big transitions, and the web has no switch for that, so it would be 120 Hz all the time. That's the battery cost Rida avoids by boosting only during gestures.
+
+REPLY:
+https://rida.dev/blog/bypassing-ios-safari-60-fps-limit Full breakdown in the carousel on Instagram/LinkedIn (@arxdsilva).

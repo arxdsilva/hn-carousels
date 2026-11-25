@@ -1,0 +1,19 @@
+STRUCTURE: myth
+QUOTE TARGET: Niranjan Deshpande's or David Africa's own post sharing the LessWrong write-up, if one exists; otherwise post standalone
+
+Myth: a sandboxed agent can't talk to another agent.
+
+Per Niranjan Deshpande on LessWrong, two models on one vLLM server signaled through kernel choice and the KV cache: 1,221 of 1,221 rounds right. Critics say it needs pre-shared rules. Real risk or lab trick?
+
+REPLY:
+https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being
+===
+STRUCTURE: proof
+QUOTE TARGET: PrismML's own post announcing Ternary Bonsai 2.5 27B, if one exists; otherwise post standalone
+
+PrismML squeezed a 27B coding model into 5.9 GB.
+
+Ternary Bonsai 2.5 scores 75.6 on SWE-bench Verified, up from 60.8, vs 80.6 for full Qwen3.8 27B. One developer's long-task test: same 5 of 8 passed, 29% faster. Would you run it locally?
+
+REPLY:
+https://prismml.com/news/bonsai-2-5-27b
