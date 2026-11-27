@@ -1,0 +1,19 @@
+Myth: a server AI built in half a day runs itself.
+
+#3 on HackerNews this week: Jan-Lukas Else arguing that AI made self-hosting fun again.
+
+His bootable OS image took half a day with AI, and he guesses at least a week without it. He also says every extra service is one more thing to maintain, and that AI-written code still has bugs and security holes. Developers in the discussion went further. One now patches critical CVEs within 24 hours of release, and another was breached twice in a year on a home server.
+
+The part that cut his upkeep was Renovate opening update pull requests and CI deploying on merge, and he points out none of that needs AI. The agent helped him wire it together. Keeping it patched and recoverable is still his job.
+
+My rule: only host what you could recover without the agent, and keep services off the public internet behind WireGuard or Tailscale where you can.
+
+Myth or fair warning?
+
+Repost if this helps someone on your team.
+
+Follow Arthur Silva for practical takes on what engineers are talking about.
+
+Source: AI made self-hosting fun again by Jan-Lukas Else (janlukas.blog).
+
+#selfhosting #devops #infosec

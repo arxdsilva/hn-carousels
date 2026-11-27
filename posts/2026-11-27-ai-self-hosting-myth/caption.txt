@@ -1,0 +1,7 @@
+An agent can stand up your homelab in an afternoon. The CVEs show up later.
+
+Would you run a service you couldn't fix without the AI?
+
+Source: AI made self-hosting fun again by Jan-Lukas Else (janlukas.blog).
+
+#selfhosting #homelab #devops #aiagents #infosec

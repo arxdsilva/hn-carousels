@@ -1,0 +1,11 @@
+# Review checklist: 2026-11-27-ai-self-hosting-myth
+
+- [ ] Myth call: "if an agent can set up your server, you can run it" is false, because AI cuts setup cost while patching, security and recovery stay with you (Else: "Every additional service is another thing that needs to be maintained"; AI-generated software "isn't exempt from bugs, security issues, or technical debt"). Agree, or flip it? Strongest counter, on slide 2: Else says with routine maintenance automated, another service "doesn't necessarily mean adding as much recurring work as it used to". Other side in the thread: one commenter runs ~60 Claude-managed services and says it's cleaner than he'd ever have built.
+- [ ] Your rule (opinion, no experience claimed): "only host what you could recover without the agent" (slide 2, linkedin.txt). Inspired by a commenter whose home server is built to be "reasonable to recover/replace unassisted". OK as yours?
+- [ ] linkedin.txt rule adds "keep services off the public internet behind WireGuard or Tailscale where you can". WireGuard comes from a commenter; Tailscale is general knowledge (also mentioned by another commenter). OK?
+- [ ] "24 hours" (slide 1 panel, linkedin.txt, x.txt): a commenter says self-hosting security "now means patching within 24hrs of a CVE9+ dropping". It's one engineer's view, labelled as such.
+- [ ] "Breached twice in a year" (slide 2, linkedin.txt): a commenter says "I've been breached twice over the past year" on a long-running home server.
+- [ ] "Half a day ... at least a week" (linkedin.txt, linkedin.png): Else's Debian bootc image, "half a day" with AI, "at least a week" without. linkedin.txt calls it a "bootable OS image".
+- [ ] linkedin.txt opens with "#3 on HackerNews this week" (rank #3 at ~07:00 MST on 2026-11-27).
+- [ ] x_extra.txt: RansomwareHelp numbers ($6,000 paid, $16,010 billed) are allegations from the indictment as reported by Krebs, written as "allegedly". Drive prices ($249.99 Nov 2024, $549.99 now, ten spinners to five) are from Kretzschmar's article. "Tested backups beat any vendor promise" is your take, not from the article.
+- [ ] Blog companion skipped this run: ytwebsite's CLAUDE.md says posts now go into the `site_posts` table, and not to commit `blog/content/` files until this routine is changed. Write it through /admin/posts if you want one.

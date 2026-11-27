@@ -1,0 +1,12 @@
+STRUCTURE: myth
+QUOTE TARGET: Jan-Lukas Else's own post sharing "AI made self-hosting fun again", if one exists; otherwise post standalone
+IMAGES: none if quoting; slide_01.png if posting standalone
+
+Myth: if an agent can set up your server, you can run it.
+
+Jan-Lukas Else says AI made self-hosting fun again, and also that every new service is one more thing to maintain. One engineer in the discussion now patches critical CVEs within 24 hours.
+
+Myth or fair warning?
+
+REPLY:
+The post: https://janlukas.blog/posts/ai-self-hosting Full breakdown in the carousel on Instagram/LinkedIn (@arxdsilva).

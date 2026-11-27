@@ -1,0 +1,26 @@
+{
+  "structure": "myth",
+  "profile": {
+    "name": "arxdsilva",
+    "handle": "@arxdsilva",
+    "avatar": "assets/avatar.png",
+    "verified": false
+  },
+  "slides": [
+    {
+      "text": "**Myth: if an agent can set up your server, you can run it.**\n\nJan-Lukas Else says AI made self-hosting fun again.\n\nHe also warns that **every new service is one more thing to maintain.**",
+      "panel": {
+        "big": "24 hours",
+        "small": "to patch a critical CVE, one engineer warns"
+      }
+    },
+    {
+      "text": "My rule: only host what you could recover without the agent.\n\n**Myth or fair warning? Pick a side, then save this.**",
+      "bullets": [
+        "Else's own caveat: AI-written code still ships bugs, security holes and debt.",
+        "One developer in the discussion was breached twice in a year at home.",
+        "Counterpoint: with Renovate and CI doing updates, Else says new services add less work than before."
+      ]
+    }
+  ]
+}

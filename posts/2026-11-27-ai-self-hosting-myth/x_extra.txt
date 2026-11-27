@@ -1,0 +1,19 @@
+STRUCTURE: myth
+QUOTE TARGET: Brian Krebs's own post sharing the KrebsOnSecurity story, if one exists; otherwise post standalone
+
+Myth: a recovery firm that says "we never pay the ransom" doesn't pay it.
+
+In an FBI sting, RansomwareHelp's CTO allegedly paid the fake gang about $6,000 and billed the fake victim $16,010, per Brian Krebs. Tested backups beat any vendor promise.
+
+REPLY:
+The story: https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/
+===
+STRUCTURE: proof
+QUOTE TARGET: Alex Kretzschmar's own post sharing the article, if one exists; otherwise post standalone
+
+The same 20TB drive cost $249.99 in Nov 2024. This Black Friday it's $549.99, per Alex Kretzschmar at blog.ktz.me.
+
+His plan: fewer, bigger disks, ten down to five. ZFS won't reshape an existing pool, so that means moving data. Plan it before a drive dies.
+
+REPLY:
+The breakdown: https://blog.ktz.me/black-friday-hard-drive-prices-are-messed-up/
